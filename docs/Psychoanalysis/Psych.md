@@ -3,7 +3,7 @@
 
 干脆就直接放出来给大家看看吧
 
-[下载HTML](/static/psych.html)
-[下载PDF](/static/Psych.pdf)
+<a href="https://makabaka1880.github.com/static/psych.html" target="_blank"> 下载HTML </a>
+<a href="https://makabaka1880.github.com/static/psych.pdf" target="_blank"> 下载PDF </a>
 
 <iframe src="/static/psych.html" style="width: 100%; height: 600px; allowfullscreen: true"></iframe>
