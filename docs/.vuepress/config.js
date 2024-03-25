@@ -33,7 +33,7 @@ module.exports = {
         path: '/',      // optional, link of the title, which should be an absolute path and must exist
         collapsable: false, // optional, defaults to true
         children: [
-          "https://github.com/makabaka1880/makabaka1880.github.io"
+          {title: "GitHub", path: "https://github.com/makabaka1880/makabaka1880.github.io"}
         ]
       },
       {
