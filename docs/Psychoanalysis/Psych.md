@@ -4,6 +4,6 @@
 干脆就直接放出来给大家看看吧
 
 [下载HTML](/static/psych.html)
-[下载PDF](/static/psych.pdf)
+[下载PDF](/static/Psych.pdf)
 
 <iframe src="/static/psych.html" style="width: 100%; height: 600px; allowfullscreen: true"></iframe>
