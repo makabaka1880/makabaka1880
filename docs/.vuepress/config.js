@@ -7,7 +7,10 @@ module.exports = {
     nav: [
       {
         text: "首页",
-        link: "/"
+        link: "/",
+        items: [
+          { text: "GitHub", link: "https://github.com/makabaka1880/makabaka1880.github.io"}
+        ]
       },
       {
         text: "CS",
@@ -29,9 +32,8 @@ module.exports = {
         title: '首页',   // required
         path: '/',      // optional, link of the title, which should be an absolute path and must exist
         collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
         children: [
-          '/'
+          "https://github.com/makabaka1880/makabaka1880.github.io"
         ]
       },
       {

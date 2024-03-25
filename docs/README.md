@@ -2,7 +2,7 @@
 home: true
 heroText: Makabaka1880的博客
 heroImage: https://img2.imgtp.com/2024/03/24/uuasYegU.png
-footer: MIT Licensed | Copyright 2024 © Sean Li
+footer: MIT Licensed | Copyright 2024 © (Sean Li)[https://github.com/makabaka1880]
 ---
 
 
