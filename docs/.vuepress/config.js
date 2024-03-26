@@ -39,14 +39,15 @@ module.exports = {
         text: "CS",
         link: "/CS/",
         items: [
-          { text: "CASIO", link: "/CS/Casio"}
+          { text: "CASIO", link: "/CS/Casio" },
+          { text: "算法汇集", link: "/CS/Algorithms" }
         ]
       },
       {
-        text: "精神分析",
-        link: "/Psychoanalysis/",
+        text: "心理学",
+        link: "/Psychology/",
         items: [
-          { text: "精神分析学导论", link: "/Psychoanalysis/Psych"}
+          { text: "精神分析学导论", link: "/Psychology/Psych"}
         ]
       }
     ],
@@ -62,13 +63,14 @@ module.exports = {
       {
         title: 'CS',
         children: [ 
-          '/CS/Casio.md'
+          '/CS/Casio.md',
+          '/CS/Algorithms.md'
         ],
       },
       {
-        title: 'Psychoanalysis',
+        title: '心理学',
         children: [ 
-          '/Psychoanalysis/Psych.md'
+          '/Psychology/Psych.md'
         ],
       }
     ]
