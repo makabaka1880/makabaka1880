@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-mathjax3": "^4.3.2",
     "vuepress": "^1.9.10"
   },
   "scripts": {

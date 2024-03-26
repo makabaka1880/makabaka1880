@@ -4,6 +4,10 @@ module.exports = {
   themeConfig: {
     logo: "https://img2.imgtp.com/2024/03/24/DUQvvzXV.png",
     displayAllHeaders: true,
+    extendsMarkdown: md => {
+      md.use(require('markdown-it-mathjax3'))
+      md.linkify.set({ fuzzyEmail: false })
+    },
     nav: [
       {
         text: "首页",
