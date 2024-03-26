@@ -17,9 +17,9 @@ actionLink: /CS/Casio
 
 <center>
 
+---
 
-
-你好陌生人～
+**你好陌生人:wave:～**
 
 我是一名普普通通的上海初中牲
 
