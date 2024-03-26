@@ -8,12 +8,17 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.21",
     "markdown-it": "^14.1.0",
+    "markdown-it-katex": "^2.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "vuepress": "^1.9.10"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "@mdit/plugin-katex": "^0.8.0"
   }
 }

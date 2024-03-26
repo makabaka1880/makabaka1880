@@ -1,13 +1,32 @@
 module.exports = {
+  plugins: [
+    '@vuepress/back-to-top',
+    'vuepress-plugin-janitor',
+    '@vuepress/container',
+  ],
+  markdown: {
+    extendMarkdown: md => {
+        md.set({
+            html: true
+        })
+        md.use(require('markdown-it-katex'))
+    }
+  },
+  head: [
+      ['link', {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css'
+      }],
+      ['link', {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css"
+      }]
+  ],
   title: 'Makabaka1880\'s Blog',
   description: '欢迎来到我的博客👏',
   themeConfig: {
     logo: "https://img2.imgtp.com/2024/03/24/DUQvvzXV.png",
     displayAllHeaders: true,
-    extendsMarkdown: md => {
-      md.use(require('markdown-it-mathjax3'))
-      md.linkify.set({ fuzzyEmail: false })
-    },
     nav: [
       {
         text: "首页",

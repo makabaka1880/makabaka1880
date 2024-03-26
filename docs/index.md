@@ -17,7 +17,7 @@ actionLink: /CS/Casio
 
 <center>
 
-$\sin \alpha + \sin \beta =2 \sin \frac{\alpha + \beta}{2}\cos \frac{\alpha - \beta}{2}$
+
 
 你好陌生人～
 

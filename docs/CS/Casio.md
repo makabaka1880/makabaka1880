@@ -1,9 +1,5 @@
 # CASIO fx991cn 常见炸机方法
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
-
 ## 0x00 引言
 作为一名长期和计算器打交道的中学生，难免会对计算器有一些好奇。在网上一番查找过后，我发现对于fx991cn可以算得上是计算器反向工程史上最牛逼的壮举了
 
