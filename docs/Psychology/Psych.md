@@ -5,6 +5,10 @@
 
 干脆就直接放出来给大家看看吧
 
+::: warning 温馨提示
+本笔记目前每日更新！我还在啃这本破书555
+:::
+
 ::: tip 线上游览
 <a href="https://makabaka1880.github.io/static/psych.html"> 戳我游览网页版 ⇨ </a>
 
