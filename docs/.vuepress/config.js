@@ -97,7 +97,8 @@ module.exports = {
           '/Psychology/Psych.md'
         ],
       }
-    ]
+    ],
+    lastUpdated: '上次更新', // string | boolean
   }
 
 }

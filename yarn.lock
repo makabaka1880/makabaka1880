@@ -10001,6 +10001,11 @@ vuepress-plugin-flowchart@^1.5.0:
   dependencies:
     flowchart.js "^1.11.3"
 
+vuepress-plugin-md-tags@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-md-tags/-/vuepress-plugin-md-tags-1.0.7.tgz#c1c22fde01c312f1483f56a363114ad0452e8586"
+  integrity sha512-Ii0qnZ2ncIMgo2AcSeZIwxsf7ay/8jQrU7ZGRoX2sfJ1Q3bgPMzW5MGZSV++dXvGaJko4HZt14v1eg+y460Ueg==
+
 vuepress-plugin-reading-time1@1.31.0-beta.1:
   version "1.31.0-beta.1"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-time1/-/vuepress-plugin-reading-time1-1.31.0-beta.1.tgz#fb54edea418678fbc5413a96c6d7a232f7588684"
