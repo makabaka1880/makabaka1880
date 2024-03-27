@@ -13,6 +13,13 @@ module.exports = {
     '@vuepress/back-to-top',
     '@vuepress/container',
     'vuepress-plugin-flowchart',
+    [
+      "md-enhance",
+      {
+        // 启用流程图
+        flowchart: true,
+      },
+    ],
   ],
   markdown: {
     extendMarkdown: md => {

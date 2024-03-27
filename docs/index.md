@@ -14,6 +14,9 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
+::: tip
+本次更新博客添加了评论功能 但可能需要登录
+:::
 
 <center>
 
@@ -28,4 +31,4 @@ actionLink: /CS/Casio
 
 之前一只找不到很好的整理方式，正好最近想整个博客，所以也就把所有东西搬上来了
 
-</center><Vssue />
+</center>

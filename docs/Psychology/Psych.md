@@ -24,6 +24,6 @@
 <a href="https://makabaka1880.github.io/static/psych.bear" download="Psychoanalysis-notes-bearnotes"> 戳我下载Bear Notes ⇩ </a>
 :::
 
+<iframe src="/static/psych.html" style="width: 100%; height: 400px; allowfullscreen: true"></iframe>
 
-
-<iframe src="/static/psych.html" style="width: 100%; height: 600px; allowfullscreen: true"></iframe>
+<Vssue/>
