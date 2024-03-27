@@ -16,7 +16,7 @@ module.exports = {
     [
       "music-bar",
       {
-        playList: ["Addio.mp3"]
+        playList: ["Addio.mp3"], firstClickPlay: true
       }
     ],
     ['fulltext-search'],
