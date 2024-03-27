@@ -7,6 +7,30 @@
 
 [[toc]]
 
+<div chembox>
+    <div chempart box2_2>O</div>
+        <hr singlebond>
+        <hr>
+        <hr>
+        <hr partialdoublebond>
+    <div chempart box3_1>C</div>
+        <hr>
+        <hr>
+        <hr doublebond>
+    <div chempart box4_2>C</div>
+        <hr singlebond>
+        <hr>
+        <hr>
+        <hr singlebond>
+    <div chempart box4_3>C</div>
+    <div chempart box3_4>C</div>
+        <hr triplebond>
+    <div chempart box2_3>N</div>
+        <hr>
+        <hr>
+        <hr singlebond>
+</div>
+
 
 ## 脑基础
 ### 大脑的结构 Brain Structure
@@ -102,3 +126,5 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ## 脑疾病
 ### 儿童障碍性疾病 Childhood Disorder
 ### 上瘾 Addiction
+
+<Vssue/>

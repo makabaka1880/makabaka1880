@@ -1,11 +1,19 @@
 module.exports = {
   plugins: [
-    '@vuepress/back-to-top',
-    'vuepress-plugin-janitor',
-    '@vuepress/container',
-    'vuepress-plugin-flowchart'
+    [
+      '@vssue/vuepress-plugin-vssue',
+      {
+      platform: 'github',
+      owner: 'makabaka1880',
+      repo: 'makabaka1880.github.io',
+      clientId: '71e3010f2012a5e26f29',
+      clientSecret: 'cb78aa8edf3233527277ed8e95c3fb942c9649b9',
+    }
   ],
-
+    '@vuepress/back-to-top',
+    '@vuepress/container',
+    'vuepress-plugin-flowchart',
+  ],
   markdown: {
     extendMarkdown: md => {
         md.set({
