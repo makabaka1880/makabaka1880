@@ -3,7 +3,9 @@ module.exports = {
     '@vuepress/back-to-top',
     'vuepress-plugin-janitor',
     '@vuepress/container',
+    'vuepress-plugin-flowchart'
   ],
+
   markdown: {
     extendMarkdown: md => {
         md.set({
@@ -48,6 +50,13 @@ module.exports = {
         link: "/Psychology/",
         items: [
           { text: "精神分析学导论", link: "/Psychology/Psych"}
+        ]
+      },
+      {
+        text: "自然科学",
+        link: "/Science/",
+        items: [
+          { text: "Brain Bee", link: "/Science/BrainBee/" }
         ]
       }
     ],
