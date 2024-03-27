@@ -3,16 +3,23 @@ module.exports = {
     [
       '@vssue/vuepress-plugin-vssue',
       {
-      platform: 'github',
-      owner: 'makabaka1880',
-      repo: 'makabaka1880.github.io',
-      clientId: '71e3010f2012a5e26f29',
-      clientSecret: 'cb78aa8edf3233527277ed8e95c3fb942c9649b9',
-    }
-  ],
-    '@vuepress/back-to-top',
+        platform: 'github',
+        owner: 'makabaka1880',
+        repo: 'makabaka1880.github.io',
+        clientId: '71e3010f2012a5e26f29',
+        clientSecret: 'cb78aa8edf3233527277ed8e95c3fb942c9649b9',
+      }
+    ],
+    ['@vuepress/back-to-top'],
     '@vuepress/container',
     'vuepress-plugin-flowchart',
+    [
+      "music-bar",
+      {
+        playList: ["Addio.mp3"]
+      }
+    ],
+    ['fulltext-search'],
     [
       "md-enhance",
       {
@@ -22,6 +29,7 @@ module.exports = {
     ],
   ],
   markdown: {
+    lineNumbers: true,
     extendMarkdown: md => {
         md.set({
             html: true
@@ -73,6 +81,10 @@ module.exports = {
         items: [
           { text: "Brain Bee", link: "/Science/BrainBee/" }
         ]
+      },
+      {
+        text: "杂类",
+        link: "/Miscellaneous/"
       }
     ],
     sidebar: [
@@ -96,6 +108,12 @@ module.exports = {
         children: [ 
           '/Psychology/Psych.md'
         ],
+      },
+      {
+        title: "杂类",
+        children: [
+          '/Miscellaneous/Keynote-deploy.md'
+        ]
       }
     ],
     lastUpdated: '上次更新', // string | boolean
