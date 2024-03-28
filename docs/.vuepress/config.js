@@ -14,17 +14,17 @@ module.exports = {
     ['@vuepress/back-to-top'],
     ['@vuepress/container'],
     ['autonav', true],
-    // [
-    //   'vuepress-plugin-graypage', {
-    //     // 是否开启控制台日志打印(default: false)
-    //     log: true,
-    //     // 月+日(哀悼日生效日期)
-    //     mournDay: ['3-28'],
-    //     // 年+月+日(哀悼日生效日期)
-    //     // 特殊的日期(例如：清明节等...建议使用默认即可)
-    //     special: ['banBenLongYi']
-    //   }
-    // ],
+    [
+      'vuepress-plugin-graypage', {
+        // 是否开启控制台日志打印(default: false)
+        log: true,
+        // 月+日(哀悼日生效日期)
+        mournDay: ['3-28'],
+        // 年+月+日(哀悼日生效日期)
+        // 特殊的日期(例如：清明节等...建议使用默认即可)
+        special: ['banBenLongYi']
+      }
+    ],
     ['vuepress-plugin-nprogress'],
     'vuepress-plugin-flowchart',
     [

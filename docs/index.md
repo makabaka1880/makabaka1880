@@ -21,12 +21,6 @@ actionLink: /CS/Casio
 <center>
 
 ---
-
-
-<Meting server="netease"
-        type="playlist"
-        mid="6838211960"
-        :lrc-type="3"/>
   
 **你好陌生人:wave:～**
 
