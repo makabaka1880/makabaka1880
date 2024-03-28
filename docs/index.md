@@ -23,6 +23,11 @@ actionLink: /CS/Casio
 ---
 
 
+<Meting server="netease"
+        type="playlist"
+        mid="6838211960"
+        :lrc-type="3"/>
+  
 **你好陌生人:wave:～**
 
 我是一名普普通通的上海初中牲
