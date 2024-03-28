@@ -14,7 +14,7 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: tip
+::: warning 默哀
 默哀[坂本龙一](https://baike.baidu.com/item/坂本龙一/4866102)(1952年1月17日-2023年3月28日)去世一周年
 :::
 

@@ -28,13 +28,6 @@
   dependencies:
     "@types/markdown-it" "^13.0.7"
 
-"@moefe/vue-aplayer@2.0.0-beta.5":
-  version "2.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@moefe/vue-aplayer/-/vue-aplayer-2.0.0-beta.5.tgz#f6bbd1802562e8e30ef9106192008a90bed2a354"
-  integrity sha512-ytzp4GStzjftuh7H1rIS/ziqwV1FO67iTLSkDxgN0J2bqlO+rBgDDr83Y+pZKBIgRUc30uu/UZHqmE4QiBHHeg==
-  dependencies:
-    vue "^2.5.17"
-
 "@moefy-canvas/core@^0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@moefy-canvas/core/-/core-0.5.2.tgz#fd3994025942e911a6dc94b85e564818ef202f7b"
@@ -918,11 +911,6 @@ highlight.js@^9.7.0:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
   integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
-howler@^2.1.3:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/howler/-/howler-2.2.4.tgz#bd3df4a4f68a0118a51e4bd84a2bfc2e93e6e5a1"
-  integrity sha512-iARIBPgcQrwtEr+tALF+rapJ8qSc+Set2GJQl7xT1MQzWaVkFebdJhR3alVlSiUf5U7nAANKuj3aWpwerocD5w==
-
 html-to-text@^7.0.0:
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/html-to-text/-/html-to-text-7.1.3.tgz#f1771801babac65c223d2b1be5b94b88f3c5f7c7"
@@ -1260,6 +1248,11 @@ nanoid@^3.3.7:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.7.tgz#d0c301a691bc8d54efa0a2226ccf3fe2fd656bd8"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
 
+neo-async@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+  integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
 node-fetch@^2.6.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
@@ -1408,6 +1401,13 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
+
+sass-loader@^14.1.1:
+  version "14.1.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-14.1.1.tgz#2c9d2277c5b1c5fe789cd0570c046d8ad23cb7ca"
+  integrity sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==
+  dependencies:
+    neo-async "^2.6.2"
 
 set-function-length@^1.2.1:
   version "1.2.2"
@@ -1592,7 +1592,7 @@ vue-property-decorator@^8.1.1:
   dependencies:
     vue-class-component "^7.1.0"
 
-vue@^2.5.17, vue@^2.6.10:
+vue@^2.6.10:
   version "2.7.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.7.16.tgz#98c60de9def99c0e3da8dae59b304ead43b967c9"
   integrity sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==
@@ -1691,21 +1691,6 @@ vuepress-plugin-helper-live2d@^1.0.2:
     chalk "^2.4.2"
     lodash "^4.17.15"
     openteam-postinstall "^1.0.2"
-
-vuepress-plugin-meting@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-meting/-/vuepress-plugin-meting-0.3.3.tgz#cc2900c996796afbeaac66fa258335fb9049a932"
-  integrity sha512-HTF5h4k8CuSgDSAFNBtfDE33bn5hap96C8h3owrQqKP639d5Bht6PvM34p8MMIzuVseHL2NDlHlKLLYPNzp31Q==
-  dependencies:
-    "@moefe/vue-aplayer" "2.0.0-beta.5"
-
-vuepress-plugin-music-bar@^3.7.6:
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-music-bar/-/vuepress-plugin-music-bar-3.7.6.tgz#121f13e4d1eac13b7ed5c5d02fe3156ecf4a2b67"
-  integrity sha512-juhBQlmIsJR85dkvzIOW8JyZ9Fr/f7eqhDAD5CC4kGoqN3EKRuv0FY48RXOgIc60oo2aPrllUrXxVRrIZpRjjw==
-  dependencies:
-    howler "^2.1.3"
-    node-fetch "^2.6.0"
 
 vuepress-plugin-nprogress@^1.1.8:
   version "1.1.8"
