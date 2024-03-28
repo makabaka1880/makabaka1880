@@ -1147,11 +1147,6 @@ markdown-it-meta@0.0.1:
   dependencies:
     js-yaml "^3.8.1"
 
-markdown-it-regexp@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-regexp/-/markdown-it-regexp-0.4.0.tgz#d64d713eecec55ce4cfdeb321750ecc099e2c2dc"
-  integrity sha512-0XQmr46K/rMKnI93Y3CLXsHj4jIioRETTAiVnJnjrZCEkGaDOmUxTbZj/aZ17G5NlRcVpWBYjqpwSlQ9lj+Kxw==
-
 markdown-it@^12.0.6:
   version "12.3.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
@@ -1681,13 +1676,6 @@ vuepress-plugin-fulltext-search@^2.2.1:
     html-to-text "^7.0.0"
     lodash "^4.17.19"
 
-vuepress-plugin-glossary@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-glossary/-/vuepress-plugin-glossary-1.0.2.tgz#621b2913857a68a93310a8f7a3b6343c082b5acd"
-  integrity sha512-hyP5UV2vBj9rsFK8GeVYjS+jEGFqOjFEAns0EG95pKqimZJMKzKn0RZ3hfcx4Ty1BhUW9//00KIRbqjxK6DweA==
-  dependencies:
-    markdown-it-regexp "^0.4.0"
-
 vuepress-plugin-go-top@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-go-top/-/vuepress-plugin-go-top-1.0.4.tgz#b2c359d85280e8737c65a43fde6e6d42953878af"
@@ -1699,11 +1687,6 @@ vuepress-plugin-graypage@^0.1.2:
   integrity sha512-ZARvX4tazHsdegQmbr+607Pos418luIa0WIquz/IHKo94BAmCeQ+lIeeOwstBbassslpsTiZTjYO74NeeWVvsA==
   dependencies:
     openteam-postinstall "^1.0.2"
-
-vuepress-plugin-graysite@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-graysite/-/vuepress-plugin-graysite-0.1.0.tgz#5d05df4f7ac13825a54a8b29b62630a1674330f3"
-  integrity sha512-tvO3OXNRtSce5MYQVgNo+CwIky55DTG4yhZc7l+clGmFqwUTRryzolEg1/QZb9zSWAjOsbvy2l4hW3muaqVJlA==
 
 vuepress-plugin-helper-live2d@^1.0.2:
   version "1.0.2"
