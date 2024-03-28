@@ -1,9 +1,3 @@
----
-terms:
-    person: "a human being"
-    dog: "a friend of :person:"
-    house: "a facility where :person:people: and :dog:dogs: can live in"
----
 # Brain Bee 脑科学竞赛笔记
 
 ::: warning
@@ -110,5 +104,4 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ### 儿童障碍性疾病 Childhood Disorder
 ### 上瘾 Addiction
 
-<Glossary :terms="$frontmatter.terms" />
 <Vssue/>
