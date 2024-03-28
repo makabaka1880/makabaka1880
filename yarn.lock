@@ -1676,12 +1676,10 @@ vuepress-plugin-go-top@^1.0.4:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-go-top/-/vuepress-plugin-go-top-1.0.4.tgz#b2c359d85280e8737c65a43fde6e6d42953878af"
   integrity sha512-VxYrZmvC9agXVOEzy1G7mJj23p17O7CVmcXhlaFtQ+J827OcIqNC1X646/gOI8Hfn8or17+J+8/Bg0ZSRyizEA==
 
-vuepress-plugin-graypage@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-graypage/-/vuepress-plugin-graypage-0.1.2.tgz#752d9ced1f3e5037bd2f13c3cece097f0455767a"
-  integrity sha512-ZARvX4tazHsdegQmbr+607Pos418luIa0WIquz/IHKo94BAmCeQ+lIeeOwstBbassslpsTiZTjYO74NeeWVvsA==
-  dependencies:
-    openteam-postinstall "^1.0.2"
+vuepress-plugin-graysite@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-graysite/-/vuepress-plugin-graysite-0.1.0.tgz#5d05df4f7ac13825a54a8b29b62630a1674330f3"
+  integrity sha512-tvO3OXNRtSce5MYQVgNo+CwIky55DTG4yhZc7l+clGmFqwUTRryzolEg1/QZb9zSWAjOsbvy2l4hW3muaqVJlA==
 
 vuepress-plugin-helper-live2d@^1.0.2:
   version "1.0.2"

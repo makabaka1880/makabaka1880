@@ -23,7 +23,7 @@
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "vuepress-plugin-flowchart": "^1.5.0",
     "vuepress-plugin-fulltext-search": "^2.2.1",
-    "vuepress-plugin-graypage": "^0.1.2",
+    "vuepress-plugin-graysite": "^0.1.0",
     "vuepress-plugin-nprogress": "^1.1.8",
     "vuepress-plugin-reading-time": "^0.1.1"
   },
