@@ -1,3 +1,9 @@
+---
+terms:
+    person: "a human being"
+    dog: "a friend of :person:"
+    house: "a facility where :person:people: and :dog:dogs: can live in"
+---
 # Brain Bee 脑科学竞赛笔记
 
 ::: warning
@@ -6,30 +12,6 @@
 **Table of Contents**
 
 [[toc]]
-
-<div chembox>
-    <div chempart box2_2>O</div>
-        <hr singlebond>
-        <hr>
-        <hr>
-        <hr partialdoublebond>
-    <div chempart box3_1>C</div>
-        <hr>
-        <hr>
-        <hr doublebond>
-    <div chempart box4_2>C</div>
-        <hr singlebond>
-        <hr>
-        <hr>
-        <hr singlebond>
-    <div chempart box4_3>C</div>
-    <div chempart box3_4>C</div>
-        <hr triplebond>
-    <div chempart box2_3>N</div>
-        <hr>
-        <hr>
-        <hr singlebond>
-</div>
 
 
 ## 脑基础
@@ -44,6 +26,7 @@
 额叶（Frontal Lobe）是脊椎动物的脑的一部分，位于脑的前半部（顶叶前方、颞叶上方），在人类大脑当中，比起其余脑中的“叶”，这是最大的一部分，而有些动物的脑几乎不存在额叶。
 
 这个结构和人类语语言的形成、语言表达（布洛卡区）、自主意识以及随意肌的控制有关。
+:person:
 :::
 - 管理
     - 行走等行为的运动皮质
@@ -127,4 +110,5 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ### 儿童障碍性疾病 Childhood Disorder
 ### 上瘾 Addiction
 
+<Glossary :terms="$frontmatter.terms" />
 <Vssue/>

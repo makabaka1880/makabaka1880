@@ -10,23 +10,46 @@ module.exports = {
         clientSecret: 'cb78aa8edf3233527277ed8e95c3fb942c9649b9',
       }
     ],
+    ['vuepress-plugin-reading-time'],
     ['@vuepress/back-to-top'],
-    '@vuepress/container',
-    'vuepress-plugin-flowchart',
+    ['@vuepress/container'],
+    ['autonav', true],
     [
-      "music-bar",
-      {
-        playList: ["Addio.mp3"], firstClickPlay: true
+      'vuepress-plugin-graypage', {
+        // 是否开启控制台日志打印(default: false)
+        log: true,
+        // 月+日(哀悼日生效日期)
+        mournDay: ['3-28'],
+        // 年+月+日(哀悼日生效日期)
+        // 特殊的日期(例如：清明节等...建议使用默认即可)
+        special: ['banBenLongYi']
       }
     ],
-    ['fulltext-search'],
+    ['vuepress-plugin-nprogress'],
+    'vuepress-plugin-flowchart',
     [
-      "md-enhance",
-      {
-        // 启用流程图
-        flowchart: true,
+      'sitemap', {
+        hostname: 'https://localhost:8080'
       },
     ],
+    [
+       'dynamic-title',
+       {
+          showIcon: '/favicon.ico',
+          showText: '(/≧▽≦/)咦！又好了！',
+          hideIcon: '/failure.ico',
+          hideText: '(●—●)喔哟，崩溃啦！',
+          recoverTime: 2000,
+       },
+    ],
+    ["vuepress-plugin-auto-sidebar", {}],
+    ['vuepress-plugin-glossary'],
+    ['fulltext-search'],
+    ['flowchart'],
+    ['@vuepress/active-header-links', {
+      sidebarLinkSelector: '.sidebar-link',
+      headerAnchorSelector: '.header-anchor'
+    }]
   ],
   markdown: {
     lineNumbers: true,
@@ -84,35 +107,9 @@ module.exports = {
       },
       {
         text: "杂类",
-        link: "/Miscellaneous/"
-      }
-    ],
-    sidebar: [
-      {
-        title: '首页',   // required
-        path: '/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        children: [
-          {title: "GitHub", path: "https://github.com/makabaka1880/makabaka1880.github.io"}
-        ]
-      },
-      {
-        title: 'CS',
-        children: [ 
-          '/CS/Casio.md',
-          '/CS/Algorithms.md'
-        ],
-      },
-      {
-        title: '心理学',
-        children: [ 
-          '/Psychology/Psych.md'
-        ],
-      },
-      {
-        title: "杂类",
-        children: [
-          '/Miscellaneous/Keynote-deploy.md'
+        link: "/Miscellaneous/",
+        items: [
+          { text: "部署线上Keynote", link: "/Miscellaneous/Keynote-deploy" }
         ]
       }
     ],
