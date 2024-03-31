@@ -9,14 +9,21 @@ features:
 - title: 精神分析学
   details: 我也是因为一些自身原因接触到心理学和精神病学的。当然我现在有这坨笔记也多亏了我当初脑抽选读了弗洛伊德的讲义
 - title: 自然科学
-  details: 包括物理, 化学, 生物, etc... 待完善
+  details: 最近搞生赛，资料也传上来了。全部笔记包括物理, 化学, 生物, etc... 待完善
 actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: warning 默哀
-默哀[坂本龙一](https://baike.baidu.com/item/坂本龙一/4866102)(1952年1月17日-2023年3月28日)去世一周年
+::: warning
+Brain Bee 笔记正在全力更新
+---
+Updated @ Mar 29
+- [精神病学](/Psychology/DSM-5) DSM-5
+- [脑科学](/Science/BrainBee/#大脑的结构-brain-structure) 大脑解剖学
 :::
+<!-- ::: warning 默哀
+默哀[坂本龙一](https://baike.baidu.com/item/坂本龙一/4866102)(1952年1月17日-2023年3月28日)去世一周年
+::: -->
 
 <center>
 

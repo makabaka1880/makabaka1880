@@ -22,27 +22,13 @@ module.exports = {
       },
     ],
     ['graysite',{
-      startDate: '2020-04-03 00:00:00',
-      endDate: '2025-04-04 23:59:59'
+      startDate: '2024-03-28 00:00:00',
+      endDate: '2024-03-28 23:59:59'
     }],
-    [
-       'dynamic-title',
-       {
-          showIcon: '/favicon.ico',
-          showText: '(/≧▽≦/)咦！又好了！',
-          hideIcon: '/failure.ico',
-          hideText: '(●—●)喔哟，崩溃啦！',
-          recoverTime: 2000,
-       },
-    ],
     ["vuepress-plugin-auto-sidebar", {}],
     ['vuepress-plugin-glossary'],
     ['fulltext-search'],
     ['flowchart'],
-    ['@vuepress/active-header-links', {
-      sidebarLinkSelector: '.sidebar-link',
-      headerAnchorSelector: '.header-anchor'
-    }]
   ],
   markdown: {
     lineNumbers: true,
@@ -88,7 +74,8 @@ module.exports = {
         text: "心理学",
         link: "/Psychology/",
         items: [
-          { text: "精神分析学导论", link: "/Psychology/Psych"}
+          { text: "精神分析学导论", link: "/Psychology/Psych"},
+          { text: "DSM-5", link: "/Psychology/DSM-5"}
         ]
       },
       {
