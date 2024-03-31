@@ -202,6 +202,35 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ### 神经元 Neuron
 #### 结构
 ### 神经递质 Neurotransmitter
+- 神经递质是否为兴奋/抑制取决于受体
+
+::: tip 肽键
+若基团$R_1$与$R_2$被肽键连接，则
+$$ R_1-CO-NH-R_2 $$
+:::
+::: tip 肽
+一串被肽键连在一起的氨基酸。也就是蛋白质片段。
+:::
+
+#### 乙酰胆碱
+$$ CH_3-COOCH_2-C-H_2N^+-(CH_3)_3 $$
+![](/static/brainbee/ACh.svg)
+
+::: tip Wikipedia
+中枢及周边神经系统中常见的神经传导物质，于自主神经系统及体运动神经系统中参与神经传导。乙酰胆碱由轴突末梢释出之后，会穿过突触间隙和突触后神经元或运动终板的细胞膜上之受体结合。
+:::
+
+- 平滑肌 兴奋
+- 心跳 抑制
+
+#### γ-氨基丁酸
+
+$$ COOH-3(CH_2)-NH_2 $$
+![](/static/brainbee/GABA.svg)
+::: tip Wikipedia
+GABA is the chief inhibitory neurotransmitter in the developmentally mature mammalian central nervous system.
+:::
+
 ### 神经之间的信息传递 Informatics
 ### 大脑的发育 Development
 ### 大脑可塑性 Plasticity
