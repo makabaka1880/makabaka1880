@@ -86,10 +86,18 @@ module.exports = {
         ]
       },
       {
+        text: "数学",
+        link: "/Math/",
+        items: [
+          { text: "博弈论", link: "/Math/GameTheory" }
+        ]
+      },
+      {
         text: "杂类",
         link: "/Miscellaneous/",
         items: [
-          { text: "部署线上Keynote", link: "/Miscellaneous/Keynote-deploy" }
+          { text: "部署线上Keynote", link: "/Miscellaneous/Keynote-deploy" },
+          { text: "书单", link: "/Miscellaneous/BookList" }
         ]
       }
     ],
