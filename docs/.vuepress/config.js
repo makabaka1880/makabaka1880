@@ -22,8 +22,8 @@ module.exports = {
       },
     ],
     ['graysite',{
-      startDate: '2024-03-28 00:00:00',
-      endDate: '2024-03-28 23:59:59'
+      startDate: '2024-04-04 00:00:00',
+      endDate: '2024-04-04 23:59:59'
     }],
     ["vuepress-plugin-auto-sidebar", {}],
     ['vuepress-plugin-glossary'],

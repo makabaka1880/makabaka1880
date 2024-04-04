@@ -24,6 +24,7 @@
     "vuepress-plugin-flowchart": "^1.5.0",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-plugin-graysite": "^0.1.0",
+    "vuepress-plugin-mindmap": "^0.2.5",
     "vuepress-plugin-nprogress": "^1.1.8",
     "vuepress-plugin-reading-time": "^0.1.1"
   },
@@ -36,6 +37,7 @@
     "vuepress-bar": "^0.4.5",
     "vuepress-plugin-auto-sidebar": "^2.3.2",
     "vuepress-plugin-go-top": "^1.0.4",
-    "vuepress-plugin-helper-live2d": "^1.0.2"
+    "vuepress-plugin-helper-live2d": "^1.0.2",
+    "vuepress-plugin-markmap": "^0.2.0"
   }
 }

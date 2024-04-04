@@ -21,9 +21,9 @@ Updated @ Mar 29
 - [精神病学](/Psychology/DSM-5) DSM-5
 - [脑科学](/Science/BrainBee/#大脑的结构-brain-structure) 大脑解剖学
 :::
-<!-- ::: warning 默哀
-默哀[坂本龙一](https://baike.baidu.com/item/坂本龙一/4866102)(1952年1月17日-2023年3月28日)去世一周年
-::: -->
+::: warning 默哀
+今天清明节 我也不知道该默哀谁 但我就觉得也不能浪费上次配置了半天的灰度插件
+:::
 
 <center>
 
