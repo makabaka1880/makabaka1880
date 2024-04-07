@@ -223,6 +223,43 @@ $$ CH_3-COOCH_2-C-H_2N^+-(CH_3)_3 $$
 - 平滑肌 兴奋
 - 心跳 抑制
 
+**受体**
+
+在骨骼肌中和N受体(烟碱型乙酰胆碱受体)结合
+::: tip Wikipedia
+**Nicotinic acetylcholine receptors**, or nAChRs, are receptor polypeptides that respond to the neurotransmitter acetylcholine. Nicotinic receptors also respond to drugs such as the agonist nicotine. They are found in the central and peripheral nervous system, muscle, and many other tissues of many organisms. At the neuromuscular junction they are the primary receptor in muscle for motor nerve-muscle communication that controls muscle contraction. In the peripheral nervous system: (1) they transmit outgoing signals from the presynaptic to the postsynaptic cells within the sympathetic and parasympathetic nervous system, and (2) they are the receptors found on skeletal muscle that receive acetylcholine released to signal for muscular contraction. In the immune system, nAChRs regulate inflammatory processes and signal through distinct intracellular pathways.[1] In insects, the cholinergic system is limited to the central nervous system.
+:::
+
+在平滑肌和M2受体(蕈毒碱型乙酰胆碱受体)结合
+::: tip Wikipedia
+Muscarinic acetylcholine receptors, or mAChRs, are acetylcholine receptors that form G protein-coupled receptor complexes in the cell membranes of certain neurons and other cells. They play several roles, including acting as the main end-receptor stimulated by acetylcholine released from postganglionic fibers in the parasympathetic nervous system.
+:::
+
+阿兹海默症的人群ACh水平普遍低下
+
+#### 多巴胺
+
+调节类神经递质，主要在中脑中分泌。掌管奖励系统
+- 控制动作
+- 保证清醒
+
+帕金森综合症人群普遍多巴胺水平低下
+精神分裂症人群多巴胺水平过高，导致幻觉
+
+#### 去甲肾上腺素
+从肾上腺中分泌
+- 加快心跳 **兴奋作用**
+- 减缓肠胃肌肉蠕动 **抑制作用**
+- 掌管唤醒
+交感神经系统中主要的神经递质
+和肾上腺素受体结合
+
+#### 肾上腺素
+- 掌管战逃反应 **兴奋作用**
+- 也是一种激素
+和肾上腺素受体结合
+
+
 #### γ-氨基丁酸
 
 $$ COOH-3(CH_2)-NH_2 $$
@@ -230,7 +267,42 @@ $$ COOH-3(CH_2)-NH_2 $$
 ::: tip Wikipedia
 GABA is the chief inhibitory neurotransmitter in the developmentally mature mammalian central nervous system.
 :::
+用于去除神经系统中的噪声 帮助睡眠
+低水平的GABA会导致失眠
 
+会被树突和轴突同时分泌
+
+由[谷氨酸](#谷氨酸)合成
+
+#### 血清素（5-羟色胺）
+大脑中主要的单胺类神经递质
+- 传输内脏感觉 **调节作用**
+低水平的血清素会导致
+- 脑雾
+- 神智不清
+
+普遍在抑郁/焦虑人群中血清素水平会很低
+
+
+#### 谷氨酸
+大脑中最多的氨基酸
+主要为兴奋神经递质
+
+和NMDA(N-甲基-D-天冬氨酸受体)受体或者AMPA(α-氨基-3-羟基-5-甲基-4-异恶唑丙酸)受体结合
+
+会直接影响神经可塑性,帮助学习
+
+#### 催产素
+加强母亲和孩子之间的情感纽带
+促进雌性哺乳动物分泌乳液
+在分娩时导致宫缩
+
+由海马体分泌, 作用于脑垂体
+
+#### 氧化氮
+$$NO$$
+脂溶性气体, 直接通过磷脂传播作用于细胞内分子
+和自己有关
 ### 神经之间的信息传递 Informatics
 ### 大脑的发育 Development
 ### 大脑可塑性 Plasticity
