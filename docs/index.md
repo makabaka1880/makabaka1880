@@ -17,9 +17,9 @@ actionLink: /CS/Casio
 ::: warning
 Brain Bee 笔记正在全力更新
 ---
-Updated @ Mar 29
-- [精神病学](/Psychology/DSM-5) DSM-5
-- [脑科学](/Science/BrainBee/#大脑的结构-brain-structure) 大脑解剖学
+Updated @ Apr 8
+- [脑科学](/Science/BrainBee/#神经递质) 添加了一些神经递质的东东
+- [博弈论](/Math/GameTheory) Daily Reading 笔记
 :::
 ::: warning 默哀
 今天清明节 我也不知道该默哀谁 但我就觉得也不能浪费上次配置了半天的灰度插件
@@ -34,7 +34,6 @@ Updated @ Mar 29
 我是一名普普通通的上海初中牲
 
 在学习各种奇奇怪怪的东西的时候也会时常有各类笔记
-$\ce{CO2 <==> C + O2}$
 之前一只找不到很好的整理方式，正好最近想整个博客，所以也就把所有东西搬上来了
 
 </center>
