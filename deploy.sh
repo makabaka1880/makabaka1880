@@ -6,7 +6,7 @@ set -e
 # # 生成静态文件
 # yarn docs:build
 
-cd ~/blog-archiac/blog
+cd ~/blog-archiac/
 # 生成静态文件
 yarn docs:build
 # 进入生成的文件夹
