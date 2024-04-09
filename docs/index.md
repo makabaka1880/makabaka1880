@@ -17,12 +17,8 @@ actionLink: /CS/Casio
 ::: warning
 Brain Bee 笔记正在全力更新
 ---
-Updated @ Apr 8
-- [脑科学](/Science/BrainBee/#神经递质) 添加了一些神经递质的东东
+Updated @ Apr 9
 - [博弈论](/Math/GameTheory) Daily Reading 笔记
-:::
-::: warning 默哀
-今天清明节 我也不知道该默哀谁 但我就觉得也不能浪费上次配置了半天的灰度插件
 :::
 
 <center>
