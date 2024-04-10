@@ -26,7 +26,7 @@ A probability space is a mathematical construct that formalizes the concept of a
 - 博弈方$-i$ 是博弈方$i$的竞争对手
 ## Chapter 2: Nash Equilibrium 
 P28\-
-### 2.1 Bayesian games
+### 2.1 Strategic Games
 ::: tip Definition 1.0
 A **Strategic Game** is a "model of interactive decivion making in which each descision-maker choose his plan of action once and for all, and these choices are made simultaneously." It is consisted of
 1. A finite set $N$ (the set of **players**)
@@ -291,8 +291,42 @@ This follows that if $v^*$, as defined in Proposition 5.3, is the value of a gam
 
 Sometimes, we wish to model situations in which some of the players are not certain of characteristic of other parties. The model of a Baysesian game, which is closely related to that of a strategic game, is designed for this purpose. Definition 1.2 is sort of like the strandard model.
 
-::: tip Definition 6.0
 A **Bayesian Game** is consisted of a set $N$ of players and a profile $(A_i)$ of actions. There are also a set $\Omega$ of possible "state of nature", each of which is a description of all the players’ relevant characteristics. For convenience we assume that $\Omega$ is finite. Each player $i$ has a *prior belief* about the stat of nature given by a probability measure $p_i$ on $\Omega$.$p_i(\omega)$ basicly just means the how much the player believes the situation $\omega$ is true. In any given play of the game some state of nature $\omega \in \Omega$ is realized. We model that players' information about the state of nature by a profile $(\tau_i)$ of *signal functions*, and $\tau_i(\omega)$ being the signal preceived by player i under the realization $\omega$. Let $T_i$ be the set of all possible values of $\tau_i$, and we refer to $T_i$ as the set of *types* of player i(This is just the collection of all possible state the player i thought the game is in). We assume $p_i(\tau^{-1}_i(t_i))$(The possibility the player $i$ think the state $t_i$ is true) $> 0$. The player isn't absolutely negative about anything. If player $i$ received the signal $t_i \in T_i$ the he deduces the the state is in the set $\tau_i^{-1}(t_i)$; the *posterior belief* about the state that has been realized assigns to each state $\omega \in \Omega$ the probability $\frac{p_i(\omega)}{p_i(\tau_i^{-1}(t_i))}$(How close is the player to the truth is, if you think about it, with $p_i(\omega)$ as the truth and $p_i(\tau^{-1}(t_i))$ what the player think is the truth) if $\omega \in \tau_i^{-1}(t_i)$ and the probability zero otherwise (i.e. the probability of $\omega$ conditional on $\tau^{-1}(t_i)$). As an example, if $\tau^{-1}(t_i) = \omega$ for all $\omega \in \Omega$ then player $i$ has full information about the state of nature. Alternatively, if $\Omega = \times_{i\in N}T_i$ and for each player $i$ the probability measure $p_i$ is a product measure on $\Omega$ and $\tau_i(\omega) = \omega_i$ then the players’ signals are independent and player $i$ does not learn from his signal anything about the other players’ information.
+
+::: tip Definition 6.0
+A **Bayesian game** consists of 
+- a finite set $N$ (the set of **players**)
+- a finite set $\Omega$ (the set of **states**)
+
+and $\forall i \in N$
+- a set $A_i$ (the set of **actions** available to player i)
+- a finite set $T_i$ (the set of **signals** that may be observed by the player)
+-  a function $\tau_i: \Omega \to T_i$ (the **signal function**, which is how a player observes a state $\Omega$)
+- a probability measure $p_i$ on $\Omega$ (the **prior belief** of player i) for which $p_i(\tau_i^{-1}(t_i)) > 0$ for all $t_i \in T_i$
+- a preference relation $\succsim_i$ on the set of probability measures over $A \times \Omega$ (the **preference relation** of player $i$), where $A = \times_{j\in N}{A_j}$
 :::
 
+This definition allows players to have different prior beliefs. It can be subjective, coincident with "an 'objective' measure", or identical. 
+
+This model is often used in a case where the state of nature is a profile of parameters of the players' preferences(ex, profiles of their valuations of an object). However, the model is much more general then this. Ex, we can consider its use to capture situations where players are uncertain about the information others know.
+
+Note that sometimes(like in previous chapters) a Bayesian game is described not in terms of an underlying state space $\Omega$, but as a *reduced form* where the basic primitives that relates to the player's information is the profile of the set of possible types.
+
+Now let's turn to the defifinition of equilibrium for a Bayesian game. In our situation, the player knows his types; he does not need to plan for steps to take in other types. One might think that the definition for a Nash equilibrium in any given game should be defined for each state of nature in isolation, but "however, in any given state a player who wishes to determine his best action may need to hold a belief about what the other players would do in other states, since he may be imperfectly informed about the state. Further, the formation of such a belief may depend on the action that the player himself would choose in other states, since the other players may also be imperfectly informed."
+
+Now we led to define a Nash equilibrium of a Baysesian game $\langle N, \Omega, (A_i), (T_i), (\tau_i), (p_i), (\succsim_i)\rangle$ to be a Nash equilibrium of the strategic game $G^*$ in which for each $i \in N$ and each possible signal $t_i \in T_i$ there is a player, whom we refer to as $(i, t_i)$("type $t_i$ of player $i$"). The set of actions for $(i, t_i)$ is $A_i$, and thus the set of action profiles in $G^*$ is $\times_{j \in N}{(\times_{t_j\in T_j}{A_j})}$. The preferences of each player $(i, t_i)$ are defined as follows:
+
+- The posterior belief of player $i$, together with an action profile $a^*$ in $G^*$ , generates a lottery $L_i(a^*, t_i)$ over $A \times \Omega$. 
+- The probability assigned by $L_i(a^*, t_i) \mapsto ((a^*(j, \tau_i(\omega)))_{j\in N}, \omega)$ is the player's posterior belief that the state is $\omega$ when he recieves the signal $t_i(a^*(j, \tau_j(\omega)))$ being the action of player $(j, \tau_j(\omega))$ in the profile $a^*$.
+- Player $(i, t_i)$ in $G^*$ prefers the action $a^*$ to the action profile $b^*$ if and only if player $i$ in the game $G^*$ prefers the lottery $L_i(a^*, t_i)$ to the lottery $L_i(b^*, t_i)$.
+
+To put it together, we have
+::: tip Definition 6.1
+A **Nash equilibrium of a Baysesian game $G = \langle N, \Omega, (A_i), (T_i), (\tau_i), (p_i), (\succsim_i)\rangle$** is a Nash equilibrium of the strategic game $G^*$ defined as following:
+- The set of players is the set of all pairs $(i, t_i)$ for $i \in N$ and $t_i \in T_i$.
+- The set of actions of each player $(i, t_i)$ is $A_i$
+The preference relation $\succsim^*_{(i, t_i)}$ of each player $(i, t_i)$ is defined by 
+$$a^* \succsim^*_{(i, t_i)} b^*  \longleftrightarrow L_i(a^*, t_i) \succsim^*_{(i, t_i)} L_i(b^*, t_i)$$
+where $L_i(a^*, t_i)$ is the lottery over $A \times \Omega$ that assigns Bayes factor $\frac{p_i(\omega)}{p_i(\tau_i^{-1}(t_i))}$ to $((a^*(j, \tau_j(\omega)))_{j\in N}, \omega)$ if $\omega \in \tau_i^{-1}(t_i)$, $0$ otherwise.
+:::
 <Vssue/>

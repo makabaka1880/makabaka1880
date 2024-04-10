@@ -93,9 +93,10 @@ module.exports = {
         ]
       },
       {
-        text: "杂类",
+        text: "杂谈",
         link: "/Miscellaneous/",
         items: [
+          { text: "全部", link: "/Miscellaneous/" },
           { text: "部署线上Keynote", link: "/Miscellaneous/Keynote-deploy" },
           { text: "书单", link: "/Miscellaneous/BookList" }
         ]
