@@ -1,6 +1,11 @@
 # 博弈论笔记
 这个也是我的英文阅读笔记
 
+::: warning Updated @ Apr 10
+Changelog
+---
+- **Daily note update** [Baysesian games](#26-bayesian-games-strategic-games-with-imperfect-information)
+:::
 [[toc]]
 
 ## Chapter 1: 符号标记

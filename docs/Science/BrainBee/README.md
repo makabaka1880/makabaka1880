@@ -1,11 +1,9 @@
 # Brain Bee 脑科学竞赛笔记
 
-::: warning
-笔记仍在完善
+::: warning Updated @ Apr 10
+Changelog
 ---
-**Updated @ March 29**
-- 完善了[大脑解剖学](#大脑的结构-brain-structure)
-- 添加了[精神病学](#精神疾病-psychiatric-disorder)部分内容
+- 完善了[神经递质](#神经递质-neurotransmitter)
 :::
 **Table of Contents**
 

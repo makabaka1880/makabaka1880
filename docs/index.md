@@ -14,11 +14,10 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: warning
-Brain Bee 笔记正在全力更新
+::: warning Updated @ Apr 9
+Changelog
 ---
-Updated @ Apr 9
-- [博弈论](/Math/GameTheory) Daily Reading 笔记
+- [博弈论](/Math/GameTheory/) Daily Reading 笔记
 :::
 
 <center>
