@@ -1,4 +1,11 @@
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@bb': '/static/brainbee/'
+      }
+    }
+  },
   plugins: [
     [
       '@vssue/vuepress-plugin-vssue',
@@ -29,6 +36,13 @@ module.exports = {
     ['vuepress-plugin-glossary'],
     ['fulltext-search'],
     ['flowchart'],
+    ['@snowdog/vuepress-plugin-pdf-export',
+    {
+      fileName: 'document.pdf',
+      pageSize: 'A4',
+      margin: '1cm',
+      printBackground: true
+    }],
   ],
   markdown: {
     lineNumbers: true,

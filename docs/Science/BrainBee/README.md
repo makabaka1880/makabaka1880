@@ -1,6 +1,6 @@
 # Brain Bee 脑科学竞赛笔记
 
-::: warning Updated @ Apr 10
+::: warning Updated @ Apr 11
 Changelog
 ---
 - 完善了[神经递质](#神经递质-neurotransmitter)
@@ -200,6 +200,72 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ### 神经元 Neuron
 #### 结构
 ### 神经递质 Neurotransmitter
+
+神经递质主要分为一下类型:
+<table>
+<thead>
+  <tr>
+    <th>氨基酸</th>
+    <th>单胺类</th>
+    <th>神经肽</th>
+    <th>其他</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+        <a href="#γ-氨基丁酸">
+            <img src="/static/brainbee/GABA.svg" height="100px"/> <br/>
+            GABA
+        </a>
+    </td>
+    <td>
+        <a href="#多巴胺">
+            <img src="/static/brainbee/Dopamine.svg" height="100px"/> <br/>
+            多巴胺
+        </a>
+    </td>
+    <td>
+        <a href="#内啡肽">
+            <img src="/static/brainbee/alpha-endorphin.gif"/> <br/>
+            内啡肽(图为alpha-内啡肽)
+        </a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+        <a href="#谷氨酸">
+            <img src="/static/brainbee/L-Glutamic-Acid.svg" height="100px"/> <br/>
+            谷氨酸
+        </a>
+    </td>
+    <td>
+        <a href="#血清素">
+            <img src="/static/brainbee/Dopamine.svg" height="100px"/> <br/>
+            血清素
+        </a>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+        <a href="#甘氨酸">
+            <img src="/static/brainbee/Glycin.svg" height="100px"/> <br/>
+            甘氨酸
+        </a>
+    </td>
+        <a href="#去甲肾上腺素">
+            <img src="/static/brainbee/Norepinephrine.svg" height="100px"/> <br/>
+            去甲肾上腺素
+        </a>
+    <td>
+    </td>
+  </tr>
+</tbody>
+</table>
+
 - 神经递质是否为兴奋/抑制取决于受体
 
 ::: tip 肽键
@@ -253,6 +319,7 @@ Muscarinic acetylcholine receptors, or mAChRs, are acetylcholine receptors that 
 和肾上腺素受体结合
 
 #### 肾上腺素
+
 - 掌管战逃反应 **兴奋作用**
 - 也是一种激素
 和肾上腺素受体结合
@@ -272,7 +339,9 @@ GABA is the chief inhibitory neurotransmitter in the developmentally mature mamm
 
 由[谷氨酸](#谷氨酸)合成
 
-#### 血清素（5-羟色胺）
+#### 血清素
+又名5-羟色胺
+![Serotonin](/static/brainbee/Serotonin.svg)
 大脑中主要的单胺类神经递质
 - 传输内脏感觉 **调节作用**
 低水平的血清素会导致
@@ -282,7 +351,17 @@ GABA is the chief inhibitory neurotransmitter in the developmentally mature mamm
 普遍在抑郁/焦虑人群中血清素水平会很低
 
 
+#### 甘氨酸
+![Glycerin](/static/BrainBee/Glycin.svg)
+$$ H_2N - CH_2 - COOH$$
+
+- 在CNS中是**抑制**神经递质
+- 假如甘氨酸受体被激活，**$Cl^-$**通过离子接受器进入神经细胞导致**抑制性突触后电位**
+- 和[谷氨酸](#谷氨酸)一样的是激动剂
+
 #### 谷氨酸
+![Glutamatic Acid](/static/BrainBee/L-Glutamic-Acid.svg)
+
 大脑中最多的氨基酸
 主要为兴奋神经递质
 
@@ -290,17 +369,49 @@ GABA is the chief inhibitory neurotransmitter in the developmentally mature mamm
 
 会直接影响神经可塑性,帮助学习
 
+
 #### 催产素
+这这这 结构简式写不下啊(悲
+![Oxytocin](/static/brainbee/Oxytocin.png)
 加强母亲和孩子之间的情感纽带
 促进雌性哺乳动物分泌乳液
 在分娩时导致宫缩
 
 由海马体分泌, 作用于脑垂体
 
+#### 内啡肽
+内啡肽是一类复杂的肽, 包括Alpha, Beta, Gamma, Delta四类
+
+##### α内啡肽
+![Alpha](/static/brainbee/alpha-endorphin.gif)
+- 由脑下垂体前叶的POMC（POMC，Proopiomelanocortin）前体蛋白通过酶切产生
+::: tip Chem-BK
+α-内啡肽具有一些重要的生理作用。它是内啡肽家族中最强的镇痛剂之一，可与$\mu-$、$\kappa-$ 和$\delta-$阿片受体结合，发挥镇痛作用。α-内啡肽还具有抗炎、抗压力和调节情绪的作用，能够提高人体的耐力和免疫功能。
+:::
+
+##### β内啡肽
+![Beta](/static/brainbee/beta-endorphin.png)
+- 1977年从人体的垂体组织中发现
+::: tip 百度百科
+已在神经系统、内分泌器官、消化道以及胎盘和羊水中均有$\beta$-内啡肽及其前体蛋白存在。它具有很强的镇痛效应;能促进生长素、催乳素、生长抑素和胰高血糖素的释放等;应激时$\beta$-内啡肽释放增多;可能是某些精神病发病的原因之一;其含量增高可促进脑缺血性脑水肿的形成;有抑制呼吸运动的频率和幅度的作用，并有报道认为它可能是肾脏的一种营养激素;对动物摄食行为有促进作用;与体温调节有关，并可视为免疫反应的生理调节因子，在中枢神经与免疫系统间起着体液传递介质的作用。
+:::
+
+##### γ内啡肽
+![gamma](/static/brainbee/gamma-endorphin.svg)
+- 前十六个氨基酸和[$\alpha$-内啡肽](#α内啡肽)相同, 前十七个氨基酸和[$\beta$-内啡肽](#β内啡肽)相同
+- 由脑垂体分泌
+::: tip Wikipedia
+Similar to other endorphins, research focusing upon γ-endorphin has been ongoing since its discovery in the 1970s. Yet, most of the information about the substance's exact role within the body is speculation that has yet to be proven. Some studies have indicated, however, that the polypeptide has antipsychotic effects on a certain category of patients with schizophrenia, while others suggest that γ-endorphin may act to help regulate blood pressure. Further research is needed, but if γ-endorphin does indeed possess such characteristics, the substance could eventually be utilized as a useful means of medical treatment.
+:::
+
+##### δ内啡肽
+- 
 #### 氧化氮
 $$NO$$
 脂溶性气体, 直接通过磷脂传播作用于细胞内分子
 和自己有关
+
+
 ### 神经之间的信息传递 Informatics
 ### 大脑的发育 Development
 ### 大脑可塑性 Plasticity

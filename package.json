@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@snowdog/vuepress-plugin-pdf-export": "^1.1.0",
     "@vssue/api-github-v3": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "@vuepress/plugin-active-header-links": "^1.9.10",
