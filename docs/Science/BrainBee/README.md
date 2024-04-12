@@ -1,9 +1,12 @@
 # Brain Bee 脑科学竞赛笔记
-
-::: warning Updated @ Apr 11
+::: danger 
+各位各位 文章中的有些链接是Wikipedia上的 需要魔法才能打开
+:::
+::: warning Updated @ Apr 12
 Changelog
 ---
 - 完善了[神经递质](#神经递质-neurotransmitter)
+- 完善了[神经元](#神经元-neuron)
 :::
 **Table of Contents**
 
@@ -194,11 +197,97 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 #### 边缘叶 Limbic Lobe
 边缘皮层是大脑很重要的一个区域。
 ::: tip Wikipedia
-边缘皮层是哺乳动物大脑半球内侧面的一处弧状大脑皮层，也包含了额叶、顶叶和颞叶的部分区域[1][2]。边缘叶是边缘系统的主要部分，最初由法国科学家保罗·布罗卡于1878年命名
+边缘皮层是哺乳动物大脑半球内侧面的一处弧状大脑皮层，也包含了额叶、顶叶和颞叶的部分区域[1][2]。边缘叶是边缘系统的主要部ss分，最初由法国科学家保罗·布罗卡于1878年命名
 :::
 
 ### 神经元 Neuron
+
 #### 结构
+<center><img src="/static/brainbee/bb-anatomy-Neuron-1.png"/></center>
+
+| **A** | **B** | **C** | **D** | **E** | **F** |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 细胞核 Nuclues | [细胞体 Soma](#细胞体) | [树突 Dendrites](#树突) | [轴突 Axon](#轴突) | [髓鞘 Myelin](#髓鞘) | [突触 Synapse](#突触) |
+| 包含遗传物质 | 包括细胞器, 支撑细胞 | 接受动作电位 | 发出动作电位 | 传播动作电位 | 与其他神经元沟通 |
+
+#### 细胞体
+::: tip Wikipedia
+In cellular neuroscience, the **soma** (pl.: somata or somas; from Greek σῶμα (sôma) 'body'), perikaryon (pl.: perikarya), neurocyton, or cell body is the bulbous, non-process portion of a neuron or other brain cell type, containing the cell nucleus.
+:::
+- 也创造了细胞运作所需的电位
+#### 树突
+::: tip Wikipedia
+A **dendrite** (from Greek δένδρον déndron, "tree") or dendron is a branched protoplasmic extension of a nerve cell that propagates the electrochemical stimulation received from other neural cells to the cell body, or soma, of the neuron from which the dendrites project. Electrical stimulation is transmitted onto dendrites by upstream neurons (usually via their axons) via synapses which are located at various points throughout the dendritic tree.
+:::
+- 获取来自其他神经元的动作电位
+- 直接连接[突触](#突触)
+
+#### 轴突
+::: tip Wikipedia
+An **axon** (from Greek ἄξων áxōn, axis) or nerve fiber (or nerve fibre: see spelling differences) is a long, slender projection of a nerve cell, or neuron, in vertebrates, that typically conducts electrical impulses known as action potentials away from the nerve cell body. The function of the axon is to transmit information to different neurons, muscles, and glands. In certain sensory neurons (pseudounipolar neurons), such as those for touch and warmth, the axons are called afferent nerve fibers and the electrical impulse travels along these from the periphery to the cell body and from the cell body to the spinal cord along another branch of the same axon.
+:::
+
+#### 髓鞘
+::: tip Wikipedia
+**Myelin** (/ˈmaɪ.əlɪn/ MY-ə-lin) is a lipid-rich material that surrounds nerve cell axons (the nervous system's electrical wires) to insulate them and increase the rate at which electrical impulses (called action potentials) pass along the axon.[1][2] The myelinated axon can be likened to an electrical wire (the axon) with insulating material (myelin) around it. However, unlike the plastic covering on an electrical wire, myelin does not form a single long sheath over the entire length of the axon. Rather, myelin ensheaths the axon segmentally: in general, each axon is encased in multiple long sheaths with short gaps between, called nodes of Ranvier. At the nodes of Ranvier, which are approximately one thousandth of a mm in length, the axon's membrane is bare of myelin.
+:::
+- 包裹着[轴突](#轴突)
+- 每一段距离会有一个兰氏结(Node of Ranvier), 大概长度为$10^{-3} \text{mm}$
+
+#### 突触
+<center><img src="/static/brainbee/bb-anatomy-synapses.png"/></center>
+
+| 编号 | 名称 | 功能(带*表示与神经科学无关) |
+| -- | -- | -- |
+| **A** | 线粒体 Mitochondria | 提供能量 |
+| **B** | 激酶 Kinase | [戳我*](https://en.wikipedia.org/wiki/Kinase) |
+| **C** | 突触小泡 | 携带/重摄取神经递质 |
+| **D** | $\text{Ca}^+$通道 | 控制神经递质的释放 详情[戳我](https://www.zhihu.com/question/652736672/answer/3463851165) |
+| **E** | 受体 Receptor | 与[神经递质](#神经递质-neurotransmitter)结合 |
+| **F** | ER内质网 | [戳我*](https://en.wikipedia.org/wiki/Endoplasmic_reticulum)
+| **G** | 活跃区 Active Zone | 释放神经递质的地方 |
+| **H** | 突触后致密区 PSD | 突触后膜胞质面聚集的一层均匀而致密的物质 细胞支架特化结构 |
+| **I** | ??? Reserve Receptors | 我也不清楚🤷但貌似是备用的受体?
+
+
+#### 电位
+::: warning
+申明
+---
+下面的图都是因为我找不到合适的图自己画的 真的很累 要用记得表明出处 谢谢啦
+:::
+首先先来一些术语
+- **电势(电压)** 电荷之间形成的势能, 记作$V$. 神经科学里可以想作细胞膜外离子和膜内形成的势能
+- **电流** 电荷的流动, 记作$I$. 神经科学里可以想作离子的流动
+- **电阻** 妨碍电流的任何东西, 记作$R$. 神经科学里可以想作细胞膜对于离子流动的阻碍性能
+::: tip 欧姆定律
+$$ U = IR$$
+:::
+
+然后就是动作电位的形成过程了(以下所有电势都是内部相对外部的)
+- **静息电位 Resting Membrane Potential** 约为 -70 mV, 由Na离子与蛋白质形成
+- 这种状态下, 神经元被称为极化(polarized)
+<center><img src="/static/brainbee/Neuron-BeforeAction.png"/></center>
+
+- 钠-钾泵分布在细胞的磷脂层上
+- 对于每三个送出胞外的Na$^+会往胞内内输送两个$K$^+$离子, 以保证电化学梯度Electrochemical Gradient
+
+<center><img src="/static/brainbee/Neuron-NaK-Pump.png"/></center>
+
+- 神经元的细胞膜上还分布着离子通道
+<center><img src="/static/brainbee/Neuron-IonChannel.png"/></center>
+
+- 有不同种类的离子通道
+    - **电压门控通道 Voltage-Gated Channels** 比如钠通道, 会在大概 -15mV的电势的时候打开
+    - **配体门控通道 Ligand-Gated Channels** 比如乙酰胆碱受体通道, 在和乙酰胆碱配对后打开
+    - **机械门控通道 Mechanically-Gated Channels** 比如压力感受性钠离子通道, 当细胞膜因为梯度导致的应力被撑开, 这玩意也会被拉开
+<center><img src="/static/brainbee/Neuron-Channels.png"/></center>
+
+- 电位分为
+    - *左边* 分级电位 没啥用
+    - *右边* 动作电位 会传给下一个神经元
+<center><img src="/static/brainbee/Neuron-Potentials.png"/></center>
+
 ### 神经递质 Neurotransmitter
 
 神经递质主要分为一下类型:

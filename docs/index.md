@@ -14,10 +14,12 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: warning Updated @ Apr 11
+::: warning Updated @ Apr 12
 Changelog
 ---
-- [脑科学](/Science/BrainBee/#脑基础)
+- [脑科学](/Science/BrainBee/)
+  - 完善了[神经递质](#神经递质-neurotransmitter)
+  - 完善了[神经元](#神经元-neuron)
 :::
 
 <center>
