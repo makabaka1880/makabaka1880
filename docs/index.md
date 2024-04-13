@@ -17,6 +17,7 @@ actionLink: /CS/Casio
 ::: warning Updated @ Apr 13
 Changelog
 ---
+- **把Brain Bee这个B东西考完了**
 - **UI**
   - 将`NavBar`中的`首页`更名为`其他账号`
   - 在`NavBar`中`其他账号`下添加了`知乎`账号[主页连接](https://www.zhihu.com/people/makabaka1880)
