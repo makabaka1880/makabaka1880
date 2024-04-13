@@ -1,12 +1,14 @@
 # Brain Bee 脑科学竞赛笔记
+::: tip
+考完试啦! 笔记可能暂停更新了
+:::
 ::: danger 
 各位各位 文章中的有些链接是Wikipedia上的 需要魔法才能打开
 :::
-::: warning Updated @ Apr 12
+::: warning Updated @ Apr 13
 Changelog
 ---
-- 完善了[神经递质](#神经递质-neurotransmitter)
-- 完善了[神经元](#神经元-neuron)
+- 完善了[Brodmann 分区](#大脑皮层分区)
 :::
 **Table of Contents**
 
@@ -24,7 +26,7 @@ Changelog
 ![Brain](/static/brainbee/bb-anatomy-motorcortex.png)
 
 **Brodmmans分区**
-
+![Brodmann](/static/brainbee/bb-anatomy-brodmann-areas-map.png)
 ::: details Brodmmans分区
 | Brodmann areas | Name                                                 | 中文名           | Function                                            |
 |----------------|------------------------------------------------------|------------------|-----------------------------------------------------|
@@ -252,8 +254,6 @@ An **axon** (from Greek ἄξων áxōn, axis) or nerve fiber (or nerve fibre: 
 
 #### 电位
 ::: warning
-申明
----
 下面的图都是因为我找不到合适的图自己画的 真的很累 要用记得表明出处 谢谢啦
 :::
 首先先来一些术语
@@ -278,7 +278,7 @@ $$ U = IR$$
 <center><img src="/static/brainbee/Neuron-IonChannel.png"/></center>
 
 - 有不同种类的离子通道
-    - **电压门控通道 Voltage-Gated Channels** 比如钠通道, 会在大概 -15mV的电势的时候打开
+    - **电压门控通道 Voltage-Gated Channels** 比如钠通道, 会在大概 -55mV的电势的时候打开
     - **配体门控通道 Ligand-Gated Channels** 比如乙酰胆碱受体通道, 在和乙酰胆碱配对后打开
     - **机械门控通道 Mechanically-Gated Channels** 比如压力感受性钠离子通道, 当细胞膜因为梯度导致的应力被撑开, 这玩意也会被拉开
 <center><img src="/static/brainbee/Neuron-Channels.png"/></center>
@@ -287,6 +287,7 @@ $$ U = IR$$
     - *左边* 分级电位 没啥用
     - *右边* 动作电位 会传给下一个神经元
 <center><img src="/static/brainbee/Neuron-Potentials.png"/></center>
+
 
 ### 神经递质 Neurotransmitter
 
