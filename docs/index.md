@@ -14,15 +14,10 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: warning Updated @ Apr 13
+::: warning Updated @ Apr 14
 Changelog
 ---
-- **把Brain Bee这个B东西考完了**
-- **UI**
-  - 将`NavBar`中的`首页`更名为`其他账号`
-  - 在`NavBar`中`其他账号`下添加了`知乎`账号[主页连接](https://www.zhihu.com/people/makabaka1880)
-- [脑科学](/Science/BrainBee/)
-  - 完善了[Brodmann 分区](#大脑皮层分区)
+- **把Brain Bee这个\*\*\*\*\*\*考完了 🍾🍾🍾🎉🎉🎉**
 :::
 
 <center>
