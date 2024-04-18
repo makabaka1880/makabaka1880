@@ -73,7 +73,7 @@ vim.cmd.colorscheme "catppuccin"
 此时再进入`neovim`，就可以了
 
 如图，这应该是完成后配置文件的样子
-![](https://pic.imgdb.cn/item/662159810ea9cb1403f7f424.png)
+![Image](https://pic.imgdb.cn/item/662159810ea9cb1403f7f424.png)
 
 其他插件可以自行在他们的README里寻找安装方法
 
