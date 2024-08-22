@@ -38,6 +38,7 @@
   "dependencies": {
     "@mdit/plugin-katex": "^0.8.0",
     "@vuepress/shared-utils": "^1.9.10",
+    "markdown-it-emoji": "^3.0.0",
     "vuepress-bar": "^0.4.5",
     "vuepress-plugin-auto-sidebar": "^2.3.2",
     "vuepress-plugin-go-top": "^1.0.4",
