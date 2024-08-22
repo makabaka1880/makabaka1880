@@ -1959,13 +1959,6 @@ flexsearch@^0.6.32:
   resolved "https://registry.yarnpkg.com/flexsearch/-/flexsearch-0.6.32.tgz#1e20684d317af65baa445cdd9864a5f5b320f510"
   integrity sha512-EF1BWkhwoeLtbIlDbY/vDSLBen/E5l/f1Vg7iX5CDymQCamcx1vhlc3tIZxIDplPjgi0jhG37c67idFbjg+v+Q==
 
-flowchart.js@^1.11.3:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/flowchart.js/-/flowchart.js-1.18.0.tgz#237b0823fc0060c11e2325f994d89602b6bb8860"
-  integrity sha512-1rZflSLyrj5/+ryzU+qIQr6IGysPIHT4UrgN+6IaVv7pLDSLu7CvC9e0X7FU6ocpRAEtHk5+UaFXv9NZKRoG3g==
-  dependencies:
-    raphael "2.3.0"
-
 flowchart.ts@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/flowchart.ts/-/flowchart.ts-3.0.0.tgz#9beb2474e879fa1b6dd37c1ea2d050808e0e5818"
@@ -2647,11 +2640,6 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-emoji@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-3.0.0.tgz#8475a04d671d7c93f931b76fb90c582768b7f0b5"
-  integrity sha512-+rUD93bXHubA4arpEZO3q80so0qgoFJEKRkRbjKX8RTdca89v2kfyF+xR3i2sQTwql9tpPZPOQN5B+PunspXRg==
-
 markdown-it-katex@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/markdown-it-katex/-/markdown-it-katex-2.0.3.tgz#d7b86a1aea0b9d6496fab4e7919a18fdef589c39"
@@ -3199,7 +3187,7 @@ qs@^6.6.0:
   dependencies:
     side-channel "^1.0.6"
 
-raphael@2.3.0, raphael@^2.3.0:
+raphael@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/raphael/-/raphael-2.3.0.tgz#eabeb09dba861a1d4cee077eaafb8c53f3131f89"
   integrity sha512-w2yIenZAQnp257XUWGni4bLMVxpUpcIl7qgxEgDIXtmSypYtlNxfXWpOBxs7LBTps5sDwhRnrToJrMUrivqNTQ==
@@ -3877,13 +3865,6 @@ vuepress-plugin-dynamic-title@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-dynamic-title/-/vuepress-plugin-dynamic-title-1.0.0.tgz#867e7a8b821ad35ccfaaafc2358bc129817d422f"
   integrity sha512-CN1wtkPNG3shGzEFgqOa2dzojSle7SeAaf+Cw77Xmkv8jvB3wO5r2zXkIHTjiclQY1c5q5lE8h2A9vQaLdor2Q==
-
-vuepress-plugin-flowchart@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-flowchart/-/vuepress-plugin-flowchart-1.5.0.tgz#42342767e643e5f9d56ae2e68f5d306224a717b4"
-  integrity sha512-mmLstal1v/S2h22wBYR51XIweqR2AMbQ+kDO44GswqtVfXODhfJLZX2D2oPwnx6x0lRMRkbnKUE8OVllcCizvg==
-  dependencies:
-    flowchart.js "^1.11.3"
 
 vuepress-plugin-fulltext-search@^2.2.1:
   version "2.2.1"
