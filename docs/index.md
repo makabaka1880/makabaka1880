@@ -14,14 +14,10 @@ actionText: 计算机科学 · 卡西欧炸机记 →
 actionLink: /CS/Casio
 ---
 
-::: warning 全站通知
-最近可能博客更新不会很快 哮喘+肺炎直接血氧89心率145干进抢救室了（悲
-:::
-
-::: warning Updated @ Mar 11
+::: warning Updated @ Aug 22
 Changelog
 ---
-- **Daily note update** 
+我回来啦！！！！
 :::
 
 <center>
