@@ -1,0 +1,163 @@
+# Blender仿真
+众所周知，blender是一款十分优秀的3D影视建模软件。但同时，由于其开源及优秀的拓展性，我们也可以在其中像Houdini一样写代码。
+
+## 0. 准备工作
+### 0x00 熟悉面板
+::: warning
+本文默认读者已经了解blender的基础操作逻辑，将不会在基础操作上多做赘述。
+:::
+![Img](/static/CS/CS-Blender-1.png)
+打开一个项目，按下<kbd>a</kbd> <kbd>x</kbd>删掉所有东西，并切换到Scripting一栏
+![Img](/static/CS/CS-Blender-2.png)
+![Img](/static/CS/CS-Blender-3.png)
+可以看到，右边有一个脚本区，左边是3D视图和终端
+
+我们按<kbd>new</kbd>
+![Img](/static/CS/CS-Blender-4.png)
+然后在下面输入代码
+``` python
+import bpy # 导入blender支持库
+
+bpy.ops.mesh.primitive_cube_add() # 添加一个立方体
+```
+运行后效果如下
+![Img](/static/CS/CS-Blender-5.png)
+
+::: tip
+我们打代码调试时经常要使用`print`，但blender的终端是不会输出这些io的。因此，建议MacOS用户打开blender的可以执行文件：
+![Img](/static/CS/CS-Blender-6.png)
+![Img](/static/CS/CS-Blender-7.png)
+这样，输出的调试信息就有啦
+![Img](/static/CS/CS-Blender-8.png)
+:::
+
+### 0x01 拓展软件
+鉴于我们仿真时经常需要用到外部的库，例如pandas处理数据或者numpy做运算，我们也需要可以在blender版的内置python上可以这样操作。但在我的测试下我发现blender是不支持pip装库的：
+![Img](/static/CS/CS-Blender-9.png)
+
+因此，我的解决方案是anaconda在blender内新建一个环境
+
+``` bash
+conda create --name=blender # 反正就是到blender内部py的目录
+conda activate blender
+conda install python=3.10 # 笔者使用的是Blender 4.3，只支持py3.10
+conda install xxx # 其他库
+sudo ln -s /opt/anaconda3/envs/blender /Applications/Blender.app/Contents/Resources/4.3 # 如果你是其他OS取决于你安装的位置和blender内库的结构
+```
+
+这时候看运气了 运气好blender还能打开 运气不好只能通过可执行文件打开
+
+### 0x02 Blender BPY API
+开发者可以通过一个叫bpy的库来和文件内的objects和data进行交互
+```python
+import bpy
+
+bpy.ops.mesh.primitive_cube_add() # OPS: 操作符 Ex 添加一个立方体primitive
+cube = bpy.context.active_object # Context: 界面上下文 Ex 获取当前选中的物体
+
+cube.name = "My Cube" # 设置名称
+
+frame = 1
+bpy.context.scene.frame_set(frame) # 设置界面当前帧为1
+cube.location.z = 0 # 设置位置
+cube.keyframe_insert("location", frame=frame) # 插入关键帧
+
+frame = 100
+bpy.context.scene.frame_set(frame) # 设置界面当前帧为100
+cube.location.z = 10 # 设置位置
+cube.keyframe_insert("location", frame=frame) # 插入关键帧
+```
+
+![Img](/static/CS/CS-Blender-10.png)
+
+## 1. 项目 - 重力场建模
+### 1x00 数学建模
+假设一个质点$m$处于坐标系中央，则重力场向内指
+$$ \mathbf G_m(\vec p) // -\vec p$$
+而且我们知道重力场符合平方反比律：
+$$ |\mathbf G_m(\vec p)| = \frac{k}{|\vec p|^2} $$
+因此
+$$ \mathbf G_m(\vec p) = -\frac{k\vec p}{|\vec p|^2} $$
+k是某个常数
+我们把他按分量展开则
+$$ \mathbf G_m(\vec p) = -\frac{k\langle p_x, p_y, p_z\rangle}{|\vec{p}|^3} $$
+如果$m$不在原点，则
+$$ \mathbf G_m(\vec p)_x = -\frac{k(p_x - m_x)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
+$$ \mathbf G_m(\vec p)_y = -\frac{k(p_y - m_y)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
+$$ \mathbf G_m(\vec p)_z = -\frac{k(p_z - m_z)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
+如果有多个质点也不麻烦，总重力场就等于它们的重力场的线性组合
+### 1x01 开始建模
+本次我将使用OOP的思路
+
+首先，定义一个class
+
+```python
+from typing import Tuple
+from math import sqrt
+class Mass:
+    def __init__(self, k: float, pos: Tuple[float, float, float]):
+        """
+        initialization method
+        """
+        self.k = k
+        self.x = pos[0]
+        self.y = pos[1]
+        self.z = pos[2]
+    def __call__(self, pos: Tuple[float, float, float]):
+        posx = pos[0]
+        posy = pos[1]
+        posz = pos[2]
+        r = sqrt((self.x - posx)**2 + (self.y - posy)**2 + (self.z - posz)**2)
+        fieldx = -(self.k * (posx - self.x)) / (r**3)
+        fieldy = -(self.k * (posx - self.y)) / (r**3)
+        fieldz = -(self.k * (posx - self.z)) / (r**3)
+        return (fieldx, fieldy, fieldz)
+```
+这个class可以存储一个质点的信息
+
+我们再来一个class
+```python
+from typing import List
+class GravitationalField:
+    def __init__(self, masses: List[Mass]):
+        self.masses = masses
+    def __call__(self, pos):
+        x, y, z = 0, 0, 0
+        for mass in self.masses:
+            field = mass(pos)
+            x += field[0]
+            y += field[1]
+            z += field[2]
+        return (x, y, z)
+```
+这个class类似一个高级的`List[Mass]`, 可以直接调用他们的线性组合。当然列表也可以，但是用class是为了后期的可拓展性
+
+### 1x02 场景交互
+如果单单只是一个普通的建模，那其他软件也可以实现
+
+Blender的优势在于可以使用各种Objects来可视化结果
+
+这里，我准备将所有质点后缀改为`M`, 并添加属性`k`:
+![Img](/static/CS/CS-Blender-11.png)
+![Img](/static/CS/CS-Blender-12.png)
+![Img](/static/CS/CS-Blender-13.png)
+![Img](/static/CS/CS-Blender-14.png)
+
+那怎么获取呢？
+```python
+import bpy
+
+masses = []
+for obj in bpy.context.scene.objects:
+    if obj.name[-1] == 'M':
+        masses.append(obj)
+
+fields = []
+for mass in masses:
+    fields.append(Mass(mass['k'], mass.location))
+
+sum = GravitationalField(fields)
+```
+Sum 就是我们的主重力场
+
+后面有时间讲可视化

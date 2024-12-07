@@ -80,7 +80,7 @@ module.exports = {
   title: 'Makabaka1880\'s Blog',
   description: '欢迎来到我的博客👏',
   themeConfig: {
-    logo: "https://img2.imgtp.com/2024/03/24/DUQvvzXV.png",
+    logo: "/static/Avatar.png",
     displayAllHeaders: true,
     nav: [
       {
@@ -96,7 +96,8 @@ module.exports = {
         link: "/CS/",
         items: [
           { text: "CASIO", link: "/CS/Casio" },
-          { text: "算法汇集", link: "/CS/Algorithms" }
+          { text: "算法汇集", link: "/CS/Algorithms" },
+          { text: "Blender仿真", link: "/CS/BlenderSim" },
         ]
       },
       {
