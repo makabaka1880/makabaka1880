@@ -160,4 +160,24 @@ sum = GravitationalField(fields)
 ```
 Sum 就是我们的主重力场
 
-后面有时间讲可视化
+## 2. 可视化
+### 2x00 数学建模
+我现在构思的方案是在空间中放置箭头，用颜色来代表大小
+
+那么
+
+$$ \mathbf{Ind}_{\vec{p}} = \frac{\mathbf{G}_m(p)}{|\mathbf{G}_m(p)|}$$
+
+我们还需要一个将数字映射到颜色上的函数 为了方便起见，我就用线性插值了
+
+先定义一下线性插值函数
+
+$$ \mathbf{lerp}(x, \max, \min) := \min + x(\max - \min) $$
+
+因此
+
+$$ \mathbf R = \mathbf{lerp}(|\mathbf{G}|, \min_R, \max_R) $$
+$$ \mathbf G = \mathbf{lerp}(|\mathbf{G}|, \min_G, \max_G) $$
+$$ \mathbf B = \mathbf{lerp}(|\mathbf{G}|, \min_B, \max_B) $$
+
+###
