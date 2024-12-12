@@ -8,7 +8,7 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "计算机科学",
-        icon: "computer",
+        icon: "laptop-code",
         prefix: "CS/",
         children: [
           { text: "UAV结构", icon: "pen-to-square", link: "UAV" },
@@ -19,15 +19,51 @@ export const zhNavbar = navbar([
         ],
       },
       {
+        text: "心理学",
+        icon: "heart",
+        prefix: "Pyschology/",
+        children: [
+          { text: "DSM-5参考", icon: "pen-to-square", link: "DSM-5" },
+          { text: "精神分析学笔记", icon: "pen-to-square", link: "Psych" },
+        ],
+      },
+      {
+        text: "数学",
+        icon: "square-root-variable",
+        prefix: "Math/",
+        children: [
+          { text: "博弈论笔记", icon: "pen-to-square", link: "GameTheory" }
+        ],
+      },
+      {
+        text: "科学",
+        icon: "microscope",
+        prefix: "Science/",
+        children: [
+          { text: "脑科学", icon: "pen-to-square", link: "BrainBee/" },
+          { text: "BrainBee 真题", icon: "pen-to-square", link: "BrainBee/Quiz-BB" },
+        ],
+      },
+      {
         text: "杂谈",
         icon: "pen-to-square",
         prefix: "Miscellaneous/",
         children: [
-          // {
-          //   text: "香蕉 2",
-          //   icon: "pen-to-square",
-          //   link: "2",
-          // },
+          {
+            text: "书单",
+            icon: "pen-to-square",
+            link: "BookList",
+          },
+          {
+            text: "部署线上Keynote",
+            icon: "pen-to-square",
+            link: "Keynote-deploy",
+          },
+          {
+            text: "Public Forum Debate 笔记",
+            icon: "pen-to-square",
+            link: "Debate",
+          }
         ],
       }
     ],

@@ -1,8 +1,8 @@
 # 精神疾病
 ::: tip DSM-5
-<a href="/static/dsm-5.pdf">在线游览 ⇨</a>
+<a href="/assets/dsm-5.pdf">在线游览 ⇨</a>
 <br/>
-<a href="/static/dsm-5.pdf" download="dsm-5">下载 ⇩</a>
+<a href="/assets/dsm-5.pdf" download="dsm-5">下载 ⇩</a>
 :::
 [[toc]]
 

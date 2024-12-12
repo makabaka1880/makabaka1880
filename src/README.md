@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Makabaka1880的博客
-heroImage: /static/Hero.png
+heroImage: /assets/Hero.png
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
 footer: MIT Licensed | Copyright 2024 © Sean Li

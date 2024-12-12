@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Makabaka1880's Blog
-heroImage: /static/Hero.png
+heroImage: /assets/Hero.png
 footer: MIT Licensed | Copyright 2024 © Sean Li
 features:
 - title: CS Notes

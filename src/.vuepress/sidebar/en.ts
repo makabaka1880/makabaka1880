@@ -1,26 +1,18 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const enSidebar = sidebar({
-  "/CS": [
-    "",
+  "/en": [
     {
-      text: "",
+      text: "Computer Science",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
+      prefix: "/",
+      link: "CS/"
     },
     {
-      text: "Articles",
-      icon: "book",
-      prefix: "posts/",
-      children: "structure",
+      text: "Mathematics",
+      icon: "square-root-variable",
+      prefix: "/",
+      link: "CS/"
     },
-    "intro",
-    {
-      text: "Slides",
-      icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/plugins/markdown/revealjs/demo.html",
-    },
-  ],
+  ]
 });

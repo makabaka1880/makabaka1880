@@ -17,5 +17,9 @@
     "vue": "^3.5.12",
     "vuepress": "2.0.0-rc.18",
     "vuepress-theme-hope": "2.0.0-rc.63"
+  },
+  "dependencies": {
+    "@noxone/vuepress-plugin-music-player": "^1.2.2",
+    "vuepress-plugin-graypage": "^0.1.2"
   }
 }
