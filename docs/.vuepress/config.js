@@ -98,6 +98,7 @@ module.exports = {
           { text: "CASIO", link: "/CS/Casio" },
           { text: "算法汇集", link: "/CS/Algorithms" },
           { text: "Blender仿真", link: "/CS/BlenderSim" },
+          { text: "UAV", link: "/CS/UAV" },
         ]
       },
       {
@@ -132,9 +133,31 @@ module.exports = {
         ]
       }
     ],
+    locales: {
+      '/': {
+        selectLanguageName: '简体中文',
+      },
+      '/en/': {
+        selectLanguageName: 'English',
+      },
+    },
     lastUpdated: '上次更新', // string | boolean
   },
   loaders: [
     { test: /\.js$/, loader: 'babel', query: {compact: false} }
-  ]
+  ],
+  locales: {
+    // The key is the path for the locale to be nested under.
+    // As a special case, the default locale can use '/' as its path.
+    '/': {
+      lang: 'zh-CN',
+      title: '博客',
+      description: 'Makabaka1880的个人博客',
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: 'Blog',
+      description: 'Makabaka1880\'s Blog',
+    },
+  },
 }
