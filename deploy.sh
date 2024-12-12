@@ -8,7 +8,7 @@ set -e
 
 cd ~/blog/
 # 生成静态文件
-yarn docs:build
+npm run docs:build
 # 进入生成的文件夹
 cd src/.vuepress/dist
 touch CNAME # Custom Domain
