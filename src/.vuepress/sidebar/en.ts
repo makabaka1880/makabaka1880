@@ -12,7 +12,7 @@ export const enSidebar = sidebar({
       text: "Mathematics",
       icon: "square-root-variable",
       prefix: "/",
-      link: "CS/"
+      link: "Math/"
     },
   ]
 });

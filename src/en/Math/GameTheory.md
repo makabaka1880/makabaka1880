@@ -1,6 +1,11 @@
-# 博弈论笔记
-这个也是我的英文阅读笔记
+# Game Theory Notes
+This was also my CE reading notes
 
+::: tip Updated @ Mar 11
+Changelog
+---
+- **Localization** -> `en-US`
+:::
 ::: warning Updated @ Mar 11
 Changelog
 ---
@@ -8,9 +13,9 @@ Changelog
 :::
 [[toc]]
 
-## Chapter 1: 符号标记
-待完善
-### 概率学
+## Chapter 1: Nomenclature and Notations
+Needs Refinement
+### Probability
 ::: details Probability Space
 A probability space is a mathematical construct that formalizes the concept of a random experiment. It consists of three elements:
 
@@ -23,12 +28,12 @@ A probability space is a mathematical construct that formalizes the concept of a
    - Normalization: $P(S) = 1$, indicating that the probability of the entire sample space is 1.
    - Countable additivity: If $A_1, A_2, \ldots$ are pairwise disjoint events (i.e., they have no outcomes in common), then $P(\bigcup_{i=1}^{\infty} A_i) = \sum_{i=1}^{\infty} P(A_i)$.
 :::
-### 集合论
+### Set Theory
 - $\times_{\text{Statement}}\text{Set}$ is the set produced by the Cartesian product for all elements that satisfy the statement and is in the set.
 - $G \times H$ is the Cartesian product of the set $G$ and $H$
 - $\mathbb N$ is the set of natural numbers
-### 博弈论符号
-- 博弈方$-i$ 是博弈方$i$的竞争对手
+### Game Theory Notation
+- Player$-i$ is the opponent of $i$
 ## Chapter 2: Nash Equilibrium 
 P28\-
 ### 2.1 Strategic Games
