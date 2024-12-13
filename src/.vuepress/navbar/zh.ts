@@ -21,7 +21,7 @@ export const zhNavbar = navbar([
       {
         text: "心理学",
         icon: "heart",
-        prefix: "Pyschology/",
+        prefix: "Psychology/",
         children: [
           { text: "DSM-5参考", icon: "pen-to-square", link: "DSM-5" },
           { text: "精神分析学笔记", icon: "pen-to-square", link: "Psych" },
