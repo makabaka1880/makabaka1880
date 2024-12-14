@@ -15,7 +15,11 @@ features:
 actionText: 计算机科学 · 无人机结构 →
 actionLink: /CS/UAV
 ---
-
+::: warning Updated @ Dec 14
+- 添加了Waline评论功能
+- 完成至今为止的en/CS/BlenderSim的英文本地化
+- 补充了/CS/BlenderSim的内容
+:::
 <center>
 
 ---

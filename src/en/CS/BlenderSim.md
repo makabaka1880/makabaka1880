@@ -1,98 +1,111 @@
-# Blender仿真
+# Blender Simulations
 ::: danger
 Localization in progress
 :::
 It is known widely that blender is a very versatile and capable 3D software in moviemaking. And due to the fact that it is in fact **open-sourced**, we can do sims and write code just like in Houdini!
 
-## 0. 准备工作
-### 0x00 熟悉面板
+## 0. Preparations
+### 0x00 Get used to the UI
 ::: warning
-本文默认读者已经了解blender的基础操作逻辑，将不会在基础操作上多做赘述。
+This doc assumes that the reader is familiar with the basics of blender and py3.
 :::
 ![Img](/assets/CS/CS-Blender-1.png)
-打开一个项目，按下<kbd>a</kbd> <kbd>x</kbd>删掉所有东西，并切换到Scripting一栏
+Open a project, press<kbd>a</kbd> <kbd>x</kbd>to delete everything, and move to the `Scripting` tab.
 ![Img](/assets/CS/CS-Blender-2.png)
 ![Img](/assets/CS/CS-Blender-3.png)
-可以看到，右边有一个脚本区，左边是3D视图和终端
-
-我们按<kbd>new</kbd>
+There's a script editor on the right, terminal on the bottom left and 3D viewport on the left
+We press<kbd>new</kbd>
 ![Img](/assets/CS/CS-Blender-4.png)
-然后在下面输入代码
+Enter the following code:
 ``` python
-import bpy # 导入blender支持库
+import bpy # Import blender py support lib
 
-bpy.ops.mesh.primitive_cube_add() # 添加一个立方体
+bpy.ops.mesh.primitive_cube_add() # Create a cube
 ```
-运行后效果如下
+This is how it looks like after running the script:
 ![Img](/assets/CS/CS-Blender-5.png)
 
 ::: tip
-我们打代码调试时经常要使用`print`，但blender的终端是不会输出这些io的。因此，建议MacOS用户打开blender的可以执行文件：
+We use `print` often when debugging, but the blender terminal doesn't support outputing user I/Os. Therefore, we would need to come up with sth ourselfs.
+
+For macOS users, opening the blender app directly with the executable will work:
 ![Img](/assets/CS/CS-Blender-6.png)
 ![Img](/assets/CS/CS-Blender-7.png)
-这样，输出的调试信息就有啦
+Now we have our debug outputs:
 ![Img](/assets/CS/CS-Blender-8.png)
 :::
 
-### 0x01 拓展软件
-鉴于我们仿真时经常需要用到外部的库，例如pandas处理数据或者numpy做运算，我们也需要可以在blender版的内置python上可以这样操作。但在我的测试下我发现blender是不支持pip装库的：
+### 0x01 Extension Libs
+Due to the fact that we need external libs(ex `pandas`, `numpy`, etc) when writing sims, it's quite a headache not to be able to install them in blender using `pip3`:
 ![Img](/assets/CS/CS-Blender-9.png)
 
-因此，我的解决方案是anaconda在blender内新建一个环境
-
+My solution is to link an `anaconda` env to blender's internal blender:
 ``` bash
-conda create --name=blender # 反正就是到blender内部py的目录
+conda create --name=blender
 conda activate blender
-conda install python=3.10 # 笔者使用的是Blender 4.3，只支持py3.10
-conda install xxx # 其他库
-sudo ln -s /opt/anaconda3/envs/blender /Applications/Blender.app/Contents/Resources/4.3 # 如果你是其他OS取决于你安装的位置和blender内库的结构
+conda install python=3.10 # I am using Blender 4.3, which only supports py3.10
+conda install xxx # libs you'll need
+sudo ln -s /opt/anaconda3/envs/blender /Applications/Blender.app/Contents/Resources/4.3 # Depends on your OS and blender version.
 ```
 
-这时候看运气了 运气好blender还能打开 运气不好只能通过可执行文件打开
+Now whether the application runs or not is up to luck. I would advise to open it via it's executable.
 
 ### 0x02 Blender BPY API
 开发者可以通过一个叫bpy的库来和文件内的objects和data进行交互
+Developers interact with objects and datas in the file via the `bpy` lib.
 ```python
 import bpy
 
-bpy.ops.mesh.primitive_cube_add() # OPS: 操作符 Ex 添加一个立方体primitive
-cube = bpy.context.active_object # Context: 界面上下文 Ex 获取当前选中的物体
+bpy.ops.mesh.primitive_cube_add() # OPS: Operators Ex Adding a cube primitive
+cube = bpy.context.active_object # Context: UI Context Ex Get currently selected object
 
-cube.name = "My Cube" # 设置名称
+cube.name = "My Cube" # Set name
 
 frame = 1
-bpy.context.scene.frame_set(frame) # 设置界面当前帧为1
-cube.location.z = 0 # 设置位置
-cube.keyframe_insert("location", frame=frame) # 插入关键帧
+bpy.context.scene.frame_set(frame) # Set current frame to 1
+cube.location.z = 0 # Set position
+cube.keyframe_insert("location", frame=frame) # insert keyframe on location
 
 frame = 100
-bpy.context.scene.frame_set(frame) # 设置界面当前帧为100
-cube.location.z = 10 # 设置位置
-cube.keyframe_insert("location", frame=frame) # 插入关键帧
+bpy.context.scene.frame_set(frame) # Set current frame to 100
+cube.location.z = 10 # Set position
+cube.keyframe_insert("location", frame=frame) # insert keyframe
 ```
 
 ![Img](/assets/CS/CS-Blender-10.png)
 
-## 1. 项目 - 重力场建模
-### 1x00 数学建模
-假设一个质点$m$处于坐标系中央，则重力场向内指
+## 1. Project - Radial Gravitational Field Modeling
+### 1x00 Mathematical Modeling
+Assuming a mass $m$ at the center of the cartasian coords system:
 $$ \mathbf G_m(\vec p) // -\vec p$$
-而且我们知道重力场符合平方反比律：
+We know that a gravitational field accords to the **inverse square law**:
+::: tip
+The **Inverse Square Law** applies to phenomena in 3D space where the intensity of a field or effect (such as light, sound, or gravitational force) decreases proportionally to the square of the distance from the source. This relationship arises because the field spreads uniformly over a spherical surface, and the surface area of a sphere grows as $4\pi r^2$.
+
+$$ \mathbf{F} \propto \frac{1}{d^2} $$
+
+Here, $d$ is the distance from the source of the field.
+:::
+
 $$ |\mathbf G_m(\vec p)| = \frac{k}{|\vec p|^2} $$
-因此
+So that
 $$ \mathbf G_m(\vec p) = -\frac{k\vec p}{|\vec p|^2} $$
-k是某个常数
-我们把他按分量展开则
+k is some strength coefficient
+
+If expanded via components:
+
 $$ \mathbf G_m(\vec p) = -\frac{k\langle p_x, p_y, p_z\rangle}{|\vec{p}|^3} $$
-如果$m$不在原点，则
+Let's extend the situation to where $m$ is not at the origin:
 $$ \mathbf G_m(\vec p)_x = -\frac{k(p_x - m_x)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
 $$ \mathbf G_m(\vec p)_y = -\frac{k(p_y - m_y)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
 $$ \mathbf G_m(\vec p)_z = -\frac{k(p_z - m_z)}{\sqrt{(p_x-m_x)^2 + (p_y-m_y)^2 + (p_z-m_z)^2}^3} $$
-如果有多个质点也不麻烦，总重力场就等于它们的重力场的线性组合
-### 1x01 开始建模
-本次我将使用OOP的思路
+The final field should be the linear combination of all grav fields of the individual masses.
 
-首先，定义一个class
+### 1x01 Let's Get Modeling!
+
+> I love OOP programing.
+
+First, define a class:
 
 ```python
 from typing import Tuple
@@ -116,9 +129,9 @@ class Mass:
         fieldz = -(self.k * (posx - self.z)) / (r**3)
         return (fieldx, fieldy, fieldz)
 ```
-这个class可以存储一个质点的信息
+This class stores the informatino of a mass and returns it's field upon calling.
 
-我们再来一个class
+Another class:
 ```python
 from typing import List
 class GravitationalField:
@@ -133,20 +146,18 @@ class GravitationalField:
             z += field[2]
         return (x, y, z)
 ```
-这个class类似一个高级的`List[Mass]`, 可以直接调用他们的线性组合。当然列表也可以，但是用class是为了后期的可拓展性
+This is sort of like an extended `List[Mass]`, but we can call the linear combination of all the elements. A list does do that but a class allows for further extensions.
 
-### 1x02 场景交互
-如果单单只是一个普通的建模，那其他软件也可以实现
+### 1x02 Scene Interactions
+It won't be as fun if there's not interactibility with the object. Now, we'll be using the advantage of Blender as a 3D software:
 
-Blender的优势在于可以使用各种Objects来可视化结果
-
-这里，我准备将所有质点后缀改为`M`, 并添加属性`k`:
+I'm now going to give all mass objects a name with the suffix `M` and give them a property `k`:
 ![Img](/assets/CS/CS-Blender-11.png)
 ![Img](/assets/CS/CS-Blender-12.png)
 ![Img](/assets/CS/CS-Blender-13.png)
 ![Img](/assets/CS/CS-Blender-14.png)
 
-那怎么获取呢？
+Now how do I get them?
 ```python
 import bpy
 
@@ -161,26 +172,24 @@ for mass in masses:
 
 sum = GravitationalField(fields)
 ```
-Sum 就是我们的主重力场
+`Sum` is now our main grav field.
 
-## 2. 可视化
-### 2x00 数学建模
-我现在构思的方案是在空间中放置箭头，用颜色来代表大小
+## 2. Visualization
+### 2x00 Mathematical Modeling
+My thoughts now are to place unitvector-sized arrows to indication direction and colors for magnitude.
 
-那么
-
+Then
 $$ \mathbf{Ind}_{\vec{p}} = \frac{\mathbf{G}_m(p)}{|\mathbf{G}_m(p)|}$$
 
-我们还需要一个将数字映射到颜色上的函数 为了方便起见，我就用线性插值了
+We'll also need a map from numbers to colors. For convienience I'm going to use **linear interpolation**.
 
-先定义一下线性插值函数
-
-$$ \mathbf{lerp}(x, \max, \min) := \min + x(\max - \min) $$
-
-因此
+::: tip
+**LERP (Linear Interpolation)** is a method for calculating a value between two points based on a proportion. 
+$$ \mathbf{lerp}(A, B, t) = A + t \cdot (B - A) $$
+:::
 
 $$ \mathbf R = \mathbf{lerp}(|\mathbf{G}|, \min_R, \max_R) $$
 $$ \mathbf G = \mathbf{lerp}(|\mathbf{G}|, \min_G, \max_G) $$
 $$ \mathbf B = \mathbf{lerp}(|\mathbf{G}|, \min_B, \max_B) $$
 
-###
+To be continued.
