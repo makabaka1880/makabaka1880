@@ -12,13 +12,11 @@ features:
   details: 我也是因为一些自身原因接触到心理学和精神病学的。当然我现在有这坨笔记也多亏了我当初脑抽选读了弗洛伊德的讲义
 - title: 自然科学
   details: 最近搞生赛，资料也传上来了。全部笔记包括物理, 化学, 生物, etc... 待完善
-actionText: 计算机科学 · 无人机结构 →
-actionLink: /CS/UAV
+- title: 友链
+  details: 欢迎来CS/Friends提交友链呀
 ---
 ::: warning Updated @ Dec 14
-- 添加了Waline评论功能
-- 完成至今为止的en/CS/BlenderSim的英文本地化
-- 补充了/CS/BlenderSim的内容
+- <a href="CS/Friends">友链戳我</a>
 :::
 <center>
 

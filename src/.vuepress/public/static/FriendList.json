@@ -1,0 +1,29 @@
+[
+    {
+      "title": "「光现象」制作组",
+      "friends": [
+        {
+          "name": "minc_nice_100",
+          "role": "Web后端开发",
+          "email": "admin@ited.top",
+          "website": "https://ited.top",
+          "avatar": "https://nas-alist.ited.top/d/public/blog/202408/44371723107000.jpg",
+          "description": "不善言辞,不喜欢社交,略会一些后端的学长"
+
+        }
+      ]
+    },
+    {
+        "title": "同学",
+        "friends": [
+        {
+            "name": "Tim",
+            "role": "Newbie Developer",
+            "email": "timcooksgrandpa@gmail.com",
+            "website": "https://616sb.top",
+            "avatar": "/assets/Friends/Tim-Avatar.png",
+            "description": "初中同学, 也是像我一样搞乱七八糟的好玩的玩意, 但他有足够的天赋能把这些乱七八糟的东西做得非常豪丸总能让人 大 开 阎 界"
+        }
+        ]
+    }
+]

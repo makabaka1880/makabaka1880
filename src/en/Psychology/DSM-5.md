@@ -1,22 +1,20 @@
-# 精神疾病
+# Psychiatrics
 
-::: warning 腻门豪啊🤓
-这个系列终于要停更喽
-因为我康复辣哈哈哈哈哈哈哈
-我刚开始这个板块的时候我刚拿到了我的诊断书. 怎么说呢, 焦虑症+adhd+传说中的抽动症这也算是buff叠满了.
-诶 您猜怎么着 我~~踏马~~抗过来喽
-最后也算是祝福一下其他同病相怜的盆友们 一起加油吧
+::: warning Hey Guys
+I'm done with psychiatry.
+I started this section when I recieved my diagnose for Panic Disorder, ADHD and Tourette's at the same time. I know that's some pretty ~~fricking~~ bad news, but hey, I've already came over it!
+And just as an encouragement for all fellow patients, life goes on, and so will you.
 :::
 
 ::: tip DSM-5
-<a href="/assets/dsm-5.pdf">在线游览 ⇨</a>
+<a href="/assets/dsm-5.pdf">Online PDF viewing ⇨</a>
 <br/>
-<a href="/assets/dsm-5.pdf" download="dsm-5">下载 ⇩</a>
+<a href="/assets/dsm-5.pdf" download="dsm-5">Download PDF ⇩</a>
 :::
 [[toc]]
 
-## 一些规定
-### 严重程度
+## Some Conventions and Nomenclature
+### How Bad?
 ::: tip DSM-5
 [...]
 
@@ -26,21 +24,21 @@
 
 **Severe** Many symptoms in excess of those required to make the diagnosis, or several symptoms that are particularly severe, are present, or the symptoms result in marked impairment in social or occupational functioning.
 :::
-## 神经发育障碍疾病
-### 智力障碍
+## Neurotics
+### Intellectual Disability
 
 ::: tip DSM-5
 **Intellectual Disability (intellectual developmental disorder)** is a disorder with onset during the developmental period that includes both intellectual and adaptive functioning deficits in conceptual, social, and practical domains.
 :::
 
-#### 诊断 Diagnose
+#### Diagnose
 
 The following three criteria must be met:
 1. Deficits in intellectual functions, such as reasoning, problem solving, planning, abstract thinking, judgment, academic learning, and learning from experience, confirmed by both clinical assessment and individualized, standardized intelligence testing.
 2. Deficits in adaptive functioning that result in failure to meet devel opmental and sociocultural standards for personal indepen dence and social responsibility. Without ongoing support, the adaptive deficits limit functioning in one or more activities of daily life, such as communication, social participation, and indepen dent living, across multiple environments, such as home, school, work, and community.
 3. Onset of intellectual and adaptive deficits during the develop mental period.
 
-#### ICD分类
+#### ICD
 \_\_.\_\_ | (\_\_.\_\_) | Intellectual Disability (Intellectual Developmental Disorder) (17)
 -|-|-
 317|(F70)|Mild
@@ -50,8 +48,8 @@ The following three criteria must be met:
 315.8|(F88)|Global Developmental Delay (23)
 319|(F79)| Unspecified Intellectual Disability (Intellectual Developmental Disorder) (23)
 
-### 社交言语障碍
-#### 诊断
+### Social Disorder
+#### Diagnose
 1. Persistent difficulties in the acquisition and use of language across modalities (i.e., spoken, written, sign language, or other) due to deficits in comprehension or production that include the following:
     Reduced vocabulary (word knowledge and use).
     Limited sentence structure (ability to put words and word endings together to form sentences based on the rules of gram-
@@ -61,7 +59,7 @@ mar and morphology)
 3. Onset of symptoms is in the early developmental period.
 4. The difficulties are not attributable to hearing or other sensory impairment, motor dysfunction, or another medical or neurological condition and are not better explained by intellectual disability (intellectual developmental disorder) or global developmental
 delay.
-#### ICD 分类
+#### ICD
 \_\_.\_\_ | (\_\_.\_\_) | Communication Disorders (24)
 -|-|-
 315.32|(F80.2)|Language Disorder (24)
@@ -71,8 +69,8 @@ delay.
 307.9|(F80.9)|Unspecified Communication Disorder (27)
 
 
-### 自闭谱系障碍
-#### 诊断 Diagnose
+### Autism Spectrum Disorder
+#### Diagnose
 1. Persistent deficits in social communication and social interaction across multiple contexts, as manifested by the following, currently or by history (examples are illustrative, not exhaustive):
     Deficits in social-emotional reciprocity, ranging, for example, from abnormal social approach and failure of normal back-andforth conversation; to reduced sharing of interests, emotions, or affect; to failure to initiate or respond to social interactions.
     Deficits in nonverbal communicative behaviors used for social interaction, ranging, for example, from poorly integrated verbal and nonverbal communication; to abnormalities in eye contact and body language or deficits in understanding and use of gestures; to a total lack of facial expressions and nonverbal communication.
@@ -94,8 +92,8 @@ Autism Spectrum Disorder 29
 299.00|(F84.0)|Autism Spectrum Disorder (27)
 
 
-### 注意力缺陷与多动障碍 ADHD
-#### 诊断 Diagnose
+### Attention Deficient and Hyperactive Disorder
+#### Diagnose
 1. A persistent pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning or development, as characterized by (A) and/or (B):
 ::: details A
 **Inattention**
@@ -134,6 +132,7 @@ versations, games, or activities; may start using other people’s things withou
 4. There is clear evidence that the symptoms interfere with, or reduce the quality of, social, academic, or occupational functioning.
 5. The symptoms do not occur exclusively during the course of schizophrenia or another psychotic disorder and are not better explained by another mental disorder (e.g., mood disorder, anxiety disorder, dissociative disorder, personality disorder, substance intoxication or withdrawal).
 
+#### ICD
 \_\_.\_\_ | (\_\_.\_\_) | Intellectual Disability (Intellectual Developmental Disorder) (17)
 -|-|-
 314.01|(F90.2)|Combined presentation
@@ -142,21 +141,20 @@ versations, games, or activities; may start using other people’s things withou
 314.01|(F90.8)|Other Specified ADHD (35)
 314.01|(F90.9)|Unspecified ADHD
 
-### 阅读障碍 Dylexia
-
+### Dylexia
 \_\_.\_\_ | (\_\_.\_\_) | Specific Learning Disorder (36)
 -|-|-
 315.00|(F81.0)|With impairment in reading (specify if with word reading accuracy, reading rate or fluency, reading comprehension)
 315.2|(F81.81)|With impairment in written expression (specify if with spelling accuracy, grammar and punctuation accuracy, clarity or organization of written expression)
 315.1|(F81.2)|With impairment in mathematics (specify if with number sense, memorization of arithmetic facts, accurate or fluent calculation, accurate math reasoning)
 
-### 机动障碍 Motor Disorder
+### Motor Disorder
 \_\_.\_\_ | (\_\_.\_\_) | Motor Disorders (39)
 -|-|-
 315.4|(F82)|Developmental Coordination Disorder (39)
 307.3|(F98.4)|Stereotypic Movement Disorder (40)
 
-### 抽动障碍 Tic Disorder
+### Tic Disorder
 \_\_.\_\_ | (\_\_.\_\_) | Tic Disorders
 -|-|-
 307.23|(F95.2)|Tourette's Disorder (41)
@@ -165,10 +163,8 @@ versations, games, or activities; may start using other people’s things withou
 307.20|(F95.8)|Other Specified Tic Disorder (42)
 307.20|(F95.9)|Unspecified Tic Disorder (42)
 
-### 其他 Miscellaneous
+### Miscellaneous
 \_\_.\_\_ | (\_\_.\_\_) | Other Neurodevelopmental Disorders (43)
 -|-|-
 315.8|(F88)|Other Specified Neurodevelopmental Disorder (43)
 315.9|(F89)|Unspecified Neurodevelopmental Disorder (44)
-
-### 

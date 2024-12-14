@@ -9,6 +9,12 @@ export const enSidebar = sidebar({
       link: "CS/"
     },
     {
+      text: "Psychology",
+      icon: "heart",
+      prefix: "/",
+      link: "Psychology/"
+    },
+    {
       text: "Mathematics",
       icon: "square-root-variable",
       prefix: "/",

@@ -1,5 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
-
+// const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
