@@ -166,7 +166,7 @@ export default hopeTheme({
   plugins: {
     comment: {
       provider: "Waline",
-      serverURL: "https://blog-vercel-backend-178zcdyb0-makabaka1880s-projects.vercel.app", // your server url
+      serverURL: "blog-vercel-backend-178zcdyb0-makabaka1880s-projects.vercel.app", // your server url
     },
     blog: true,
     // Install @waline/client before enabling it
