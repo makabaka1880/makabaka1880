@@ -25,7 +25,7 @@ bpy.ops.mesh.primitive_cube_add() # Create a cube
 This is how it looks like after running the script:
 ![Img](/assets/CS/CS-Blender-5.png)
 
-::: tip
+::: tip Debug Outputs
 We use `print` often when debugging, but the blender terminal doesn't support outputing user I/Os. Therefore, we would need to come up with sth ourselfs.
 
 For macOS users, opening the blender app directly with the executable will work:
@@ -79,7 +79,7 @@ cube.keyframe_insert("location", frame=frame) # insert keyframe
 Assuming a mass $m$ at the center of the cartasian coords system:
 $$ \mathbf G_m(\vec p) // -\vec p$$
 We know that a gravitational field accords to the **inverse square law**:
-::: tip
+::: tip Inverse Square Law
 The **Inverse Square Law** applies to phenomena in 3D space where the intensity of a field or effect (such as light, sound, or gravitational force) decreases proportionally to the square of the distance from the source. This relationship arises because the field spreads uniformly over a spherical surface, and the surface area of a sphere grows as $4\pi r^2$.
 
 $$ \mathbf{F} \propto \frac{1}{d^2} $$
@@ -183,13 +183,104 @@ $$ \mathbf{Ind}_{\vec{p}} = \frac{\mathbf{G}_m(p)}{|\mathbf{G}_m(p)|}$$
 
 We'll also need a map from numbers to colors. For convienience I'm going to use **linear interpolation**.
 
-::: tip
+::: tip LERP
 **LERP (Linear Interpolation)** is a method for calculating a value between two points based on a proportion. 
 $$ \mathbf{lerp}(A, B, t) = A + t \cdot (B - A) $$
 :::
 
+This will then be a function that computes lerp:
+```python
+def lerp(a, b, k):
+    return a + (b - a) * k
+```
 $$ \mathbf R = \mathbf{lerp}(|\mathbf{G}|, \min_R, \max_R) $$
 $$ \mathbf G = \mathbf{lerp}(|\mathbf{G}|, \min_G, \max_G) $$
 $$ \mathbf B = \mathbf{lerp}(|\mathbf{G}|, \min_B, \max_B) $$
 
-To be continued.
+Therefore we can write a pretty nice little linear interpolation function for color due to python's elegant one-liner syntax:
+```python
+def color_lerp(color1, color2, k):
+    r, g, b = lerp(color1[0], color2[0], k), lerp(color1[1], color2[1], k), lerp(color1[2], color2[2], k)
+    return (r, g, b)
+```
+### 2x01 Actualization
+To assign colors to objects, we need to initiate new materials. Since this doc is not focused on the blender api itself, I'll use ChatGPT-generated helper functions to do the assignment.
+> By the way GPT generated comments were really nice :)
+
+```python
+def assign_emission_shader(name, color, obj, strength=1.0):
+    """
+    Assign an emission shader with the specified color and strength to the given object.
+    
+    Parameters:
+    - name: The name of the material to be created.
+    - color: The RGB color for the emission shader (a tuple like (1.0, 0.0, 0.0) for red).
+    - obj: The Blender object to which the material will be assigned.
+    - strength: The strength of the emission (default is 1.0).
+    """
+    # Check if the object already has the material assigned
+    existing_material = bpy.data.materials.get(name)
+    
+    # If the material doesn't exist, create a new one
+    if not existing_material:
+        material = bpy.data.materials.new(name)  # Create the material
+        material.use_nodes = True  # Enable the use of nodes
+        nodes = material.node_tree.nodes
+        
+        # Clear existing nodes
+        for node in nodes:
+            nodes.remove(node)
+        
+        # Add an Emission shader node
+        emission_node = nodes.new(type='ShaderNodeEmission')
+        emission_node.inputs['Color'].default_value = (*color, 1.0)  # Set the color with alpha = 1
+        emission_node.inputs['Strength'].default_value = strength  # Set the emission strength
+        
+        # Add a Material Output node
+        material_output_node = nodes.new(type='ShaderNodeOutputMaterial')
+        
+        # Connect the emission node to the material output
+        material.node_tree.links.new(emission_node.outputs['Emission'], material_output_node.inputs['Surface'])
+    else:
+        material = existing_material
+        # Update the existing material's color and strength
+        nodes = material.node_tree.nodes
+        for node in nodes:
+            if isinstance(node, bpy.types.ShaderNodeEmission):
+                node.inputs['Color'].default_value = (*color, 1.0)
+                node.inputs['Strength'].default_value = strength
+                break
+    
+    # Assign the material to the object
+    if obj.data.materials:
+        # If the object already has materials, replace the first one
+        obj.data.materials[0] = material
+    else:
+        # If the object has no materials, append the new one
+        obj.data.materials.append(material)
+
+```
+Then this should work as a shader assigning script for each of the masses:
+```python
+s = 4 # Add to the start of code
+for obj in masses:
+    k = obj['k']
+    c1 = (0.7, 0.3, 0.1) # Change to your preference
+    c2 = (0.1, 0.3, 0.7) # Change to your preference
+    color = color_lerp(c1, c2, k)
+    assign_emission_shader(obj.name, color, obj, s)
+```
+::: tip Deleting Materials
+If you've decided to make some adjustments to you code, but it won't update, it's probably because of blender's data system. To cope with that, you'll need this script:
+```python
+for material in bpy.data.materials:
+    if material.name[-1] == "M":
+        bpy.data.materials.remove(material)
+```
+Add it to the start of your main script.
+:::
+
+Now, running the script you should see that we have a correctly assiged material to the objects:
+![Img](/assets/CS/CS-Blender-15.png)
+
+*To be continued*

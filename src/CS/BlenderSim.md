@@ -191,4 +191,90 @@ $$ \mathbf R = \mathbf{lerp}(|\mathbf{G}|, \min_R, \max_R) $$
 $$ \mathbf G = \mathbf{lerp}(|\mathbf{G}|, \min_G, \max_G) $$
 $$ \mathbf B = \mathbf{lerp}(|\mathbf{G}|, \min_B, \max_B) $$
 
-###
+我们也可以借python的one-liner语法写一个十分*优雅*的线性插值函数函数:
+```python
+def color_lerp(color1, color2, k):
+    r, g, b = lerp(color1[0], color2[0], k), lerp(color1[1], color2[1], k), lerp(color1[2], color2[2], k)
+    return (r, g, b)
+```
+### 2x01 实现
+To assign colors to objects, we need to initiate new materials. Since this doc is not focused on the blender api itself, I'll use ChatGPT-generated helper functions to do the assignment.
+要想给物体上色我们就需要给它赋予新的材质. 这不是今天的重点所以我就请我们亲爱的ChatGPT来写个Helper Function力
+> 顺便一提ChatGPT的注释写的真的牛逼 :)
+
+```python
+def assign_emission_shader(name, color, obj, strength=1.0):
+    """
+    Assign an emission shader with the specified color and strength to the given object.
+    
+    Parameters:
+    - name: The name of the material to be created.
+    - color: The RGB color for the emission shader (a tuple like (1.0, 0.0, 0.0) for red).
+    - obj: The Blender object to which the material will be assigned.
+    - strength: The strength of the emission (default is 1.0).
+    """
+    # Check if the object already has the material assigned
+    existing_material = bpy.data.materials.get(name)
+    
+    # If the material doesn't exist, create a new one
+    if not existing_material:
+        material = bpy.data.materials.new(name)  # Create the material
+        material.use_nodes = True  # Enable the use of nodes
+        nodes = material.node_tree.nodes
+        
+        # Clear existing nodes
+        for node in nodes:
+            nodes.remove(node)
+        
+        # Add an Emission shader node
+        emission_node = nodes.new(type='ShaderNodeEmission')
+        emission_node.inputs['Color'].default_value = (*color, 1.0)  # Set the color with alpha = 1
+        emission_node.inputs['Strength'].default_value = strength  # Set the emission strength
+        
+        # Add a Material Output node
+        material_output_node = nodes.new(type='ShaderNodeOutputMaterial')
+        
+        # Connect the emission node to the material output
+        material.node_tree.links.new(emission_node.outputs['Emission'], material_output_node.inputs['Surface'])
+    else:
+        material = existing_material
+        # Update the existing material's color and strength
+        nodes = material.node_tree.nodes
+        for node in nodes:
+            if isinstance(node, bpy.types.ShaderNodeEmission):
+                node.inputs['Color'].default_value = (*color, 1.0)
+                node.inputs['Strength'].default_value = strength
+                break
+    
+    # Assign the material to the object
+    if obj.data.materials:
+        # If the object already has materials, replace the first one
+        obj.data.materials[0] = material
+    else:
+        # If the object has no materials, append the new one
+        obj.data.materials.append(material)
+
+```
+然后我们就可以这样给每个物体刷颜色喽
+```python
+s = 4 # Add to the start of code
+for obj in masses:
+    k = obj['k']
+    c1 = (0.7, 0.3, 0.1) # Change to your preference
+    c2 = (0.1, 0.3, 0.7) # Change to your preference
+    color = color_lerp(c1, c2, k)
+    assign_emission_shader(obj.name, color, obj, s)
+```
+::: tip 删除材质
+但你对你的代码进行调整之后, 你可能会发现材质没有任何区别. 这是因为blender的数据管理系统的问题. 这时你就可以在代码的一开始放上这么一段:
+```python
+for material in bpy.data.materials:
+    if material.name[-1] == "M":
+        bpy.data.materials.remove(material)
+```
+:::
+
+跑完代码之后可以看到材质都刷新了:
+![Img](/assets/CS/CS-Blender-15.png)
+
+*未完待续*
