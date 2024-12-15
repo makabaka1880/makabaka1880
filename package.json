@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@noxone/vuepress-plugin-music-player": "^1.2.2",
+    "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-graypage": "^0.1.2"
   }
 }

@@ -5,6 +5,24 @@ heroImage: /assets/Hero.png
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
 footer: MIT Licensed | Copyright 2024 © Sean Li
+actions:
+  - text: 一台UAV的结构👉
+    link: ./CS/UAV
+    icon: signs-post
+    type: primary
+
+  - text: 博客
+    icon: lightbulb
+    link: ./article/
+
+  - text: 大事记
+    icon: star
+    link: ./timeline/
+
+  - text: 友链
+    icon: heart
+    link: ./CS/Friends
+  
 features:
 - title: 理科笔记
   details: 计算机科学以及数学一直是我很喜欢的两门门学科,我现在也在往我的博客上面搬CS和数学笔记了 还没搬完

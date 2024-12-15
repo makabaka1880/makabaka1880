@@ -7,6 +7,22 @@ export const zhNavbar = navbar([
     prefix: "/",
     children: [
       {
+        text: "提纲",
+        icon: "pen-to-square",
+        prefix: "",
+        children: [
+          { text: "博客主页", icon: "pen-to-square", link: "article/"},
+          { text: "大事记", icon: "pen-to-square", link: "timeline/"}
+        ]
+      }
+    ]
+  },
+  {
+    text: "创客笔记",
+    icon: "pen-to-square",
+    prefix: "/",
+    children: [
+      {
         text: "计算机科学",
         icon: "laptop-code",
         prefix: "CS/",
