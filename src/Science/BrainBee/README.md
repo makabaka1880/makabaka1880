@@ -9,7 +9,7 @@
 Changelog
 ---
 - 完善了[Brodmann 分区](#大脑皮层分区)
-:::
+::: 
 **Table of Contents**
 
 [[toc]]

@@ -14,10 +14,10 @@ actionText: Computer Science · UAV Structure →
 actionLink: /CS/UAV
 ---
 
-::: warning Updated @ Aug 22
-Changelog
----
-科学界小组的同学请看入口
+::: warning Changelog @ Dec 14
+- 添加了Waline评论功能
+- 完成至今为止的en/CS/BlenderSim的英文本地化
+- 补充了/CS/BlenderSim的内容
 :::
 
 <center>

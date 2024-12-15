@@ -11,6 +11,7 @@ export const zhNavbar = navbar([
         icon: "laptop-code",
         prefix: "CS/",
         children: [
+          { text: "友情链接", icon: "pen-to-square", link: "Friends" },
           { text: "UAV结构", icon: "pen-to-square", link: "UAV" },
           { text: "Blender仿真学", icon: "pen-to-square", link: "BlenderSim" },
           { text: "算法", icon: "pen-to-square", link: "Algorithms" },
@@ -63,6 +64,11 @@ export const zhNavbar = navbar([
             text: "Public Forum Debate 笔记",
             icon: "pen-to-square",
             link: "Debate",
+          },
+          {
+            text: "牛逼的东西",
+            icon: "pen-to-square",
+            link: "NewBeeLinks",
           }
         ],
       }

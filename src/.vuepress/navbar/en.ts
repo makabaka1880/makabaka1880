@@ -15,6 +15,14 @@ export const enNavbar = navbar([
         ],
       },
       {
+        text: "Psychology",
+        prefix: "Psychology/",
+        children: [
+          { text: "DSM-5", icon: "pen-to-square", link: "DSM-5" },
+          { text: "Pschoanalysis", icon: "pen-to-square", link: "Psych" },
+        ]
+      },
+      {
         text: "Mathematics",
         prefix: "Math/",
         children: [
