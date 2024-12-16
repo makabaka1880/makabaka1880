@@ -59,6 +59,7 @@ export const zhNavbar = navbar([
         children: [
           { text: "脑科学", icon: "pen-to-square", link: "BrainBee/" },
           { text: "BrainBee 真题", icon: "pen-to-square", link: "BrainBee/Quiz-BB" },
+          { text: "静电场与电学", icon: "pen-to-square", link: "Coulumb" },
         ],
       },
       {
