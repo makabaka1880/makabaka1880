@@ -1,5 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 // const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
+import { musicBarPlugin } from "vuepress-plugin-music-bar"
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
@@ -29,6 +30,14 @@ export default hopeTheme({
       Youtube: "https://www.youtube.com/@XXXMakabaka1880",
       Zhihu: "https://www.zhihu.com/people/makabaka1880"
     },
+  },
+  encrypt: {
+    config: {
+    // This will encrypt the entire guide directory, and both passwords are available
+      "/School-2024": ["HBBSS-24", "ln1880"],
+      "/School-2024/Chinese": "Chi-24",
+      "/School-2024/Physics": "Phy-24"
+    }
   },
 
   locales: {
@@ -137,10 +146,6 @@ export default hopeTheme({
   },
 
   plugins: {
-    comment: {
-      provider: "Waline",
-      serverURL: "https://blog-waline-backend-jv486do1c-makabaka1880s-projects.vercel.app", // your server url
-    },
     blog: true,
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
