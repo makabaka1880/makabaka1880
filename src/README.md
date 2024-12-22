@@ -38,9 +38,6 @@ features:
 - title: 友链
   details: 欢迎来CS/Friends提交友链呀 -->
 
-以下是我改写后的版本，力求更具情感表达，同时保持简洁庄重的风格：
-
----
 
 ::: warning Updated @ Dec 20  
 尊敬的各位访客：  
