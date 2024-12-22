@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Light Phenomenon Production Team",
+    "friends": [
+      {
+        "name": "ITED",
+        "role": "Web Backend Master",
+        "email": "admin@ited.top",
+        "website": "ited.top",
+        "avatar": "/assets/Friends/ITED-Avatar.png",
+        "description": "Met a big shot in the Light Phenomenon crew, helped the crew set up the website lightphenomenon.ited.top, skilled in Web backend, solved many technical problems, and helped the entire project move forward smoothly. Whether it was optimizing the server or building APIs, he handled it effortlessly — a true technical master."
+      }
+    ]
+  },
+  {
+    "title": "Classmates",
+    "friends": [
+      {
+        "name": "Tim",
+        "role": "Newbie Developer",
+        "email": "timcooksgrandpa@gmail.com",
+        "website": "616sb.top",
+        "avatar": "/assets/Friends/Tim-Avatar.png",
+        "description": "Middle school classmate, also someone who enjoys creating messy and fun things just like me, but he has enough talent to turn these messy ideas into something truly epic, always blowing people's minds with his creativity."
+      }
+    ]
+  }
+]

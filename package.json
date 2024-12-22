@@ -1,0 +1,33 @@
+{
+  "name": "makabaka1880s-blog",
+  "description": "My own blog",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/plugin-register-components": "^2.0.0-rc.66",
+    "@vuepress/plugin-revealjs": "^2.0.0-rc.67",
+    "@waline/client": "^3.4.1",
+    "flowchart.ts": "^3.0.1",
+    "katex": "^0.16.15",
+    "sass-embedded": "^1.79.5",
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-theme-hope": "2.0.0-rc.63"
+  },
+  "dependencies": {
+    "@noxone/vuepress-plugin-music-player": "^1.2.2",
+    "@vuepress/shared-utils": "^1.9.10",
+    "valine": "^1.5.3",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-graypage": "^0.1.2",
+    "vuepress-plugin-music-bar": "^3.7.6"
+  }
+}
