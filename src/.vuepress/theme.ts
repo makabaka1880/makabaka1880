@@ -155,7 +155,7 @@ export default hopeTheme({
     // You MUST generate and use your own comment service in production.
     comment: {
       provider: "Waline",
-      serverURL: "https://blog-waline-backend.vercel.app",
+      serverURL: "https://comments-frontend.makabaka1880.xyz/",
     },
     components: {
       components: ["Badge", "VPCard"],
