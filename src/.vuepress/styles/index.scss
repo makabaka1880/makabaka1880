@@ -2,3 +2,35 @@
 body {
     filter: grayscale(100%);
 }
+
+video {
+    width: 65vw;
+}
+
+table {
+    border: none;
+}
+
+.center-container {
+    display: grid;
+    place-items: center;
+}
+
+.center-container-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table th, table td {
+    border: none; /* Remove borders from cells */
+}
+
+tbody tr {
+    background-color: #222; /* Set a light gray background for all rows */
+}
+
+thead {
+    background-color: #222; /* Set a slightly darker gray for the header */
+    color: #fff
+}
