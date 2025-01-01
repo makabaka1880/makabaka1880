@@ -20,6 +20,7 @@ export default hopeTheme({
 
   docsDir: "src",
 
+
   blog: {
     medias: {
       BiliBili: "https://bilibili.com/makabaka1880",
@@ -31,6 +32,7 @@ export default hopeTheme({
       Zhihu: "https://www.zhihu.com/people/makabaka1880"
     },
   },
+
   encrypt: {
     config: {
     // This will encrypt the entire guide directory, and both passwords are available
