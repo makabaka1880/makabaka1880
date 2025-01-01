@@ -3,9 +3,12 @@ article: true
 tag:
   - 日常 Daily
 star: true
+excerpt: "POV: 烟花加特林遇上f/1.4大光定"
 ---
 
 # 新年好呀
+
+<!--  -->
 
 算是这个站上发的第一份博客了
 
