@@ -8,7 +8,7 @@ set -e
 
 cd ~/blog/
 # 生成静态文件
-npm run docs:build
+sudo npm run docs:build --allow-root --unsafe-perm=true
 # 进入生成的文件夹
 cd src/.vuepress/dist
 touch CNAME # Custom Domain
