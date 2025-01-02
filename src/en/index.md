@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Makabaka1880's Blog
-heroImage: /assets/Slive-Hero-en-US.png
+heroImage: /assets/Slive-Hero-en-US.webp
 footer: MIT Licensed | Copyright 2024 © Sean Li
 features:
 - title: Dec 24. 2024

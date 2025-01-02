@@ -2,13 +2,13 @@
 tag:
   - 日常 Daily
 star: true
-heroImage: /assets/blogs/2025/Jan/NewYear-Hero.png
+heroImage: /assets/blogs/2025/Jan/NewYear-Hero.webp
 ---
 
 # 新年好呀
 
 
-![POV: 烟花加特林遇上f/1.4大光定](/assets/blogs/2025/Jan/NewYear-Hero.jpg)
+![POV: 烟花加特林遇上f/1.4大光定](/assets/blogs/2025/Jan/NewYear-Hero.webp)
 
 > 算是这个站上发的第一份博客了哈哈哈哈
 
