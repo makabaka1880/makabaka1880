@@ -33,6 +33,8 @@ export const zhNavbar = navbar([
           { text: "算法", icon: "pen-to-square", link: "Algorithms" },
           { text: "折腾CASIO fx991-cn", icon: "pen-to-square", link: "Casio" },
           { text: "手搓渲染器", icon: "pen-to-square", link: "CG" },
+          { text: "C++笔记", icon: "pen-to-square", link: "cpp/" },
+          { text: "树莓派烹饪指南", icon: "pen-to-square", link: "raspi/" },
         ],
       },
       {

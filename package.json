@@ -28,6 +28,7 @@
     "@vuepress/shared-utils": "^1.9.10",
     "markdown-it-html5-embed": "^0.3.3",
     "valine": "^1.4.14",
+    "vuepress-auto-sidebar": "^1.1.1",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-graypage": "^0.1.2",
     "vuepress-plugin-music-bar": "^3.7.6"
