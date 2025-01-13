@@ -2,10 +2,6 @@
 
 前两天搞到一个树莓派，性质冲冲的开始玩
 
-搭建了个家庭服务器：
-
-![Raspberrypi 4B 8GB](/assets/CS/raspi/hero.webp)
-
 然后开始研究GPIO引脚
 
 我有好多个之前做项目剩下的DHT11:
