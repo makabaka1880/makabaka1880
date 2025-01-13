@@ -114,11 +114,6 @@ export default hopeTheme({
     },
     components: {
       components: ["Badge", "VPCard"],
-    },
-    autoSidebarPlugin: {
-      sort: "asc",
-      collapse: true,
-      sidebarDepth: 2,
-    },
+    }
   },
 });
