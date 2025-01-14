@@ -53,7 +53,7 @@ import numpy as np
 def render(array):
     return array
 
-def exportImage(array, name = "render.png"):
+def exportImage(array, name = "render.webp"):
     im = Image.fromarray(array)
     im = im.convert("L")
     im.save("output/"+name)
@@ -66,13 +66,13 @@ from Main import *
 
 arr = np.zeros((128, 128)) # 创建一个128x128的numpy矩阵并用矩阵来填充
 arr = render(arr)
-exportImage(arr, "render1-1.png")
+exportImage(arr, "render1-1.webp")
 ```
 
 运行`run.py`
 这样我们就得到了一张这样的图片:
 
-![Render 1-1](/assets/CS/cg-render-output/render1-1.png)
+![Render 1-1](/assets/CS/cg-render-output/render1-1.webp)
 
 芜湖! 这是我们渲染出的第一张图片
 
@@ -131,7 +131,7 @@ def render(array):
 
 我们就得到了
 
-![Render 2-1](/assets/CS/cg-render-output/render2-1.png)
+![Render 2-1](/assets/CS/cg-render-output/render2-1.webp)
 
 看上去效果不错, 但是有一个问题: 它的y坐标反了
 这也很好解释, 比较算法是从左往右, 从上到下扫描的那个矩阵。这个问题也很好解决，直接用flip：
@@ -142,10 +142,10 @@ arr = np.zeros((128, 128))
 arr = render(arr)
 arr = np.flip(arr, axis=0)
 print(arr)
-exportImage(arr, "render2-2.png")
+exportImage(arr, "render2-2.webp")
 ```
 
-![Render 2-2](/assets/CS/cg-render-output/render2-2.png)
+![Render 2-2](/assets/CS/cg-render-output/render2-2.webp)
 
 这下对劲了
 
@@ -169,7 +169,7 @@ def isOnLine(start=(0, 0), end=(1, 1), point=(0, 0)):
     # 如果距离非常小，则认为点在线段上
     return distance < 0.5
 ```
-![Render 2-3](/assets/CS/cg-render-output/render2-3.png)
+![Render 2-3](/assets/CS/cg-render-output/render2-3.webp)
 
 
 如果想要绘制线段的话可以调整一下代码，判断点是点是否在$\text{Rectangle}((x_0, y_0), (x_1, y_0), (x_0, y_1), (x_1, y_1))$当中。
@@ -207,13 +207,13 @@ def render(array):
     return array
 ```
 
-![Render 2-4](/assets/CS/cg-render-output/render2-4.png)
+![Render 2-4](/assets/CS/cg-render-output/render2-4.webp)
 
 ## 0x03 绘制有宽度的直线
 
 现在出现了一个问题 如果我想绘制一条斜率为$\pi$的线怎么办？
 
-![Render 3-1](/assets/CS/cg-render-output/render3-1.png)
+![Render 3-1](/assets/CS/cg-render-output/render3-1.webp)
 
 出现了一个大问题
 因为我们的算法只考虑了在整数格点上的线条，所以没法绘制无理斜率的线条。同样，我们也没法画出有宽度的线条。

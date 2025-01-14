@@ -6,14 +6,14 @@
 ::: warning
 本文默认读者已经了解blender的基础操作逻辑，将不会在基础操作上多做赘述。
 :::
-![Img](/assets/CS/CS-Blender-1.png)
+![Img](/assets/CS/CS-Blender-1.webp)
 打开一个项目，按下<kbd>a</kbd> <kbd>x</kbd>删掉所有东西，并切换到Scripting一栏
-![Img](/assets/CS/CS-Blender-2.png)
-![Img](/assets/CS/CS-Blender-3.png)
+![Img](/assets/CS/CS-Blender-2.webp)
+![Img](/assets/CS/CS-Blender-3.webp)
 可以看到，右边有一个脚本区，左边是3D视图和终端
 
 我们按<kbd>new</kbd>
-![Img](/assets/CS/CS-Blender-4.png)
+![Img](/assets/CS/CS-Blender-4.webp)
 然后在下面输入代码
 ``` python
 import bpy # 导入blender支持库
@@ -21,19 +21,19 @@ import bpy # 导入blender支持库
 bpy.ops.mesh.primitive_cube_add() # 添加一个立方体
 ```
 运行后效果如下
-![Img](/assets/CS/CS-Blender-5.png)
+![Img](/assets/CS/CS-Blender-5.webp)
 
 ::: tip
 我们打代码调试时经常要使用`print`，但blender的终端是不会输出这些io的。因此，建议MacOS用户打开blender的可以执行文件：
-![Img](/assets/CS/CS-Blender-6.png)
-![Img](/assets/CS/CS-Blender-7.png)
+![Img](/assets/CS/CS-Blender-6.webp)
+![Img](/assets/CS/CS-Blender-7.webp)
 这样，输出的调试信息就有啦
-![Img](/assets/CS/CS-Blender-8.png)
+![Img](/assets/CS/CS-Blender-8.webp)
 :::
 
 ### 0x01 拓展软件
 鉴于我们仿真时经常需要用到外部的库，例如pandas处理数据或者numpy做运算，我们也需要可以在blender版的内置python上可以这样操作。但在我的测试下我发现blender是不支持pip装库的：
-![Img](/assets/CS/CS-Blender-9.png)
+![Img](/assets/CS/CS-Blender-9.webp)
 
 因此，我的解决方案是anaconda在blender内新建一个环境
 
@@ -68,7 +68,7 @@ cube.location.z = 10 # 设置位置
 cube.keyframe_insert("location", frame=frame) # 插入关键帧
 ```
 
-![Img](/assets/CS/CS-Blender-10.png)
+![Img](/assets/CS/CS-Blender-10.webp)
 
 ## 1. 项目 - 重力场建模
 ### 1x00 数学建模
@@ -145,10 +145,10 @@ class GravitationalField:
 Blender的优势在于可以使用各种Objects来可视化结果
 
 这里，我准备将所有质点后缀改为`M`, 并添加属性`k`:
-![Img](/assets/CS/CS-Blender-11.png)
-![Img](/assets/CS/CS-Blender-12.png)
-![Img](/assets/CS/CS-Blender-13.png)
-![Img](/assets/CS/CS-Blender-14.png)
+![Img](/assets/CS/CS-Blender-11.webp)
+![Img](/assets/CS/CS-Blender-12.webp)
+![Img](/assets/CS/CS-Blender-13.webp)
+![Img](/assets/CS/CS-Blender-14.webp)
 
 那怎么获取呢？
 ```python
@@ -275,6 +275,6 @@ for material in bpy.data.materials:
 :::
 
 跑完代码之后可以看到材质都刷新了:
-![Img](/assets/CS/CS-Blender-15.png)
+![Img](/assets/CS/CS-Blender-15.webp)
 
 *未完待续*

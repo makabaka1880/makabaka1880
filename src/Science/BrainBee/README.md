@@ -17,16 +17,16 @@ Changelog
 
 ## 脑基础
 ### 大脑的结构 Brain Structure
-![Brain](/assets/brainbee/bb-anatomy-1.png)
-![Brain](/assets/brainbee/bb-anatomy-fore-1.png)
+![Brain](/assets/brainbee/bb-anatomy-1.webp)
+![Brain](/assets/brainbee/bb-anatomy-fore-1.webp)
 
 #### 大脑皮层分区
 **运动皮层**
 
-![Brain](/assets/brainbee/bb-anatomy-motorcortex.png)
+![Brain](/assets/brainbee/bb-anatomy-motorcortex.webp)
 
 **Brodmmans分区**
-![Brodmann](/assets/brainbee/bb-anatomy-brodmann-areas-map.png)
+![Brodmann](/assets/brainbee/bb-anatomy-brodmann-areas-map.webp)
 ::: details Brodmmans分区
 | Brodmann areas | Name                                                 | 中文名           | Function                                            |
 |----------------|------------------------------------------------------|------------------|-----------------------------------------------------|
@@ -179,7 +179,7 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 
 **掌管**
 - 分区
-    - ![Insular Lobe](/assets/brainbee/bb-anatomy-ins-1.png)
+    - ![Insular Lobe](/assets/brainbee/bb-anatomy-ins-1.webp)
     - 红色 感觉运动
     - 黄色 化学感觉
     - 蓝色 社会情绪
@@ -205,7 +205,7 @@ The parietal lobe is the center of the somatic senses. Most importantly, this pa
 ### 神经元 Neuron
 
 #### 结构
-<center><img src="/assets/brainbee/bb-anatomy-Neuron-1.png"/></center>
+<center><img src="/assets/brainbee/bb-anatomy-Neuron-1.webp"/></center>
 
 | **A** | **B** | **C** | **D** | **E** | **F** |
 | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -237,7 +237,7 @@ An **axon** (from Greek ἄξων áxōn, axis) or nerve fiber (or nerve fibre: 
 - 每一段距离会有一个兰氏结(Node of Ranvier), 大概长度为$10^{-3} \text{mm}$
 
 #### 突触
-<center><img src="/assets/brainbee/bb-anatomy-synapses.png"/></center>
+<center><img src="/assets/brainbee/bb-anatomy-synapses.webp"/></center>
 
 | 编号 | 名称 | 功能(带*表示与神经科学无关) |
 | -- | -- | -- |
@@ -267,26 +267,26 @@ $$ U = IR$$
 然后就是动作电位的形成过程了(以下所有电势都是内部相对外部的)
 - **静息电位 Resting Membrane Potential** 约为 -70 mV, 由Na离子与蛋白质形成
 - 这种状态下, 神经元被称为极化(polarized)
-<center><img src="/assets/brainbee/Neuron-BeforeAction.png"/></center>
+<center><img src="/assets/brainbee/Neuron-BeforeAction.webp"/></center>
 
 - 钠-钾泵分布在细胞的磷脂层上
 - 对于每三个送出胞外的Na$^+会往胞内内输送两个$K$^+$离子, 以保证电化学梯度Electrochemical Gradient
 
-<center><img src="/assets/brainbee/Neuron-NaK-Pump.png"/></center>
+<center><img src="/assets/brainbee/Neuron-NaK-Pump.webp"/></center>
 
 - 神经元的细胞膜上还分布着离子通道
-<center><img src="/assets/brainbee/Neuron-IonChannel.png"/></center>
+<center><img src="/assets/brainbee/Neuron-IonChannel.webp"/></center>
 
 - 有不同种类的离子通道
     - **电压门控通道 Voltage-Gated Channels** 比如钠通道, 会在大概 -55mV的电势的时候打开
     - **配体门控通道 Ligand-Gated Channels** 比如乙酰胆碱受体通道, 在和乙酰胆碱配对后打开
     - **机械门控通道 Mechanically-Gated Channels** 比如压力感受性钠离子通道, 当细胞膜因为梯度导致的应力被撑开, 这玩意也会被拉开
-<center><img src="/assets/brainbee/Neuron-Channels.png"/></center>
+<center><img src="/assets/brainbee/Neuron-Channels.webp"/></center>
 
 - 电位分为
     - *左边* 分级电位 没啥用
     - *右边* 动作电位 会传给下一个神经元
-<center><img src="/assets/brainbee/Neuron-Potentials.png"/></center>
+<center><img src="/assets/brainbee/Neuron-Potentials.webp"/></center>
 
 
 ### 神经递质 Neurotransmitter
@@ -462,7 +462,7 @@ $$ H_2N - CH_2 - COOH$$
 
 #### 催产素
 这这这 结构简式写不下啊(悲
-![Oxytocin](/assets/brainbee/Oxytocin.png)
+![Oxytocin](/assets/brainbee/Oxytocin.webp)
 加强母亲和孩子之间的情感纽带
 促进雌性哺乳动物分泌乳液
 在分娩时导致宫缩
@@ -480,7 +480,7 @@ $$ H_2N - CH_2 - COOH$$
 :::
 
 ##### β内啡肽
-![Beta](/assets/brainbee/beta-endorphin.png)
+![Beta](/assets/brainbee/beta-endorphin.webp)
 - 1977年从人体的垂体组织中发现
 ::: tip 百度百科
 已在神经系统、内分泌器官、消化道以及胎盘和羊水中均有$\beta$-内啡肽及其前体蛋白存在。它具有很强的镇痛效应;能促进生长素、催乳素、生长抑素和胰高血糖素的释放等;应激时$\beta$-内啡肽释放增多;可能是某些精神病发病的原因之一;其含量增高可促进脑缺血性脑水肿的形成;有抑制呼吸运动的频率和幅度的作用，并有报道认为它可能是肾脏的一种营养激素;对动物摄食行为有促进作用;与体温调节有关，并可视为免疫反应的生理调节因子，在中枢神经与免疫系统间起着体液传递介质的作用。

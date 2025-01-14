@@ -5,5 +5,7 @@ One day, I suddenly decided to learn ASM. I have absolutely no idea why, but I j
 I'm on a MacBook, so I have to learn AArch64 (ARM64) ASM. There are a lot of resources available, but not many explanations.
 
 TOC here:
-
-- [Your first Hello World](helloworld)
+- Notes
+    - [Your first Hello World](/CS/asm/helloworld)
+- Cheatsheets:
+    - [System Calls](/CS/asm/syscalls)

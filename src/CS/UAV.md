@@ -46,48 +46,48 @@ UAV有很多种(本文主要关注多旋翼):
 
 ## 1. 无人机的主要系统
 无人机要想正常工作一般需要以下部份
-![Diagram](/assets/CS/FPV/FPV.png)
+![Diagram](/assets/CS/FPV/FPV.webp)
 ## 0x01 动力系统 Power System
 这套系统包含电机以及电调等让飞机真正获得动力的部分
 
 ### 1. 电机 Motors
-![电机](/assets/CS/FPV/FPV-Motors.png)
+![电机](/assets/CS/FPV/FPV-Motors.webp)
 电机在多旋翼上一般采用无刷电机，也有小飞机采用空心杯电机。电机主要由kv值来区分动力。Kv值表面了每1伏电压的增加会带来多少转速的提升：
 $$ \Delta K_v = \frac{dK}{dU} $$
 其中K表示转速，U表示电压
 
 ### 2. 电子速度调器 Electrical Speed Controller
 又称电调，ESC。是这个系统里面关于飞控D-SHOT电空信号控制电机电压的系统，简单来说就是将飞控的指令转化为电调的电设. 飞塔的第一层.
-![Speedybee f405 ESC](/assets/CS/FPV/FPV-ESC.png)
+![Speedybee f405 ESC](/assets/CS/FPV/FPV-ESC.webp)
 
 ## 1x01 控制系统 Flight Control OS
 ### 3. 飞行控制器 Flight Controller
-![频率通道对照表](/assets/CS/FPV/FPV-FC.png)
+![频率通道对照表](/assets/CS/FPV/FPV-FC.webp)
 缩写为飞控, FC. 飞控是飞机的大脑。它上面有个陀螺仪，用于采集调整飞机姿态的数据。它整合各个传感器传来的数据，将DSHOT信号发送给ESC驱动马达，将摄像头画面传给图传功放，接受接收器接受的遥控器发射的遥控信号，等等. 飞塔的第二层.
 
 ## 1x02 图传系统 (FPV系统) VTX System
 ### 4. 图传功放模块 VTX
-![频率通道对照表](/assets/CS/FPV/FPV-VTX.png)
+![频率通道对照表](/assets/CS/FPV/FPV-VTX.webp)
 又称VTX, Video Transmittion。将飞控传过来的摄像头图传画面发射出去，通常配有天线以将电信号转化为电磁波。常用的图传频段有5.8GHz，功率一般100mW-2W之间。有时候可以作为飞塔第三层.
-![频率通道对照表](/assets/CS/FPV/FPV-VTX-CH.png)
+![频率通道对照表](/assets/CS/FPV/FPV-VTX-CH.webp)
 
 ### 5. 摄像头 Camera
 其中含有CMOS传感器，通常配有一个定焦鱼眼镜头，有些可以调节对焦焦距。
-![频率通道对照表](/assets/CS/FPV/FPV-Cam.png)
+![频率通道对照表](/assets/CS/FPV/FPV-Cam.webp)
 
 ## 1x03 接收系统 Recieving System
 ### 6. 接收器 Reciever
 又称RX模块，接收遥控器发送的遥感信息，有时候也负责信息回传(Telemetry)。常用的种类有ELRS(ExpressLRS, 一种开源协议), TBS(黑羊, 普遍效果比ELRS好, 但更贵), DJI(通过SBUS串口接收, 生态相对封闭, 但可以直接使用DJI O3 Air Unit等DJI VTX来当接收器, 方便DJI VTX内录)
-![频率通道对照表](/assets/CS/FPV/FPV-RX.png)
+![频率通道对照表](/assets/CS/FPV/FPV-RX.webp)
 
 ## 1x04 机身 Frame
 ### 7. 主/下碳板 Carbon Plate
 飞机的主体, 固定飞塔的地方.
-![频率通道对照表](/assets/CS/FPV/FPV-Plate.png)
+![频率通道对照表](/assets/CS/FPV/FPV-Plate.webp)
 
 ### 8. 涵道/桨叶保护器 Propeller Guard
 又称桨保, Prop Guard. 可以包裹桨叶, 免其受到伤害或者伤害到其他物品. 常用于<4寸的飞机, 适合室内航拍时用. 这类飞机统称为圈圈机. 有些小飞机(<2.5寸)将桨保作为涵道(Duct)使用, 利用涵道独特的空气动力学优势获得额外升力及更小的噪声. 这类飞机叫涵道机.
-![频率通道对照表](/assets/CS/FPV/FPV-Guard.png)
+![频率通道对照表](/assets/CS/FPV/FPV-Guard.webp)
 
 ### 9. 上碳板/侧碳板 Sideboard
 多见于5寸及以上的机型, 用于支撑机体, 这个功能在圈圈机中被圈圈所包含. 

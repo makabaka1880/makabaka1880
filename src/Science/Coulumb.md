@@ -25,7 +25,7 @@
 ::: tip 平方反比律
 **平方反比律 (Inverse Square Law)** 是一种物理定律，表明某些物理量（如光强、引力、静电力等）与距离的平方成反比。这意味着随着距离的增大，这些物理量的强度会迅速减弱。平方反比律的来源可以追溯到点源的辐射或力的分布。在三维空间中，随着距离的增加，能量或力的“分布面积”以平方比例增加，因此强度会减弱为距离的平方反比。如下图中，场的强被均匀的散在了$a^2$与$b^2$的球面上，因此场强之比为$a^{-2} : b^{-2}$, 顾$\mathbf{F}(l) \varpropto \frac{1}{l^2}$
 
-![Inverse Square Law Diagram](/assets/Science/Physics/Coulumb-ISL.png)
+![Inverse Square Law Diagram](/assets/Science/Physics/Coulumb-ISL.webp)
 :::
 
 

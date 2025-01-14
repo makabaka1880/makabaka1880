@@ -2,17 +2,17 @@
 ## 0x00 序言
 最近在做学校项目，发现一个几万年前star过的一个很看好的库[slidev](https://sli.dev)更新到0.5 Beta了，感觉想试试
 
-![效果也确实不错](/assets/CS/PNGInterlacing/1.png)
+![效果也确实不错](/assets/CS/PNGInterlacing/1.webp)
 
 但唯一的问题就是Deploy之后由于是在Github Pages做的托管所以网很差，assets加载很慢
 
 因此就出现了这种问题：
 
-![啊啊啊啊破网啊啊啊啊](/assets/CS/PNGInterlacing/2.png)
+![啊啊啊啊破网啊啊啊啊](/assets/CS/PNGInterlacing/2.webp)
 
-![诶 出来一点](/assets/CS/PNGInterlacing/3.png)
+![诶 出来一点](/assets/CS/PNGInterlacing/3.webp)
 
-![咋只出来一半啊！！！](/assets/CS/PNGInterlacing/4.png)
+![咋只出来一半啊！！！](/assets/CS/PNGInterlacing/4.webp)
 
 但我们在网上看到的很多都是这样的：
 
@@ -30,7 +30,7 @@
 ### 逐步加载 Progressive
 这种形式就是我刚刚展示的一行行扫描的加载方式：
 
-![逐步加载的PNG](/assets/CS/PNGInterlacing/Prog.png)
+![逐步加载的PNG](/assets/CS/PNGInterlacing/Prog.webp)
 
 - **优势** 加载出来就是最佳的图像
 - **缺点** 没法一次性就加载出来整个图像
@@ -38,7 +38,7 @@
 ### 交叉加载 Interlaced
 这种形式就是我刚刚展示的一行行扫描的加载方式：
 
-![交叉加载的PNG](/assets/CS/PNGInterlacing/Inter.png)
+![交叉加载的PNG](/assets/CS/PNGInterlacing/Inter.webp)
 
 - **优势** 可以将整个图像快速加载出来
 - **缺点** 质量逐步增加，没法一次到位

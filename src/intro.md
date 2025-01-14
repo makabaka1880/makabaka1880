@@ -1,6 +1,6 @@
 ---
 icon: circle-info
-cover: /assets/Hero.png
+cover: /assets/Hero.webp
 ---
 
 # **你好陌生人:wave:～**

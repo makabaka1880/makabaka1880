@@ -27,6 +27,7 @@
     "@noxone/vuepress-plugin-music-player": "^1.2.2",
     "@vuepress/shared-utils": "^1.9.10",
     "markdown-it-html5-embed": "^0.3.3",
+    "mermaid": "^11.4.1",
     "valine": "^1.4.14",
     "vuepress-auto-sidebar": "^1.1.1",
     "vuepress-plugin-comment": "^0.7.3",

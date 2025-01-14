@@ -9,13 +9,13 @@ It is known widely that blender is a very versatile and capable 3D software in m
 ::: warning
 This doc assumes that the reader is familiar with the basics of blender and py3.
 :::
-![Img](/assets/CS/CS-Blender-1.png)
+![Img](/assets/CS/CS-Blender-1.webp)
 Open a project, press<kbd>a</kbd> <kbd>x</kbd>to delete everything, and move to the `Scripting` tab.
-![Img](/assets/CS/CS-Blender-2.png)
-![Img](/assets/CS/CS-Blender-3.png)
+![Img](/assets/CS/CS-Blender-2.webp)
+![Img](/assets/CS/CS-Blender-3.webp)
 There's a script editor on the right, terminal on the bottom left and 3D viewport on the left
 We press<kbd>new</kbd>
-![Img](/assets/CS/CS-Blender-4.png)
+![Img](/assets/CS/CS-Blender-4.webp)
 Enter the following code:
 ``` python
 import bpy # Import blender py support lib
@@ -23,21 +23,21 @@ import bpy # Import blender py support lib
 bpy.ops.mesh.primitive_cube_add() # Create a cube
 ```
 This is how it looks like after running the script:
-![Img](/assets/CS/CS-Blender-5.png)
+![Img](/assets/CS/CS-Blender-5.webp)
 
 ::: tip Debug Outputs
 We use `print` often when debugging, but the blender terminal doesn't support outputing user I/Os. Therefore, we would need to come up with sth ourselfs.
 
 For macOS users, opening the blender app directly with the executable will work:
-![Img](/assets/CS/CS-Blender-6.png)
-![Img](/assets/CS/CS-Blender-7.png)
+![Img](/assets/CS/CS-Blender-6.webp)
+![Img](/assets/CS/CS-Blender-7.webp)
 Now we have our debug outputs:
-![Img](/assets/CS/CS-Blender-8.png)
+![Img](/assets/CS/CS-Blender-8.webp)
 :::
 
 ### 0x01 Extension Libs
 Due to the fact that we need external libs(ex `pandas`, `numpy`, etc) when writing sims, it's quite a headache not to be able to install them in blender using `pip3`:
-![Img](/assets/CS/CS-Blender-9.png)
+![Img](/assets/CS/CS-Blender-9.webp)
 
 My solution is to link an `anaconda` env to blender's internal blender:
 ``` bash
@@ -72,7 +72,7 @@ cube.location.z = 10 # Set position
 cube.keyframe_insert("location", frame=frame) # insert keyframe
 ```
 
-![Img](/assets/CS/CS-Blender-10.png)
+![Img](/assets/CS/CS-Blender-10.webp)
 
 ## 1. Project - Radial Gravitational Field Modeling
 ### 1x00 Mathematical Modeling
@@ -152,10 +152,10 @@ This is sort of like an extended `List[Mass]`, but we can call the linear combin
 It won't be as fun if there's not interactibility with the object. Now, we'll be using the advantage of Blender as a 3D software:
 
 I'm now going to give all mass objects a name with the suffix `M` and give them a property `k`:
-![Img](/assets/CS/CS-Blender-11.png)
-![Img](/assets/CS/CS-Blender-12.png)
-![Img](/assets/CS/CS-Blender-13.png)
-![Img](/assets/CS/CS-Blender-14.png)
+![Img](/assets/CS/CS-Blender-11.webp)
+![Img](/assets/CS/CS-Blender-12.webp)
+![Img](/assets/CS/CS-Blender-13.webp)
+![Img](/assets/CS/CS-Blender-14.webp)
 
 Now how do I get them?
 ```python
@@ -281,6 +281,6 @@ Add it to the start of your main script.
 :::
 
 Now, running the script you should see that we have a correctly assiged material to the objects:
-![Img](/assets/CS/CS-Blender-15.png)
+![Img](/assets/CS/CS-Blender-15.webp)
 
 *To be continued*

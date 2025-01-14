@@ -161,7 +161,7 @@ var theme_default = hopeTheme({
     url: "https://makabaka1880.xyz"
   },
   iconAssets: "fontawesome-with-brands",
-  logo: "/static/Avatar.png",
+  logo: "/static/Avatar.webp",
   repo: "makabaka1880/makabaka1880",
   docsDir: "src",
   blog: {
@@ -306,34 +306,34 @@ var theme_default = hopeTheme({
     //   cacheImage: true,
     //   appendBase: true,
     //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
+    //     icon: "/assets/icon/apple-icon-152.webp",
     //     statusBarColor: "black",
     //   },
     //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
+    //     image: "/assets/icon/ms-icon-144.webp",
     //     color: "#ffffff",
     //   },
     //   manifest: {
     //     icons: [
     //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
+    //         src: "/assets/icon/chrome-mask-512.webp",
     //         sizes: "512x512",
     //         purpose: "maskable",
     //         type: "image/png",
     //       },
     //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
+    //         src: "/assets/icon/chrome-mask-192.webp",
     //         sizes: "192x192",
     //         purpose: "maskable",
     //         type: "image/png",
     //       },
     //       {
-    //         src: "/assets/icon/chrome-512.png",
+    //         src: "/assets/icon/chrome-512.webp",
     //         sizes: "512x512",
     //         type: "image/png",
     //       },
     //       {
-    //         src: "/assets/icon/chrome-192.png",
+    //         src: "/assets/icon/chrome-192.webp",
     //         sizes: "192x192",
     //         type: "image/png",
     //       },
@@ -345,7 +345,7 @@ var theme_default = hopeTheme({
     //         url: "/demo/",
     //         icons: [
     //           {
-    //             src: "/assets/icon/guide-maskable.png",
+    //             src: "/assets/icon/guide-maskable.webp",
     //             sizes: "192x192",
     //             purpose: "maskable",
     //             type: "image/png",

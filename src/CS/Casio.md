@@ -9,7 +9,7 @@
 ### fx-es(ms)吧
 这算是这里面的重量级选手了
 
-![Img](/assets/CS/CS-CASIO-0x00-1.png)
+![Img](/assets/CS/CS-CASIO-0x00-1.webp)
 
 贴吧里的技术贴一直以硬核著称 这里就不细说了
 ## 0x02 字符转换器

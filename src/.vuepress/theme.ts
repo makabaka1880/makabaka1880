@@ -14,7 +14,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/static/Avatar.png",
+  logo: "/static/Avatar.webp",
 
   repo: "makabaka1880/makabaka1880",
 
@@ -104,6 +104,7 @@ export default hopeTheme({
       type: "katex",
     },
     flowchart: true,
+    mermaid: true,
   },
 
   plugins: {
@@ -115,5 +116,6 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     }
+
   },
 });
