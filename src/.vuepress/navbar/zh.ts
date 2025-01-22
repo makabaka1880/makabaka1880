@@ -35,6 +35,7 @@ export const zhNavbar = navbar([
           { text: "手搓渲染器", icon: "pen-to-square", link: "CG" },
           { text: "C++笔记", icon: "pen-to-square", link: "cpp/" },
           { text: "树莓派烹饪指南", icon: "pen-to-square", link: "raspi/" },
+          { text: "Arm ASM笔记", icon: "pen-to-square", link: "asm/" },
         ],
       },
       {

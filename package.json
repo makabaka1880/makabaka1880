@@ -26,9 +26,13 @@
   "dependencies": {
     "@noxone/vuepress-plugin-music-player": "^1.2.2",
     "@vuepress/shared-utils": "^1.9.10",
+    "circuit-diagram": "^0.5.0",
     "element-ui": "^2.15.14",
     "markdown-it-html5-embed": "^0.3.3",
     "mermaid": "^11.4.1",
+    "react": "^19.0.0",
+    "react-art": "^19.0.0",
+    "react-dom": "^19.0.0",
     "valine": "^1.4.14",
     "vuepress-plugin-comment": "^0.7.3"
   }
