@@ -1,9 +1,9 @@
 ---
 home: true
 layout: BlogHome
-heroText: Makabaka1880的博客
-heroImage: /assets/Slice-Hero.webp
-bgImage: /BG-Father.webp
+heroText: Makabaka1880的博客 | 新年快乐
+heroImage: /assets/Hero.webp
+bgImage: /assets/blogs/2025/Jan/NewYear-Hero.webp
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
 footer: MIT Licensed | Copyright 2024 © Sean Li
