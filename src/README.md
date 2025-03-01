@@ -1,9 +1,9 @@
 ---
 home: true
 layout: BlogHome
-heroText: Makabaka1880的博客 | 新年快乐
+heroText: Makabaka1880的博客 | 开学季 :(
 heroImage: /assets/Hero.webp
-bgImage: /assets/blogs/2025/Jan/NewYear-Hero.webp
+bgImage: /BG-HW.webp
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
 footer: MIT Licensed | Copyright 2024 © Sean Li
@@ -16,8 +16,6 @@ features:
 ---
 
 <!-- 
-
-
   - text: 一台UAV的结构👉
     link: ./CS/UAV
     icon: signs-post

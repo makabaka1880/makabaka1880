@@ -34,6 +34,7 @@
     "react-art": "^19.0.0",
     "react-dom": "^19.0.0",
     "valine": "^1.4.14",
+    "vue-template-compiler": "^2.7.16",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }
