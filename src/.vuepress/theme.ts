@@ -1,8 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { musicBarPlugin } from "vuepress-plugin-music-bar";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import autoSidebarPlugin from "vuepress-auto-sidebar";
 
 export default hopeTheme({
   hostname: "https://makabaka1880.github.io",
