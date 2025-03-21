@@ -67,3 +67,5 @@ int main() {
     printf("a = %d\n", a);
 }
 ```
+
+Both methods allow for standard escape sequences like `\n`

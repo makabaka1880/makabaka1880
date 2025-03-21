@@ -152,3 +152,127 @@ for (int i = 3, i < 7; i++) { // 5 = (7 - 1) - 1, 3 is the insertion place
     a[i - 1] = a[i] // Move backwards
 }
 ```
+
+### 0x04 Cases
+
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+    // Init array
+    int a[1001] = {};
+    int n;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i]
+    }
+
+    // Iterate through array to find index
+    int x; cin >> x;
+    int index;
+    for (int i = 1; i<= n; i++) {
+        for (a[i] == x) index = i; break;
+    }
+
+    for (int i = index; i < n; i++) {
+        a[i-1] = a[i];
+    }
+
+    for (int i = 1; i<= n; i++) {
+        cout << a[i - 1];
+    }
+    return 0;
+}
+```
+
+::: tip Case Study
+**STDIN** 
+1. $N$
+2. $\{*a\}$
+3. $i$ $x$
+
+**Operation**
+Insert $x$ into $a$ at $i$ to obtain $a'$
+
+**STDOUT**
+1. $\{*a'\}$
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Init array
+    int a[1001] = {};
+    int n; cin >> n;
+    
+    for (int i = 0; i < n; i++) cin >> a[i];
+    
+    int ind, x; cin >> ind >> x;
+    
+    for (int i = n - 1; i >= ind - 2; i--) {
+        a[i + 1] = a[i];
+    }
+    a[ind - 1] = x;
+    
+    for (int i = 0; i <= n; i++) cout << a[i] << " ";
+    
+}
+```
+:::
+
+::: tip Case Study
+
+**STDIN** 
+1. $N$
+2. $\{*a\}$
+3. $n$ $i$ $x$
+
+**Operation**
+if $n$ is 1 then insert $x$ into $a$ at $i$, else delete at $i$ from $a$.
+
+**STDOUT**
+1. $\{*a'\}$
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Init array
+int a[1001] = {};
+int n;
+
+void insert() {
+    int ind, x; cin >> ind >> x;
+    
+    for (int i = n - 1; i >= ind - 2; i--) {
+        a[i + 1] = a[i];
+    }
+    a[ind - 1] = x;
+}
+
+void del() {
+    int ind; cin >> ind;
+    
+    for (int i = ind; i < n; i++) {
+        a[i-1] = a[i];
+    }
+}
+
+int main() {
+    cin >> n;
+    for (int i = 0; i < n; i++) cin >> a[i];
+    
+    bool ins; cin >> ins;
+    if (ins) {
+        insert();
+    } else {
+        del();
+    }
+    
+    for (int i = 0; i < n + (ins ? 1 : -1); i++) cout << a[i] << " ";
+
+    return 0;
+}
+```
