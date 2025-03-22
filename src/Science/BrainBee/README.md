@@ -270,7 +270,7 @@ $$ U = IR$$
 <center><img src="/assets/brainbee/Neuron-BeforeAction.webp"/></center>
 
 - 钠-钾泵分布在细胞的磷脂层上
-- 对于每三个送出胞外的Na$^+会往胞内内输送两个$K$^+$离子, 以保证电化学梯度Electrochemical Gradient
+- 对于每三个送出胞外的Na$^+$会往胞内内输送两个K$^+$离子, 以保证电化学梯度Electrochemical Gradient
 
 <center><img src="/assets/brainbee/Neuron-NaK-Pump.webp"/></center>
 
