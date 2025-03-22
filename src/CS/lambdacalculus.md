@@ -6,9 +6,11 @@ sticky: true
 
 ::: tip 写在前面
 学这个主要是因为我们社团准备要规范一些写代码的习惯以及结构 确定了OOP以及函数化编程后在寻找适合函数化编程的伪代码规范的时候决定恶补一下底层知识
+
+本文适合对于计算机科学与代数有一定了解的同学
 :::
 
-## 0x00 Notations
+## 0x01 Notations
 
 Assume a mathematical function $f(x) = x^2$. It can be denoted as a map:
 $$ f: x \mapsto x^2$$
@@ -44,7 +46,7 @@ Instead, python and many other languages have a built-in lambda syntax:
 ```
 :::
 
-## 0x01 Reductions
+## 0x02 Reductions
 
 λ-abstractions could be manipulated. Consider the previous python lambda function:
 
@@ -58,6 +60,15 @@ It represents a λ-abstraction $(\lambda x .\ x^2)$. One can notice that changin
 **α-conversions** is a operation on a λ-abstraction to change the bound variable. For an abstraction with bound variable x and body M:
 $$(\lambda x .\ M)\ \to_{\alpha}\ (\lambda y .\ M)$$
 is an α-conversion.
+
+An example would be to da an α-conversion on our previous python lambda expression.
+
+```python
+>>> f1 = (lambda x: x ** 2) # Original Function
+>>> f2 = (lambda y: y ** 2) # Alpha-conversion done
+>>> assert f1 (2) == f2 (2) # Check for equivalence
+True
+```
 :::
 
 Functions on their own aren't of much use. To utilize a function, **function applications** come in:
@@ -68,6 +79,13 @@ $$(\lambda x .\ M) N\ \to_{\beta}\ M[N/x]$$
 
 For example, consider the algebriac function $f(x) = x^2$ and computing $f(3)$, the equivalent in lambda calculus would be 
 $$(\lambda x .\ x^2)\ 3\ \to_{\beta}\ x^2[3/x] = 3^2 = 9$$
+
+Let's try that out on our previous function.
+```python
+>>> f = (lambda x: x ** 2)
+>>> f (2) # Applies 2 to the parameter x, thus computing x ** 2 [2/x]
+4
+```
 
 Note that lambda calculus is **completely symbolic**, therefore numerical operations are not allowed. The squaring example is included purely for demonstration.
 :::
@@ -93,7 +111,7 @@ In python, a curried lambda function could also be implemented as follows:
 ```
 :::
 
-## 0x02 Extensions
+## 0x03 Encoding
 The lambda calculus is pretty primitive as for now. However, according to the **Church-Turing thesis**, this functional programming language is **Turing Complete**, thus capable of anything a modern programming language is.
 
 Let's see some implementations of features in modern languages.
@@ -238,3 +256,162 @@ Other binary operands $(\lambda a .\ \lambda b .\ M)$ can be implemented similar
 | $\text{OR}$ | $a\ \text{True}\ b$ |
 | $\text{XOR}$ | $a\ (\text{Not}\ b)\ b$ |
 | $\text{NAND}$ | $a\ (\text{Not}\ b)\ \text{True}$ |
+
+## Appendix: Cheatsheet
+
+### Boolean Constants
+#### T (True)
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a $$
+- **Python Implementation**:  
+  ```python
+  T = lambda a: lambda b: a
+  ```
+- **Effect**:  
+  Selects first argument:  
+  $$ \text{T}\ a\ b \to a $$
+- **Example**:  
+  ```python
+  >>> T ("T") ("F") 
+  "T"
+  ```
+
+#### F (False)
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, b $$
+- **Python Implementation**:  
+  ```python
+  F = lambda a: lambda b: b
+  ```
+- **Effect**:  
+  Selects second argument:  
+  $$ \text{F}\ a\ b \to b $$
+- **Example**:  
+  ```python
+  >>> F ("T") ("F") 
+  "F"
+  ```
+
+---
+
+### Unary Boolean Gates
+
+#### NOT
+- **Lambda Abstraction**:  
+  $$ \lambda s .\, s\ \text{F}\ \text{T} $$
+- **Python Implementation**:  
+  ```python
+  NOT = lambda s: s (F) (T)
+  ```
+- **Effect**:  
+  $$ 
+  \begin{align} 
+  \lnot \text{T} &\to \text{F} \\ 
+  \lnot \text{F} &\to \text{T} 
+  \end{align}
+  $$
+- **Example**:  
+  ```python
+  >>> NOT (T) ("T") ("F") 
+  "F"
+  ```
+
+---
+
+### Binary Boolean Operations
+
+#### AND
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a\ b\ \text{F} $$
+- **Python Implementation**:  
+  ```python
+  AND = lambda a: lambda b: a (b) (F)
+  ```
+- **Effect**:  
+  $$ a \land b = \begin{cases} 
+  \text{T} & \text{if } a = \text{T}, b = \text{T} \\ 
+  \text{F} & \text{otherwise} 
+  \end{cases} $$
+- **Example**:  
+  ```python
+  >>> AND (T) (F) ("T") ("F") 
+  "F"
+  ```
+
+#### OR
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a\ \text{T}\ b $$
+- **Python Implementation**:  
+  ```python
+  OR = lambda a: lambda b: a (T) (b)
+  ```
+- **Effect**:  
+  $$ a \lor b = \begin{cases} 
+  \text{T} & \text{if } a = \text{T} \text{ or } b = \text{T} \\ 
+  \text{F} & \text{otherwise} 
+  \end{cases} $$
+- **Example**:  
+  ```python
+  >>> OR (F) (T) ("T") ("F") 
+  "T"
+  ```
+
+#### NAND
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a\ (\text{NOT}\ b)\ \text{T} $$
+- **Python Implementation**:  
+  ```python
+  NAND = lambda a: lambda b: a (NOT (b)) (T)
+  ```
+- **Effect**:  
+  $$ \lnot(a \land b) $$
+- **Example**:  
+  ```python
+  >>> NAND (T) (T) ("T") ("F") 
+  "F"
+  ```
+
+#### NOR
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a\ \text{F}\ (\text{NOT}\ b) $$
+- **Python Implementation**:  
+  ```python
+  NOR = lambda a: lambda b: a (F) (NOT (b))
+  ```
+- **Effect**:  
+  $$ \lnot(a \lor b) $$
+- **Example**:  
+  ```python
+  >>> NOR (F) (F) ("T") ("F") 
+  "T"
+  ```
+
+#### XOR
+- **Lambda Abstraction**:  
+  $$ \lambda a .\, \lambda b .\, a\ (\text{NOT}\ b)\ b $$
+- **Python Implementation**:  
+  ```python
+  XOR = lambda a: lambda b: a (NOT (b)) (b)
+  ```
+- **Effect**:  
+  $$ a \oplus b = \begin{cases} 
+  \text{T} & \text{if } a \neq b \\ 
+  \text{F} & \text{otherwise} 
+  \end{cases} $$
+- **Example**:  
+  ```python
+  >>> XOR (T) (F) ("T") ("F") 
+  "T"
+  ```
+
+---
+
+### Key Conventions
+1. All operations are **curried**: `AND (T) (F)` not `AND(T, F)`
+2. Church booleans act as **selectors**:  
+   $$ \text{T}\ a\ b \to a \quad \text{F}\ a\ b \to b $$
+3. Primitive definitions:  
+   ```python
+   T = lambda a: lambda b: a  # Church TRUE
+   F = lambda a: lambda b: b  # Church FALSE
+   ```
