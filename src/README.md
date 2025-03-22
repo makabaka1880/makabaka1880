@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-heroText: Makabaka1880的博客 | 开学季 :(
+heroText: Makabaka1880的博客 | 中考季 :(
 heroImage: /assets/Hero.webp
 bgImage: /BG-HW.webp
 heroFullScreen: true

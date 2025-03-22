@@ -28,14 +28,11 @@ export const zhNavbar = navbar([
         prefix: "CS/",
         children: [
           { text: "友情链接", icon: "pen-to-square", link: "Friends" },
-          { text: "UAV结构", icon: "pen-to-square", link: "UAV" },
-          { text: "Blender仿真学", icon: "pen-to-square", link: "BlenderSim" },
-          { text: "算法", icon: "pen-to-square", link: "Algorithms" },
-          { text: "折腾CASIO fx991-cn", icon: "pen-to-square", link: "Casio" },
-          { text: "手搓渲染器", icon: "pen-to-square", link: "CG" },
-          { text: "C++笔记", icon: "pen-to-square", link: "cpp/" },
+          { text: "ARM开发", icon: "pen-to-square", link: "ARM/" },
+          { text: "C++学习", icon: "pen-to-square", link: "cpp/" },
+          { text: "理论计算机科学", icon: "pen-to-square", link: "theoretical/" },
           { text: "树莓派烹饪指南", icon: "pen-to-square", link: "raspi/" },
-          { text: "Arm ASM笔记", icon: "pen-to-square", link: "asm/" },
+          { text: "杂项", icon: "pen-to-square", link: "miscellaneous/" },
         ],
       },
       {

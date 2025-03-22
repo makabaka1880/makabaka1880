@@ -7,7 +7,9 @@ sticky: true
 ::: tip 写在前面
 学这个主要是因为我们社团准备要规范一些写代码的习惯以及结构 确定了OOP以及函数化编程后在寻找适合函数化编程的伪代码规范的时候决定恶补一下底层知识
 
-本文适合对于计算机科学与代数有一定了解的同学
+本文适合对于计算机科学与代数有一定了解的同学 最好是python 我文中就先用py的lambda expression来做的implementation
+
+结尾有[Cheatsheet](#appendix-cheatsheet)哈～
 :::
 
 ## 0x01 Notations
@@ -56,7 +58,7 @@ Instead, python and many other languages have a built-in lambda syntax:
 
 It represents a λ-abstraction $(\lambda x .\ x^2)$. One can notice that changing the bound variable of the abstraction does not change the essence of the map, ie whether the abstraction is called $(\lambda y .\ y^2)$ or $(\lambda \star .\ \star^2)$ it is always equivalent to our initial abstraction. Therefore we define **α-conversion** as follows:
 
-::: tip Definition
+::: info Definition
 **α-conversions** is a operation on a λ-abstraction to change the bound variable. For an abstraction with bound variable x and body M:
 $$(\lambda x .\ M)\ \to_{\alpha}\ (\lambda y .\ M)$$
 is an α-conversion.
@@ -73,7 +75,7 @@ True
 
 Functions on their own aren't of much use. To utilize a function, **function applications** come in:
 
-::: tip Definition
+::: info Definition
 **β-reduction** is a function application where a specific value is being computed using a λ abstraction. For a given abstration with bound variable x and body M:
 $$(\lambda x .\ M) N\ \to_{\beta}\ M[N/x]$$
 
@@ -109,6 +111,32 @@ In python, a curried lambda function could also be implemented as follows:
 ```python
 (lambda x: lambda y: x + y) (1) (2) # Outputs 3
 ```
+:::
+
+Although it seems like that a nested function requires strict ordering of parameters, it is not the case in a curried function. 
+
+::: info Proof Box
+**Lemma.** Any two abstractions of form $f = \lambda x.\ \lambda y.\ M(x, y)$ and $g = \lambda y.\ \lambda x.\ M$(y, x) are equivalent.
+**Proof.** Perform α-conversions on f and g:
+$$
+\begin{align*}
+f &= \lambda x .\ \lambda y.\ M(x, y) \\
+&\to_{\alpha}^{x \to a} \lambda a .\ \lambda y.\ M(a, y) \\
+&\to_{\alpha}^{y \to b} \lambda a .\ \lambda b.\ M(a, b) \\
+\end{align*}
+$$
+$$
+\begin{align*}
+g &= \lambda y .\ \lambda x.\ M(y, x) \\
+&\to_{\alpha}^{y \to a} \lambda a .\ \lambda x.\ M(a, x) \\
+&\to_{\alpha}^{x \to b} \lambda a .\ \lambda b.\ M(a, b) \\
+\end{align*}
+$$
+
+Therefore $f \equiv g$.
+
+<QED/>
+
 :::
 
 ## 0x03 Encoding
@@ -153,7 +181,6 @@ $$
     &\to_{\beta} (\lambda x .\ \lambda y .\ x)\ M\ N \\
     &\to_{\beta} (\lambda y .\ M)\ N  \\
     &\to_{\beta} M
-    &= M \\
 \end{align*}
 $$
 
@@ -167,7 +194,6 @@ $$
     &\to_{\beta} (\lambda x .\ \lambda y .\ y)\ M\ N \\
     &\to_{\beta} (\lambda y .\ y)\ N  \\
     &\to_{\beta} N
-    &= M \\
 \end{align*}
 $$
 
@@ -234,7 +260,7 @@ graph TD;
 
 Further more, the $\text{If}$ statement can be ommited completely:
 
-::: info Proof
+::: info Proof Box
 **Lemma.** Any application of the form $\text{If}\ s\ a\ b$ is equivalent to $s\ a\ b$.
 
 Perform a $\beta$-reduction on the application:
@@ -246,6 +272,9 @@ $$
 &\to_{\beta} s\ a\ b
 \end{align*}
 $$
+
+<QED/>
+
 :::
 
 Other binary operands $(\lambda a .\ \lambda b .\ M)$ can be implemented similarly:
@@ -256,6 +285,10 @@ Other binary operands $(\lambda a .\ \lambda b .\ M)$ can be implemented similar
 | $\text{OR}$ | $a\ \text{True}\ b$ |
 | $\text{XOR}$ | $a\ (\text{Not}\ b)\ b$ |
 | $\text{NAND}$ | $a\ (\text{Not}\ b)\ \text{True}$ |
+
+For more implementations, see [cheatsheet](#binary-boolean-operations)
+### Church Numerals
+
 
 ## Appendix: Cheatsheet
 

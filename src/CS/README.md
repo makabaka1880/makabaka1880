@@ -5,3 +5,5 @@
 - [树莓派](raspi/)
 - [C++](cpp/)
 - [AArch汇编](asm/)
+- [理论计算机科学](theoretical/)
+- [其他的都在这里 ->](miscellaneous/)
