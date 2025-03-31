@@ -9,6 +9,8 @@ sticky: true
 
 本文适合对于计算机科学与代数有一定了解的同学 最好是python 我文中就先用py的lambda expression来做的implementation
 
+我自己做了个$\lambda$-calculus的演算器，可以来玩玩 [网站](https://pylambda.makabaka1880.xyz) [GitHub](https://github.com/makabaka1880/PyLambda)
+
 结尾有[Cheatsheet](#appendix-cheatsheet)哈～
 :::
 
@@ -263,7 +265,7 @@ Further more, the $\text{If}$ statement can be ommited completely:
 ::: info Proof Box
 **Lemma.** Any application of the form $\text{If}\ s\ a\ b$ is equivalent to $s\ a\ b$.
 
-Perform a $\beta$-reduction on the application:
+**Proof.** Perform a $\beta$-reduction on the application:
 
 $$
 \begin{align*}
