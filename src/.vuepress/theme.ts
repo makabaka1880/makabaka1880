@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://makabaka1880.github.io",
+  hostname: "https://makabaka1880.xyz",
 
   author: {
     name: "Makabaka1880",
@@ -32,6 +32,7 @@ export default hopeTheme({
 
   encrypt: {
     config: {
+      "/School-2025": ["BmflsHzbqb", "ln1880"],
       "/School-2024": ["HBBSS-24", "ln1880"],
       "/School-2024/Chinese": "Chi-24",
       "/School-2024/Physics": "Phy-24",
@@ -109,7 +110,7 @@ export default hopeTheme({
     blog: true,
     comment: {
       provider: "Waline",
-      serverURL: "https://comments-frontend.makabaka1880.xyz/",
+      serverURL: "https://blog-comments-frontend.vercel.app",
     },
     components: {
       components: ["Badge", "VPCard"],
