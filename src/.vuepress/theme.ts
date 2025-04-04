@@ -111,6 +111,7 @@ export default hopeTheme({
     comment: {
       provider: "Waline",
       serverURL: "https://waline.service.itedev.com/",
+      turnstileKey: "0x4AAAAAABDy6JZ02biPBqza"
     },
     components: {
       components: ["Badge", "VPCard"],
