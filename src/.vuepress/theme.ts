@@ -110,7 +110,7 @@ export default hopeTheme({
     blog: true,
     comment: {
       provider: "Waline",
-      serverURL: "https://blog-comments-frontend.vercel.app",
+      serverURL: "https://waline.service.itedev.com/",
     },
     components: {
       components: ["Badge", "VPCard"],
