@@ -36,7 +36,7 @@ sticky: true
 小时候第一次看到电脑时的那种好奇又一次涌上心头，我开始在老爸的陪伴下一页一页啃下书中的种种术语和语法。在读完这本书之后，我打开了我们家的大电脑。当我编译好代码，在游览器看到了那句我写下的“Hello World”时，我的心中仿佛打开了一扇通往新世界的门。
 
 ```html
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
     <head>
         <title> My First Website | 2018 </title>

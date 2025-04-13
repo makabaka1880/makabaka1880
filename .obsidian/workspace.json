@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b8f0f5f78c446d73",
+        "id": "53a67d1f0e28450e",
         "type": "tabs",
         "children": [
           {
-            "id": "30a23452d9d7044d",
+            "id": "897b6fa16216431c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/Miscellaneous/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "7942402d2c3185f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/School-2024/Chinese/Yizhan.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Yizhan"
-            }
-          },
-          {
-            "id": "02689f5e626d62d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/CS/theoretical/lambdacalculus.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "lambdacalculus"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,16 +164,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02689f5e626d62d4",
+  "active": "897b6fa16216431c",
   "lastOpenFiles": [
+    "src/Miscellaneous/README.md",
+    "src/School-2024/Chinese/Yizhan.md",
+    "src/CS/theoretical/lambdacalculus.md",
     "src/blog/2025/Father.md",
     "src/School-2025/HW-W6.md",
     "src/School-2025",
     "src/blog/2025/HappyNewYear.md",
     "src/blog/2025/NewYear-Jan1.md",
-    "src/School-2024/Chinese/Yizhan.md",
     "科学的本质.md",
-    "src/Miscellaneous/README.md",
     "src/Miscellaneous/NewBeeLinks.md",
     "src/Miscellaneous/Keynote-deploy.md",
     "src/Miscellaneous/BookList.md",
