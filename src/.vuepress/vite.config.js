@@ -9,4 +9,7 @@ export default defineConfig({
       external: ['react', 'react-art', 'react-art/shapes/circle'],
     },
   },
+  server: {
+    cors: true // or specify origins as needed
+  }
 });
