@@ -3,6 +3,7 @@ import FriendList from './components/FriendList.vue'
 import FriendList_enUS from './components/FriendList_enUS.vue'
 import Schematic from './components/Schematic.vue'
 import QED from './components/QED.vue'
+import Audio from './components/Audio.vue'
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -10,5 +11,6 @@ export default defineClientConfig({
     app.component('FriendList_enUS', FriendList_enUS)
     app.component('Schematic', Schematic)
     app.component('QED', QED)
+    app.component('Audio', Audio)
   },
 })
