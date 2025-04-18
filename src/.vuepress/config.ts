@@ -7,12 +7,12 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "博客",
+      title: "Makabaka1880的博客",
       description: "Makabaka1880的博客",
     },
     "/en/": {
       lang: "en-US",
-      title: "Blog",
+      title: "Makabaka1880's Blog",
       description: "Makabaka1880's Blog",
     },
   },
