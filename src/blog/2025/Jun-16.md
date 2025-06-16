@@ -6,7 +6,7 @@ tag:
 
 # Jun 16 记
 
-<Audio src="http://homeserver.local:3030/static/hosted/blog/2025/Jun/viva%20las%20vengence.m4a" fileName="Vivi Las Vengeance - Panic! At the Disco"/>
+<Audio src="http://files.makabaka1880.xyz/static/hosted/blog/2025/Jun/viva%20las%20vengence.m4a" fileName="Vivi Las Vengeance - Panic! At the Disco"/>
 
 中考考完啦！终于结束了初中四年的生活
 
