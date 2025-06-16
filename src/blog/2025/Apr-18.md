@@ -2,12 +2,10 @@
 tag:
   - 日常 Daily
   - 学业 Academia
-star: true
-heroImage: /assets/blogs/2025/Jan/NewYear-Hero.webp
 ---
 
 # Apr 18 记
-<Audio src="http://files.makabaka1880.xyz/static/hosted/blog/2025/Apr/Welcome%20Home,%20Son%20(Remastered).m4a" lyrics="http://files.makabaka1880.xyz/static/hosted/blog/2025/Apr/Welcome%20Home,%20Son%20(Remastered).lrc" fileName="Welcome Home, Son (Remastered) - Radical Faces"/>
+<Audio src="http://files.makabaka1880.xyz/static/hosted/blog/2025/Apr/Welcome%20Home,%20Son%20(Remastered).m4a" fileName="Welcome Home, Son (Remastered) - Radical Faces"/>
 
 二模也算是考完啦 人也算是快要裂开啦哈哈哈哈哈哈
 
