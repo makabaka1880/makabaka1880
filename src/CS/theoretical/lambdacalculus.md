@@ -14,87 +14,87 @@ sticky: true
 结尾有[Cheatsheet](#appendix-cheatsheet)哈～
 :::
 
-## 0x01 Notations
+## 0x01 记法
 
-Assume a mathematical function $f(x) = x^2$. It can be denoted as a map:
+考虑函数$f(x) = x^2$. 我们可以把它写做一个函数：
 $$ f: x \mapsto x^2$$
 
-Lambda calculus is all about the manipulation of functions, so the definition of functions is necessary. In lambda calculus, functions are called λ-abstractions:
+Lambda演算就是完全围绕函数及其运算展开的，因此函数的定义是必要的。在Lambda演算中，函数被称为lambda抽象：
 
-::: info Definition
-**λ-Abstractions** represents anonymous singled-valued functions. Consider a map $x \mapsto M$ then a equivalent λ-abstraction could be defined as
+::: info 定义 1.0
+**λ抽象 (Lambda Abstraction)** 表示单值匿名函数。对于映射关系 $x \mapsto M$，其等价的λ抽象定义为：
 $$ \lambda x .\ M $$
-Where $x$ is the **bound variable** and $M$ the **body**. In modern programming languages, $x$ is also known as the **input parameter**.
+其中 $x$ 称为**绑定变量**，$M$ 称为**函数体**。在现代编程语言中，$x$ 也被称作**输入参数**。
 :::
 
-Thus our squaring function $f$ could be defined using a lambda abstraction:
+因此此前的函数可以写作：
 $$ \lambda x .\ x^2 $$
 
-::: warning Warning
-Note that the abstraction $(\lambda x .\ x^2)$ is not equivalent of the following py3 function:
+::: warning 主意
+虽然它们的类型等价，但是 $(\lambda x .\ x^2)$ 与下面这个函数不是一样的：
 
 ```python
 def f(x):
     return x ** 2
 ```
 
-$x^2$ is the **body** of the abstraction. In λ-calculus, there's no concept as to return values; an abstraction is only a mathematical object. Analogy:
-- Functions in languages are like ​calculators (produce values immediately).
-- λ-abstractions are like ​equations (preserve structure for formal manipulation).
+$x^2$是这个抽象的**函数体**，是这个函数的值。在编程语言中，f(x)在未带入前是无意义的，但是在lambda演算中我们的抽象体是有具体意义的
 
-Instead, python and many other languages have a built-in lambda syntax:
+- 变成语言中的函数更像是计算器，可以给你直接算出答案
+- lambda抽象是草稿纸上的过程，它们保留了代数结构以便推导
+
+值得注意的是Python等语言中也有定义匿名函数的方法：
 
 ```python
 (lambda x: x ** 2) # Defines a lambda function that squares
 (lambda x: x ** 2) (2) # Outputs 4
 ```
 :::
+## 0x02 操作与规约
 
-## 0x02 Reductions
-
-λ-abstractions could be manipulated. Consider the previous python lambda function:
+抽象体可以参与运算。考虑先前的结构体：
 
 ```python
 (lambda x: x ** 2)
 ```
 
-It represents a λ-abstraction $(\lambda x .\ x^2)$. One can notice that changing the bound variable of the abstraction does not change the essence of the map, ie whether the abstraction is called $(\lambda y .\ y^2)$ or $(\lambda \star .\ \star^2)$ it is always equivalent to our initial abstraction. Therefore we define **α-conversion** as follows:
+它表示一个λ抽象 $(\lambda x .\ x^2)$。我们可以注意到，改变抽象的绑定变量并不会改变映射的本质。也就是说，无论抽象被命名为 $(\lambda y .\ y^2)$ 还是 $(\lambda \star .\ \star^2)$，它始终等价于我们最初的抽象。因此我们定义**α转换**如下：
 
-::: info Definition
-**α-conversions** is a operation on a λ-abstraction to change the bound variable. For an abstraction with bound variable x and body M:
+::: info 定义
+**α转换**是对λ抽象改变其绑定变量的操作。对于一个具有绑定变量x和函数体M的抽象：
 $$(\lambda x .\ M)\ \to_{\alpha}\ (\lambda y .\ M)$$
-is an α-conversion.
+就是一个α转换。
 
-An example would be to da an α-conversion on our previous python lambda expression.
+以下是在我们之前的Python lambda表达式上进行α转换的示例：
 
 ```python
->>> f1 = (lambda x: x ** 2) # Original Function
->>> f2 = (lambda y: y ** 2) # Alpha-conversion done
->>> assert f1 (2) == f2 (2) # Check for equivalence
+>>> f1 = (lambda x: x ** 2) # 原始函数
+>>> f2 = (lambda y: y ** 2) # 完成α转换
+>>> assert f1(2) == f2(2) # 验证等价性
 True
 ```
 :::
 
-Functions on their own aren't of much use. To utilize a function, **function applications** come in:
+函数本身并不直接发挥作用。要实际运用函数，就需要进行**函数应用**：
 
-::: info Definition
-**β-reduction** is a function application where a specific value is being computed using a λ abstraction. For a given abstration with bound variable x and body M:
+::: info 定义
+**β规约**是指使用λ抽象计算特定值的函数应用过程。对于具有绑定变量x和函数体M的抽象：
 $$(\lambda x .\ M) N\ \to_{\beta}\ M[N/x]$$
 
-For example, consider the algebriac function $f(x) = x^2$ and computing $f(3)$, the equivalent in lambda calculus would be 
+例如，考虑代数函数 $f(x) = x^2$ 计算 $f(3)$，在λ演算中等价为：
 $$(\lambda x .\ x^2)\ 3\ \to_{\beta}\ x^2[3/x] = 3^2 = 9$$
 
-Let's try that out on our previous function.
+让我们在前面的函数上实际验证：
 ```python
 >>> f = (lambda x: x ** 2)
->>> f (2) # Applies 2 to the parameter x, thus computing x ** 2 [2/x]
+>>> f(2)  # 将2应用于参数x，即计算 x**2 [2/x]
 4
 ```
 
-Note that lambda calculus is **completely symbolic**, therefore numerical operations are not allowed. The squaring example is included purely for demonstration.
+需要注意的是，λ演算是**完全符号化的**，因此不允许直接进行数值运算。平方运算示例仅用于演示目的。
 :::
 
-Until here, one limitation of lambda abstractions is shown: they are single-valued functions. However, the higher-order property of lambda abstractions allows them to recieve **functions** as inputs. Consider the following implementation of binary addition:
+至此，λ抽象的一个限制显现出来：它们都是单参函数。然而，λ抽象的高阶特性允许它们接受**函数**作为输入。考虑以下二元加法的实现：
 
 $$
 (\lambda x .\ (\lambda y .\ (x + y)))\ M\ N\ \\
@@ -104,22 +104,25 @@ $$
 (x + y)\ [x/M]\ [y/N] = M + N
 $$
 
-It implements something called **currying**, named after the logician Haskell Curry. The brackets are included only for easier understanding; the lambda abstract itself could be written as follows:
+这种技术称为**柯里化**(Currying)，以逻辑学家Haskell Curry的名字命名。括号仅用于便于理解；λ抽象本身可简写为：
 $$\lambda x .\ \lambda y .\ x + y$$
 
-::: tip Implementation
-In python, a curried lambda function could also be implemented as follows:
+::: tip 实现
+在Python中，柯里化的λ函数可以这样实现：
 
 ```python
-(lambda x: lambda y: x + y) (1) (2) # Outputs 3
+(lambda x: lambda y: x + y)(1)(2)  # 输出3
 ```
 :::
 
-Although it seems like that a nested function requires strict ordering of parameters, it is not the case in a curried function. 
+尽管嵌套函数似乎要求严格的参数顺序，但在柯里化函数中并非如此。
+以下是对引理证明和布尔值编码的专业中文翻译：
 
-::: info Proof Box
-**Lemma.** Any two abstractions of form $f = \lambda x.\ \lambda y.\ M(x, y)$ and $g = \lambda y.\ \lambda x.\ M$(y, x) are equivalent.
-**Proof.** Perform α-conversions on f and g:
+---
+
+::: info 证明
+**引理.** 形式为 $f = \lambda x.\ \lambda y.\ M(x, y)$ 和 $g = \lambda y.\ \lambda x.\ M(y, x)$ 的任意两个抽象是等价的。  
+**证明.** 对 f 和 g 进行α转换：  
 $$
 \begin{align*}
 f &= \lambda x .\ \lambda y.\ M(x, y) \\
@@ -135,43 +138,43 @@ g &= \lambda y .\ \lambda x.\ M(y, x) \\
 \end{align*}
 $$
 
-Therefore $f \equiv g$.
+因此 $f \equiv g$。
 
 <QED/>
 
 :::
 
-## 0x03 Encoding
-The lambda calculus is pretty primitive as for now. However, according to the **Church-Turing thesis**, this functional programming language is **Turing Complete**, thus capable of anything a modern programming language is.
+## 0x03 编码实现
+目前的λ演算还相当原始。但根据**邱奇-图灵论题**(Church-Turing thesis)，这种函数式编程语言是**图灵完备的**，因此能够实现任何现代编程语言的功能。
 
-Let's see some implementations of features in modern languages.
+让我们看看现代语言中某些特性的λ演算实现。
 
-### Booleans and Conditionals
+### 布尔值与条件表达式
 
-In lambda calculus, all computation is expressed through function abstraction and application. We can define Boolean values as selector functions:
+在λ演算中，所有计算都通过函数抽象和应用来表达。我们可以将布尔值定义为选择函数：
 
 $$
 \text{True} = \lambda x .\ \lambda y .\ x \\
 \text{False} = \lambda x .\ \lambda y .\ y
 $$
 
-If one extract any one of these lambda functions into a python named function, it looks like this:
+如果将这些λ函数转化为Python命名函数，其形式如下：
 
 ```python
 def true(x, y):
-    x()
+    return x  # 总是选择第一个参数
 
 def false(x, y):
-    y()
+    return y  # 总是选择第二个参数
 ```
 
-It is already obvious that these are control-flow statements. They might seemed hard-coded, but try seeing it from a perspective when they are *variables*.
+显然，这些函数实现了条件选择的功能。它们看起来像是硬编码的，但如果将它们视为*变量*，就能理解其通用性。
 
-The conditional operator can be implemented as:
+条件运算符可如下实现：
 
 $$ \text{If} = \lambda b .\ \lambda x .\ \lambda y .\ b\ x\ y $$
 
-Reduction Examples:
+规约示例：
 
 $$
 \begin{align*}
@@ -199,254 +202,252 @@ $$
 \end{align*}
 $$
 
-Therefore a valid control-flow statement has been implemented. By this logic, even a switch statement with finite number of branches can be implemented. For example, a ternary switch-case control selector could be implemented. 
+通过上述规约过程，我们实现了有效的条件控制流。基于此原理，甚至可以创建具有有限分支的switch语句。例如，我们可以实现一个三路选择器：
 
-First, the cases/branches need to be defined:
-
+首先定义分支选择函数：
 $$
-\text{A} = \lambda x .\ \lambda y .\ \lambda z .\ x \\
-\text{B} = \lambda x .\ \lambda y .\ \lambda z .\ y \\
-\text{C} = \lambda x .\ \lambda y .\ \lambda z .\ z \\
+\text{A} = \lambda x .\ \lambda y .\ \lambda z .\ x \quad \text{(选择第一参数)} \\
+\text{B} = \lambda x .\ \lambda y .\ \lambda z .\ y \quad \text{(选择第二参数)} \\
+\text{C} = \lambda x .\ \lambda y .\ \lambda z .\ z \quad \text{(选择第三参数)} \\
 $$
 
-Then the conditional itself:
-
+然后定义选择器核心：
 $$
 \text{Selector} = \lambda s .\ \lambda x .\ \lambda y .\ \lambda z\ s\ x\ y\ z
 $$
 
-Then the selector can be called as
-
+选择器调用过程：
 $$
-\text{Selector}\ \text{A}\ a\ b\ c\ \to_{\beta}\ A [a/x] [b/y] [c/z] = x \\
-\text{Selector}\ \text{B}\ a\ b\ c\ \to_{\beta}\ B [a/x] [b/y] [c/z] = y \\
-\text{Selector}\ \text{C}\ a\ b\ c\ \to_{\beta}\ C [a/x] [b/y] [c/z] = x \\
+\begin{align*}
+\text{Selector}\ \text{A}\ a\ b\ c\ &\to_{\beta}\ A\ a\ b\ c = a \\
+\text{Selector}\ \text{B}\ a\ b\ c\ &\to_{\beta}\ B\ a\ b\ c = b \\
+\text{Selector}\ \text{C}\ a\ b\ c\ &\to_{\beta}\ C\ a\ b\ c = c
+\end{align*}
 $$
 
-Here's an implementation in python;
-
+Python实现示例：
 ```python
->>> A = (lambda x: lambda y: lambda z: x)
->>> B = (lambda x: lambda y: lambda z: y)
->>> C = (lambda x: lambda y: lambda z: z)
->>> Selector = (lambda s: lambda x: lambda y: lambda z: s (x) (y) (z))
+>>> A = (lambda x: lambda y: lambda z: x)  # 总是返回第一个参数
+>>> B = (lambda x: lambda y: lambda z: y)  # 总是返回第二个参数
+>>> C = (lambda x: lambda y: lambda z: z)  # 总是返回第三个参数
+>>> Selector = (lambda s: lambda x: lambda y: lambda z: s(x)(y)(z))
 
->>> Selector (A) ('a') ('b') ('c')
+>>> Selector(A)('a')('b')('c')  # 选择第一个分支
 'a'
 
->>> Selector (B) ('a') ('b') ('c')
+>>> Selector(B)('a')('b')('c')  # 选择第二个分支
 'b'
 
->>> Selector (C) ('a') ('b') ('c')
+>>> Selector(C)('a')('b')('c')  # 选择第三个分支
 'c'
 ```
+### 布尔运算
 
-### Boolean Operations
-
-Once we have the boolean operations written, boolean operants could be easily implemented. For example, not could switch into two branches based on the value of the bound variable:
+在定义了基本布尔值后，布尔运算符可以轻松实现。例如，"非"运算通过切换两个分支来实现：
 
 $$ \text{Not} = \lambda s .\ \text{If}\ s\ \text{False}\ \text{True} $$
 
-And could be implemented through a brute-force check of combination of bound vars:
+"与"运算则通过暴力检查绑定变量组合实现：
 
 $$
-\text{And} = \lambda a .\ \lambda b .\ (b\ \text{False})
+\text{And} = \lambda a .\ \lambda b .\ a\ b\ \text{False}
 $$
 
 ```mermaid
 graph TD;
-    A["lambda a: lambda b: If a"]
-    A -->|True| B["b"]
-    A -->|False| E["False"]
+    A["λa.λb. 若a为真"]
+    A -->|真| B["则返回b"]
+    A -->|假| E["则返回假"]
 ```
 
-Further more, the $\text{If}$ statement can be ommited completely:
+更进一步，$\text{If}$ 语句可以被完全省略：
 
-::: info Proof Box
-**Lemma.** Any application of the form $\text{If}\ s\ a\ b$ is equivalent to $s\ a\ b$.
-
-**Proof.** Perform a $\beta$-reduction on the application:
+::: info 证明框
+**引理.** 任何形式为 $\text{If}\ s\ a\ b$ 的应用等价于 $s\ a\ b$。  
+**证明.** 对应用进行β规约：
 
 $$
 \begin{align*}
-\text{If}\ s\ a\ b &\to_{\beta} ((\lambda b .\ \lambda x .\ \lambda y .\ b\ x\ y)\ [s/b])\ x\ y \\
-&\to_{\beta} (\lambda x .\ \lambda y .\ s\ x\ y)\ [a/x]\ [b/y] \\
+\text{If}\ s\ a\ b &\to_{\beta} ((\lambda b .\ \lambda x .\ \lambda y .\ b\ x\ y)\ [s/b])\ a\ b \\
+&\to_{\beta} (\lambda x .\ \lambda y .\ s\ x\ y)\ a\ b \\
 &\to_{\beta} s\ a\ b
 \end{align*}
 $$
 
-<QED/>
+<证毕/>
 
 :::
 
-Other binary operands $(\lambda a .\ \lambda b .\ M)$ can be implemented similarly:
+其他二元运算符 $(\lambda a .\ \lambda b .\ M)$ 可类似实现：
 
-| Operand | $M$ |
-| - | - |
-| $\text{AND}$ | $a\ b\ \text{False}$ |
-| $\text{OR}$ | $a\ \text{True}\ b$ |
-| $\text{XOR}$ | $a\ (\text{Not}\ b)\ b$ |
-| $\text{NAND}$ | $a\ (\text{Not}\ b)\ \text{True}$ |
+| 运算符 | 实现 $M$ | 逻辑描述 |
+|--------|----------|----------|
+| $\text{AND}$ | $a\ b\ \text{False}$ | a真时取b，否则取假 |
+| $\text{OR}$ | $a\ \text{True}\ b$ | a真时取真，否则取b |
+| $\text{XOR}$ | $a\ (\text{Not}\ b)\ b$ | a真时取非b，否则取b |
+| $\text{NAND}$ | $a\ (\text{Not}\ b)\ \text{True}$ | a真时取非b，否则取真 |
 
-For more implementations, see [cheatsheet](#binary-boolean-operations)
-### Church Numerals
+更多实现详见[速查表](#binary-boolean-operations)
+
+### 邱奇数码
 
 
-## Appendix: Cheatsheet
+## 附录：λ演算速查表
 
-### Boolean Constants
-#### T (True)
-- **Lambda Abstraction**:  
+### 布尔常量
+#### T (真值)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   T = lambda a: lambda b: a
   ```
-- **Effect**:  
-  Selects first argument:  
+- **效果**:  
+  选择第一个参数:  
   $$ \text{T}\ a\ b \to a $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> T ("T") ("F") 
-  "T"
+  >>> T ("真") ("假") 
+  "真"
   ```
 
-#### F (False)
-- **Lambda Abstraction**:  
+#### F (假值)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, b $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   F = lambda a: lambda b: b
   ```
-- **Effect**:  
-  Selects second argument:  
+- **效果**:  
+  选择第二个参数:  
   $$ \text{F}\ a\ b \to b $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> F ("T") ("F") 
-  "F"
+  >>> F ("真") ("假") 
+  "假"
   ```
 
 ---
 
-### Unary Boolean Gates
+### 一元布尔门
 
-#### NOT
-- **Lambda Abstraction**:  
+#### 非门 (NOT)
+- **λ抽象表示**:  
   $$ \lambda s .\, s\ \text{F}\ \text{T} $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   NOT = lambda s: s (F) (T)
   ```
-- **Effect**:  
+- **效果**:  
   $$ 
   \begin{align} 
   \lnot \text{T} &\to \text{F} \\ 
   \lnot \text{F} &\to \text{T} 
   \end{align}
   $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> NOT (T) ("T") ("F") 
-  "F"
+  >>> NOT (T) ("真") ("假") 
+  "假"
   ```
 
 ---
 
-### Binary Boolean Operations
+### 二元布尔运算
 
-#### AND
-- **Lambda Abstraction**:  
+#### 与门 (AND)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a\ b\ \text{F} $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   AND = lambda a: lambda b: a (b) (F)
   ```
-- **Effect**:  
+- **效果**:  
   $$ a \land b = \begin{cases} 
-  \text{T} & \text{if } a = \text{T}, b = \text{T} \\ 
-  \text{F} & \text{otherwise} 
+  \text{T} & \text{当 } a = \text{T}, b = \text{T} \\ 
+  \text{F} & \text{其他情况} 
   \end{cases} $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> AND (T) (F) ("T") ("F") 
-  "F"
+  >>> AND (T) (F) ("真") ("假") 
+  "假"
   ```
 
-#### OR
-- **Lambda Abstraction**:  
+#### 或门 (OR)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a\ \text{T}\ b $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   OR = lambda a: lambda b: a (T) (b)
   ```
-- **Effect**:  
+- **效果**:  
   $$ a \lor b = \begin{cases} 
-  \text{T} & \text{if } a = \text{T} \text{ or } b = \text{T} \\ 
-  \text{F} & \text{otherwise} 
+  \text{T} & \text{当 } a = \text{T} \text{ 或 } b = \text{T} \\ 
+  \text{F} & \text{其他情况} 
   \end{cases} $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> OR (F) (T) ("T") ("F") 
-  "T"
+  >>> OR (F) (T) ("真") ("假") 
+  "真"
   ```
 
-#### NAND
-- **Lambda Abstraction**:  
+#### 与非门 (NAND)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a\ (\text{NOT}\ b)\ \text{T} $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   NAND = lambda a: lambda b: a (NOT (b)) (T)
   ```
-- **Effect**:  
+- **效果**:  
   $$ \lnot(a \land b) $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> NAND (T) (T) ("T") ("F") 
-  "F"
+  >>> NAND (T) (T) ("真") ("假") 
+  "假"
   ```
 
-#### NOR
-- **Lambda Abstraction**:  
+#### 或非门 (NOR)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a\ \text{F}\ (\text{NOT}\ b) $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   NOR = lambda a: lambda b: a (F) (NOT (b))
   ```
-- **Effect**:  
+- **效果**:  
   $$ \lnot(a \lor b) $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> NOR (F) (F) ("T") ("F") 
-  "T"
+  >>> NOR (F) (F) ("真") ("假") 
+  "真"
   ```
 
-#### XOR
-- **Lambda Abstraction**:  
+#### 异或门 (XOR)
+- **λ抽象表示**:  
   $$ \lambda a .\, \lambda b .\, a\ (\text{NOT}\ b)\ b $$
-- **Python Implementation**:  
+- **Python实现**:  
   ```python
   XOR = lambda a: lambda b: a (NOT (b)) (b)
   ```
-- **Effect**:  
+- **效果**:  
   $$ a \oplus b = \begin{cases} 
-  \text{T} & \text{if } a \neq b \\ 
-  \text{F} & \text{otherwise} 
+  \text{T} & \text{当 } a \neq b \\ 
+  \text{F} & \text{其他情况} 
   \end{cases} $$
-- **Example**:  
+- **示例**:  
   ```python
-  >>> XOR (T) (F) ("T") ("F") 
-  "T"
+  >>> XOR (T) (F) ("真") ("假") 
+  "真"
   ```
 
 ---
 
-### Key Conventions
-1. All operations are **curried**: `AND (T) (F)` not `AND(T, F)`
-2. Church booleans act as **selectors**:  
+### 关键约定
+1. 所有运算均为**柯里化形式**：`AND (T) (F)` 而非 `AND(T, F)`
+2. Church布尔值作为**选择器**工作：  
    $$ \text{T}\ a\ b \to a \quad \text{F}\ a\ b \to b $$
-3. Primitive definitions:  
+3. 基础定义：  
    ```python
-   T = lambda a: lambda b: a  # Church TRUE
-   F = lambda a: lambda b: b  # Church FALSE
+   T = lambda a: lambda b: a  # Church真值
+   F = lambda a: lambda b: b  # Church假值
    ```
+  
