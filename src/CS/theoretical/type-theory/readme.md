@@ -11,7 +11,8 @@ sticky: true
 ## 序言
 
 ::: tip 本节术语 | Glossary
-- [**安全性 (safety)**](#safety) - 指程序在运行时避免未定义行为和错误的能力，包括程序的可验证性、鲁棒性以及对异常情况的安全处理。
+- [**安全性 (safety)**](#safety) 指程序在运行时避免未定义行为和错误的能力，包括程序的可验证性、鲁棒性以及对异常情况的安全处理。
+- [**MCU (Micro Computing Unit)**](#mcu) 嵌入式设备的核心处理器，成本低廉功能单一
 :::
 
 ::: info 目录
@@ -36,7 +37,10 @@ sticky: true
 
 一个程序不安全可能有很多原因。
 
-在嵌入式领域，开发者需要和操作系统等其他因素配合，保证不给对方"下绊子"。例如在LPC2214中，VIC(Vector Interruption Controller)采用了多选一的位域设计，理论上来说`VICVectCntl`寄存器中只可以有一位是1，但是这种设计很难保证在中途不会因为资源竞争(data race)等原因导致未发现的位反转。例如以下情况会使中断系统进入不可预测的状态：
+我们先来看看一个日常的例子吧。在我们身边，有无数的<Anchor id="mcu">MCU (Micro Computing Unit)</Anchor>。它们和外界沟通可以通过串口，UART，I<sup>2</sup>C等方式沟通，还有一个：中断。由于生产环境中的中断类型较多，我们可以用向量来表示他们。如下：
+
+例如在LPC2214中，VIC(Vector Interruption Controller)采用了多选一的位域设计。
+比如说，这是理论理论上来说`VICVectCntl`寄存器中只可以有一位是1，但是这种设计很难保证在中途不会因为资源竞争(data race)等原因导致未发现的位反转。例如以下情况会使中断系统进入不可预测的状态：
 
 ```c
 VICVectCntl0_Type VICVectCntl0;

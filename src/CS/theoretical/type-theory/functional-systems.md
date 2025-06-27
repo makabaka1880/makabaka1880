@@ -4,6 +4,7 @@
 ::: tip 本节术语 | Glossary
 - [**图灵机 (Turing's machine)**](#turings-machine) 利用无限长的纸带和读写头搭建的计算模型
 - [**λ演算 (The Lambda Calculus)**](#lambda-calculus) 利用无限长的纸带和读写头搭建的计算模型
+- [**邱奇 - 图灵 论题 (Church - Turing Hypothesis)**](#church-turing) 即图灵机与Lambda演算等价
 - [**简单类型λ演算 (STLC)**](#stlc) 一种带有简单chaining的类型系统
 - [**上下文 (Context)**](#context) 关联变量及其类型的数据结构
 - [**作用域 (Scope)**](#scope) 一种在程序语言中<Anchor>上下文</Anchor>的实现
@@ -89,6 +90,7 @@ M = (Q, \Sigma, \Gamma, \delta, q_0, q_{\text{accept}}, q_{\text{reject}})
 
 :::
 
+总而言之，他发现只用函数，居然也能完成所有图灵机所可以做的运算；这就是大名鼎鼎的<Anchor id='church-turing'>邱奇 - 图灵 论题 (Church - Turing Hypothesis)</Anchor>。
 但是这个东西有个缺陷：lambda演算毫无安全性可言，正如图灵机的类型只有其字母表一样。尽管这样可以实现类似c++当中用指针当泛型的神奇操作，但还是太不实用了。于是在不久后，邱奇就提出了<Anchor id="stlc">STLC (Simply-Typed Lambda Calculus)</Anchor>.
 
 ::: danger 建议
@@ -100,7 +102,17 @@ M = (Q, \Sigma, \Gamma, \delta, q_0, q_{\text{accept}}, q_{\text{reject}})
 
 $$\lambda x.\ x$$
 
-类型系统首先需要知道每个变量的类型是啥；这时我们需要一个<Anchor id="context">**上下文 (Context)**</Anchor>。数学上来说，是我们的程序当中所有绑定变量$x$与其类型$\tau$所形成的有序对的集合:
+我们再来确认一下类型是什么吧：类型应该要像变量一样，可以被命名、组合和传递，用来描述数据的结构和性质，从而保证程序的安全性和正确性。我们在STLC中一般用$t$或者$\tau$来代表类型。
+
+在lambda演算中，我们一般只会标注绑定变量的类型：
+
+$$ \lambda x^\tau.\ x $$
+
+当然 我们还有一种特殊的类型叫<Anchor id="function-type">函数类型 (Function Types)</Anchor>。它们描述的是函数输入和输出的数据类型，使得函数不仅仅是代码块，而是带有明确接口和行为规范的值。比如说，我们刚刚那个lambda抽象也有类型。因为定义的输入是$\tau$，而且输出和输入一样，所以我们就可以认为这个函数的类型是
+
+$$\tau \to \tau$$
+
+那毕竟是要写程序嘛，类型系统首先需要知道你写的每个变量的类型是啥。这时我们需要一个<Anchor id="context">**上下文 (Context)**</Anchor>。数学上来说，是我们的程序当中所有绑定变量$x$与其类型$\tau$所形成的有序对的集合:
 $$\Gamma = \{(x, \tau) | \forall x\}$$
 
 当然对于软件工程师来说可能这样更好理解一点：
@@ -177,13 +189,15 @@ assert(type(x) == τ.Type)
 ```
 简单来说，就是判断一个项 / 变量$x$的类型是否为$\tau$.
 
+因此，获取刚刚那个抽象$\lambda x^\tau.\ x$的类型可以表示为
+$$ \Gamma \vdash (\lambda x^\tau.\ x) : \tau \to \tau $$
 一般来说，我们在STLC中解决的问题都是求解一个对象的类型。接下来，我们介绍三条对于STLC我们常用的Type Check规则。
 
 ::: warning 记法风格约定
 在接下来的逻辑推理与类型证明中，我们将交替使用以下三种常见的记法风格：
 
 > 说明：本教材默认使用 **形式推理**（自然演绎）风格进行主要推导，必要时补充其它格式以增强理解。
-> 
+
 ::: tabs
 
 @tab 初等证明格式
@@ -419,4 +433,16 @@ $$
 
 优雅～
 
-(未完待续)
+## V. 结语
+
+在前面的讨论中，我们通过分析 identityTwice 函数，深入理解了简单类型λ演算（STLC）如何通过类型系统确保函数的行为符合预期。通过类型判断规则，我们能够验证函数是否类型安全，避免了运行时错误。
+
+然而，STLC 只是类型系统的起点。随着我们对类型系统的深入了解，我们将探索更强大的类型系统，如 Hindley-Milner 类型系统，它为多态性提供了强有力的支持，使得函数可以处理多种类型的输入。
+
+在接下来的章节中，我们将进一步探讨不同种类的类型，包括：
+
+- **代数数据类型 (Algebraic Data Types)** 和类型与积类型结合产生的魔法
+- **泛型与继承 (Generics and Inheritence)** 通过定义一个模版类型来保证其他衍生类型的安全性
+- **参数化多模态 (Parametric Polymorphism)** 通过定义 / 限定一个类型的类型的变量来作为类型的参数
+
+通过这些扩展，我们将看到类型系统如何在编程语言中发挥更大的作用，不仅提高代码的安全性和可维护性，还能提升程序的表达能力和灵活性。
