@@ -1,6 +1,6 @@
 # Hello from Shanghai 👋
 
-Hi! I'm Sean, an enthusiastic software engineer. Check out [my blog~](https://makabaka1880.xyz). I use ARM MacOS for daily dev, and I mostly do full stack projects on my own or with other friends.
+Hi! I'm Sean, a Chinese high school student, as well as an enthusiastic software engineer. Check out [my blog~](https://makabaka1880.xyz). I use ARM MacOS for daily dev, and I mostly do full stack projects on my own or with other friends.
 
 When I'm not coding, you can find me diving into music, martial arts, or the depths of theoretical computer science.
 
@@ -8,12 +8,12 @@ When I'm not coding, you can find me diving into music, martial arts, or the dep
 Check our some of my interesting projects:
 
 ### [🧠 PyLambda](https://github.com/makabaka1880/PyLambda)
-A Python implementation of the [Simple Untyped Lambda Calculus](https://makabaka1880.xyz/CS/theoretical/lambdacalculus.html). Delves into the foundational concepts of functional programming and serves as a playground for experimenting with lambda expressions.
+A Python implementation of the [Simple Untyped Lambda Calculus](https://makabaka1880.xyz/CS/theoretical/lambdacalculus.html), along with a powerful REPL intepreter. Delves into the foundational concepts of functional programming and serves as a playground for experimenting with lambda expressions.
 
 ![Performing beta-reduction of the successor function on Church numeral null.](pylambda-screenshot.png)
 
 ### [🎹 Overture](https://github.com/makabaka1880/Overture.rs)
-A terminal UI rendering middleware in Rust. Overture serves as a prelude to more complex rendering tasks, providing a solid foundation for building text-based user interfaces.
+A terminal UI rendering middleware in Rust. Overture serves as a prelude to more complex rendering tasks, aims to providing a solid foundation for building text-based user interfaces.
 
 Below shown is an implementation of `Pomodoro` using overture.
 
