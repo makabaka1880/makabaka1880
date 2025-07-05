@@ -1,7 +1,9 @@
 ---
 sticky: true
 ---
+
 # 程序语言理论 - 类型系统
+
 ::: info 写在前面
 作为一名软件开发者，或多或少会遇到过各种各样的类型系统。虽然说当今的编程语言大多已经十分完善且安全，但每个语言还是有自己的不足，需要学习类型理论来进行特定类型的实现。同时，类型理论的额学习也可以帮助软件开发者更好的写出更加优雅、稳定、且安全的代码，利人利己。我个人认为PLT是计算机科学里面最美的分支了可以用各种神奇的模型来描绘一些我们从来没法想到过的模型，来完成一下完全想不到的壮举。本系列就是为了方便初学者来快速入门类型论、程序语言理论、多范式编程、及范畴论等在传统软件工程领域被严重忽视的理论计算科学。
 
@@ -15,11 +17,12 @@ sticky: true
 - [**MCU (Micro Computing Unit)**](#mcu) 嵌入式设备的核心处理器，成本低廉功能单一
 :::
 
+
 ::: info 目录
-- [第0章 - 类型系统](type-systems)
-    - [第0节 - 弱类型系统与强类型系统](strong-and-weak-systems)
-    - [第1节 - 动态和静态类型语言](static-and-dynamic-systems)
-    - [第2节 - STLC、System-F与Hindley-Milner类型系统 (函数类型)](functional-systems)
+- [第0章 - 类型系统](type-systems/)
+    - [第0节 - 弱类型系统与强类型系统](type-systems/strong-and-weak-systems)
+    - [第1节 - 动态和静态类型语言](type-systems/static-and-dynamic-systems)
+    - [第2节 - STLC、System-F与Hindley-Milner类型系统 (函数类型)](type-systems/functional-systems)
 :::
 
 凌晨2:17。显示器冷光刺破黑暗，键盘的敲击声是房间里唯一的声响。

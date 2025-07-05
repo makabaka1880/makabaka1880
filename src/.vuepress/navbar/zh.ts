@@ -28,7 +28,7 @@ export const zhNavbar = navbar([
         prefix: "CS/",
         children: [
           { text: "友情链接", icon: "pen-to-square", link: "Friends" },
-          { text: "类型系统", icon: "pen-to-square", link: "miscellaneous/" },
+          { text: "类型系统", icon: "pen-to-square", link: "theoretical/type-theory/" },
           { text: "ARM开发", icon: "pen-to-square", link: "ARM/" },
           { text: "C++学习", icon: "pen-to-square", link: "cpp/" },
           { text: "理论计算机科学", icon: "pen-to-square", link: "theoretical/" },

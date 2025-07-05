@@ -1,26 +1,13 @@
 ---
 home: true
-heroText: Makabaka1880's Blog
-heroImage: /assets/Slive-Hero-en-US.webp
+layout: BlogHome
+heroImage: /assets/Hero.webp
+bgImage: /BG-HW.webp
+heroText: Makabaka1880's Blog (EN Localization still in progress)
 footer: MIT Licensed | Copyright 2024 © Sean Li
-features:
-- title: Dec 24. 2024
-  details: Goobye, dad.
-
-actions: 
-- text: Digital Memorial →
-  link: https://www.jamesli.love
 
 ---
 
-<!--
-- title: CS Notes
-  details: I've always been fascinated with computer science and mathematics. I'm now writing my extracurriculum notes on my blog, as well as some notes from preparations of competitions.
-- title: Psychology
-  details: I first got into psychology and psychiatry due to some personal reasons. Of course, I now have this set of notes thanks to my impulsive decision to read Freud's lectures back then.
-- title: Natural Science
-  details: Recently, I’ve been preparing for a biology competition, and the materials have been uploaded. The notes cover physics, chemistry, biology, etc. refinements needed.
--->
 ::: tip Notice
 My father passed away on 2024/12/20. We have not yet performed autopsy so the exact cause of death is not yet known, but likely mechanical asphyxia because of choking. He was only 52 years old, but his life was forever paused on that fateful day. However, his love and memories will never fade away.
 
