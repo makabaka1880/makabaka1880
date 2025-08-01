@@ -1,0 +1,42 @@
+[
+    {
+      "title": "「光现象」后期组",
+      "friends": [
+        {
+          "name": "minc_nice_100",
+          "role": "Web后端开发",
+          "email": "admin@itedev.com",
+          "website": "https://itedev.com/",
+          "avatar": "https://nas-alist.ited.top/d/public/blog/202408/44371723107000.jpg",
+          "description": "不善言辞, 不喜欢社交, *略*会一些后端的网友"
+
+        }
+      ]
+    },
+    {
+        "title": "同学",
+        "friends": [
+        {
+            "name": "Tim",
+            "role": "Newbie Developer",
+            "email": "timcooksgrandpa@gmail.com",
+            "website": "https://616sb.top",
+            "avatar": "/assets/Friends/Tim-Avatar.webp",
+            "description": "初中同学, 也是像我一样搞乱七八糟的好玩的玩意, 但他有足够的天赋能把这些乱七八糟的东西做得非常豪丸总能让人 大 开 阎 界"
+        }
+        ]
+    },
+    {
+        "title": "老师",
+        "friends": [
+        {
+            "name": "XueKeDou",
+            "role": "iOS Developer",
+            "email": "842635351@qq.com",
+            "website": "https://xuekedou.github.io",
+            "avatar": "https://avatars.githubusercontent.com/u/19183282?s=48&v=4",
+            "description": "带我入坑苹果生态Swift开发的恩师, 复旦大学计算机计算机系的ML大佬, 曾拿下过Swift Student Challenge三杀"
+        }
+        ]
+    }
+]
