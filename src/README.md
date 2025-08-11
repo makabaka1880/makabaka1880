@@ -2,7 +2,7 @@
 home: true
 layout: Blog
 heroText: Makabaka1880的博客 | 中考季 :(
-heroImage: /assets/Hero-White.png
+heroImage: /assets/Hero-White.webp
 bgImage: /BG-Aug.webp
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
