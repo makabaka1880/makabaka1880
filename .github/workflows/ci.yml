@@ -17,13 +17,6 @@ jobs:
               with:
                   node-version: 20
 
-
-            - name: Install dependencies and build
-              run: |
-                  npm install
-                  npm run docs:build
-                  
-            # Cache node_modules directory
             - name: Cache npm dependencies
               uses: actions/cache@v3
               with:
@@ -31,6 +24,12 @@ jobs:
                   key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
                   restore-keys: |
                       ${{ runner.os }}-node-modules-
+
+            - name: Install dependencies and build
+              run: |
+                  npm ci
+                  npm run docs:build
+                  
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
