@@ -10,8 +10,6 @@ export default hopeTheme({
     url: "https://makabaka1880.xyz",
   },
 
-  iconAssets: "fontawesome-with-brands",
-
   logo: "/static/Avatar.webp",
 
   repo: "makabaka1880/makabaka1880",
@@ -115,6 +113,9 @@ export default hopeTheme({
     },
     components: {
       components: ["Badge", "VPCard"],
+    },
+    icon: {
+        assets: "fontawesome-with-brands"
     }
   },
 });

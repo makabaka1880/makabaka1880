@@ -1,14 +1,15 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 heroText: Makabaka1880的博客 | 中考季 :(
-heroImage: /assets/Hero.webp
+heroImage: /assets/Hero-White.png
 bgImage: /BG-Aug.webp
 heroFullScreen: true
 tagline: 欢迎来到Makabaka1880的博客👏
 footer: MIT Licensed | Copyright 2024 © Sean Li
 ---
 
+<center>
 **你好陌生人:wave:～**
 
 我是一名普普通通的上海初中牲

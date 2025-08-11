@@ -1,15 +1,14 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 heroImage: /assets/BG-Aug.webp
 bgImage: /BG-HW.webp
 heroText: Makabaka1880's Blog (EN Localization still in progress)
 footer: MIT Licensed | Copyright 2024 © Sean Li
 
 ---
-<center>
 
----
+<center>
   
 **Hello, who ever stumbled on this blog:wave:～**
 

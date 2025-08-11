@@ -1,0 +1,25 @@
+"devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.67",
+    "@vuepress/plugin-register-components": "^2.0.0-rc.67",
+    "@vuepress/plugin-revealjs": "^2.0.0-rc.67",
+    "@waline/client": "^3.5.6",
+    "flowchart.ts": "^3.0.1",
+    "katex": "^0.16.15",
+    "sass-embedded": "^1.79.5",
+    "vidstack": "^1.12.12",
+    "vue": "^3.5.18", ok
+    "vuepress": "2.0.0-rc.24", ok
+    "vuepress-theme-hope": "2.0.0-rc.19" ok
+  },
+  "dependencies": {
+    "@noxone/vuepress-plugin-music-player": "^1.2.2",
+    "@vuepress/shared-utils": "^1.9.10",
+    "markdown-it-html5-embed": "^0.3.3",
+    "mermaid": "^11.4.1",
+    "react": "^19.0.0",
+    "react-art": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "valine": "^1.4.14",
+    "vue-template-compiler": "^2.7.16",
+    "vuepress-plugin-comment": "^0.7.3"
+  }
