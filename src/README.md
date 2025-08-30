@@ -1,7 +1,7 @@
 ---
 home: true
 layout: Blog
-heroText: Makabaka1880的博客 | 中考季 :(
+heroText: Makabaka1880的博客 | 站长还在补暑假作业
 heroImage: /assets/Hero-White.webp
 bgImage: /BG-Aug.webp
 heroFullScreen: true
