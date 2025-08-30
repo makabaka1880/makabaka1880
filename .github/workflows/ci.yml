@@ -27,8 +27,8 @@ jobs:
 
             - name: Install dependencies and build
               run: |
-                  npm ci
-                  npm run docs:build
+                  pnpm install
+                  pnpm docs:build
                   
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
