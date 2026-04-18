@@ -1,6 +1,6 @@
 # Hello from Shanghai 👋
 
-Hi! I'm Sean, a Chinese high school student, as well as an enthusiastic software engineer. Check out [my blog~](https://makabaka1880.xyz). I use ARM MacOS for daily dev, and I mostly do full stack projects on my own or with other friends.
+Hi! I'm Sean, a Chinese high school student, as well as an enthusiastic software engineer. Check out [my blog~](https://blog.makabaka1880.xyz). I use ARM MacOS for daily dev, and I mostly do full stack projects on my own or with other friends.
 
 When I'm not coding, you can find me diving into music, martial arts, or the depths of theoretical computer science.
 
