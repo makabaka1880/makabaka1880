@@ -1,7 +1,7 @@
 ---
 home: true
 layout: Blog
-heroText: Makabaka1880的博客 | 站长还在补暑假作业
+heroText: 博客已迁移 | blog.makabaka1880.xyz
 heroImage: /assets/Hero-White.webp
 bgImage: /BG-Aug.webp
 heroFullScreen: true
